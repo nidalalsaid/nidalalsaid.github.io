@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,86 +6,121 @@
 <title>Dr. Nidal Al Said</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #1f2d3d;
+body{
+  margin:0;
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:#f5f7fa;
+  color:#1f2d3d;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
 }
 
-.hero {
-    text-align: center;
-    padding: 40px 20px;
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:60px;
 }
 
-.hero h1 {
-    margin-bottom: 10px;
-    font-size: 36px;
+.hero-text{
+  flex:1;
+  min-width:280px;
 }
 
-.hero p {
-    font-size: 18px;
-    color: #4a5568;
-    max-width: 800px;
-    margin: auto;
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
 }
 
-.buttons {
-    margin-top: 25px;
+.hero p{
+  font-size:17px;
+  color:#4a5568;
+  line-height:1.6;
 }
 
-.buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
-    background-color: #0d3b66;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
+.hero img{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-.section {
-    margin-top: 60px;
+.buttons{
+  margin-top:20px;
 }
 
-.section h2 {
-    margin-bottom: 20px;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 10px;
+.buttons a{
+  display:inline-block;
+  margin:8px 8px 0 0;
+  padding:10px 18px;
+  background:#0d3b66;
+  color:#fff;
+  text-decoration:none;
+  border-radius:25px;
+  font-size:14px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.cv-button{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 22px;
+  background:#1a202c;
+  color:#fff;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:bold;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 20px;
-    color: #718096;
-    font-size: 14px;
+.section{
+  margin-top:60px;
 }
 
-.cv-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 25px;
-    background-color: #1a202c;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+.section h2{
+  border-bottom:2px solid #e2e8f0;
+  padding-bottom:10px;
+}
+
+.books-grid{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.book-card{
+  background:#ffffff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.05);
+  text-align:center;
+  flex:1;
+  min-width:250px;
+}
+
+.book-card img{
+  width:160px;
+  border-radius:8px;
+  margin-bottom:15px;
+}
+
+.book-card a{
+  color:#0d3b66;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.footer{
+  margin-top:80px;
+  text-align:center;
+  color:#718096;
+  font-size:14px;
 }
 </style>
 </head>
@@ -95,67 +130,65 @@ body {
 <div class="container">
 
 <div class="hero">
-<h1>Dr. Nidal Al Said</h1>
-<p>
-Associate Professor at Ajman University | AI, HCI & Data Analytics | Smart Digital Systems |
-Interdisciplinary Research and Innovation in Technology, Media, Design & Education<br><br>
-United Arab Emirates
-</p>
 
-<div class="buttons">
-<a href="https://www.amazon.com" target="_blank">Book Profiles</a>
-<a href="https://scholar.google.com" target="_blank">Research Profiles</a>
-<a href="#">Intellectual Property</a>
-<a href="mailto:your@email.com">Contact</a>
-</div>
+  <div class="hero-text">
+    <h1>Nidal Al Said</h1>
+    <p>
+    Associate Professor at Ajman University | AI, HCI & Data Analytics | Smart Digital Systems |
+    Interdisciplinary Research and Innovation in Technology, Media, Design & Education<br><br>
+    United Arab Emirates
+    </p>
 
-<a class="cv-button" href="CV Dr Nidal Al Said _Compact_1-2026.pdf" target="_blank">
-Download Full CV (PDF)
-</a>
-</div>
+    <div class="buttons">
+      <a href="books.html">Book Profiles</a>
+      <a href="research.html">Research Profiles</a>
+      <a href="ip.html">Intellectual Property</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
+    <a class="cv-button" href="cv.pdf" target="_blank">
+    Download Full CV (PDF)
+    </a>
+  </div>
 
-<div class="section">
-<h2>Recent Books</h2>
-
-<div class="card">
-Recent book title will appear here.<br>
-Publisher | Amazon | DOI
-</div>
-
-<div class="card">
-Recent book title will appear here.<br>
-Publisher | Amazon | DOI
-</div>
+  <div>
+    <img src="profile.jpg" alt="Dr. Nidal Al Said">
+  </div>
 
 </div>
 
 
 <div class="section">
-<h2>Recent Publications</h2>
+  <h2>Recent Books</h2>
 
-<div class="card">
-Recent publication title.<br>
-Journal | DOI | Scopus
+  <div class="books-grid">
+
+    <div class="book-card">
+      <img src="book1.jpg">
+      <div><strong>INTELLIGENT VISUAL DESIGN</strong></div>
+      <div style="margin-top:8px;">
+        <a href="#" target="_blank">Amazon</a> |
+        <a href="https://iipbooks.com/authors/nidal-al-said--2266" target="_blank">Publisher</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="book2.jpg">
+      <div><strong>The Digital Nexus</strong></div>
+      <div style="margin-top:8px;">
+        <a href="#" target="_blank">Amazon</a> |
+        <a href="https://redshine.co.in/book-author/dr-nidal-al-said/" target="_blank">Publisher</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:25px;">
+    <a href="books.html" style="font-weight:bold;">View All Books →</a>
+  </div>
+
 </div>
 
-<div class="card">
-Recent publication title.<br>
-Journal | DOI | Scopus
-</div>
-
-</div>
-
-
-<div class="section">
-<h2>Recent Intellectual Property</h2>
-
-<div class="card">
-Patent or Innovation Title.<br>
-Filed / Granted | Authority
-</div>
-
-</div>
 
 <div class="footer">
 © 2026 Dr. Nidal Al Said | nidalalsaid.github.io
@@ -165,4 +198,3 @@ Filed / Granted | Authority
 
 </body>
 </html>
-<!-- refresh -->
