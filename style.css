@@ -612,3 +612,36 @@ a{color:inherit}
 @media(max-width:520px){
   .stats{grid-template-columns:1fr}
 }
+/* Publications cards (same style as books, but no image column) */
+.pub-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  padding:16px 18px;
+}
+
+.pub-title{
+  font-weight:900;
+  font-size:16px;
+  margin-bottom:6px;
+  line-height:1.35;
+}
+
+.pub-meta{
+  color:var(--muted);
+  font-size:13.5px;
+  margin-bottom:10px;
+}
+
+.pub-summary{
+  color:var(--muted);
+  font-size:13.5px;
+  margin-bottom:12px;
+}
+
+.pub-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
