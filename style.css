@@ -267,3 +267,34 @@ body{
   font-size:13px;
   color:var(--muted);
 }
+.icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  flex-shrink: 0;
+  fill: #5fb59f;
+}
+
+.contact-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-item {
+  padding: 16px 0;
+}
+
+.contact-text .label {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-text .value {
+  color: #555;
+}
