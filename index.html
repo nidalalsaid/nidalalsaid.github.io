@@ -1,639 +1,250 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nidal Al Said</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Nidal Al Said</title>
 
 <style>
- :root {
-    --bg-dark: #0f1f24;
-    --bg-card: #142e35;
-    --accent: #1abc9c;
-    --accent-soft: #16a085;
-    --text-main: #ffffff;
-    --text-muted: #c8e3e7;
-    --border-soft: #1f3a40;
+:root{
+  --bg:#0f1f24;
+  --card:#142e35;
+  --accent:#1abc9c;
+  --text:#eaf6f8;
+  --muted:#a7c6cc;
+  --border:#1f3a40;
 }
 
+*{box-sizing:border-box;margin:0;padding:0}
 
-
-.book-card{
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.12);
-  border-radius:16px;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:160px 1fr;
-  box-shadow:0 12px 26px rgba(2,8,23,0.18);
+body{
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
 }
 
-.book-media{
-  background:rgba(255,255,255,0.06);
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  padding:40px 0;
+}
+
+/* HERO */
+.hero{
   display:flex;
+  justify-content:space-between;
   align-items:center;
-  justify-content:center;
-  padding:14px;
+  flex-wrap:wrap;
+  gap:30px;
 }
 
-.book-media img{
-  width:100%;
-  height:auto;
+.hero-text{
+  flex:1;
+  min-width:280px;
+}
+
+.hero-text h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.hero-text p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.actions a{
+  display:inline-block;
+  padding:8px 14px;
+  margin-right:10px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:1px solid var(--border);
+  color:#fff;
+  background:var(--card);
+  transition:0.3s;
+}
+
+.actions a:hover{
+  background:var(--accent);
+  color:#072236;
+}
+
+.portrait{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--accent);
+}
+
+/* STATS */
+.stats{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.stat{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:18px;
   border-radius:10px;
+  text-align:center;
+}
+
+.stat strong{
+  font-size:22px;
   display:block;
-  box-shadow:0 10px 18px rgba(2,8,23,0.22);
 }
 
-.book-body{
-  padding:16px 16px 14px 16px;
-  color:rgba(255,255,255,0.92);
+.stat span{
+  color:var(--muted);
+  font-size:13px;
 }
 
-.book-label{
-  font-size:0.85rem;
-  opacity:0.85;
-  margin-bottom:6px;
+/* SECTIONS */
+.section{
+  margin-top:60px;
+}
+
+.section h2{
+  font-size:22px;
+  margin-bottom:20px;
+  border-left:4px solid var(--accent);
+  padding-left:10px;
+}
+
+/* BOOKS GRID */
+.books{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+.book{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:20px;
+}
+
+.book img{
+  width:150px;
+  display:block;
+  margin-bottom:15px;
+  border-radius:8px;
 }
 
 .book-title{
-  font-size:1.08rem;
-  font-weight:800;
-  letter-spacing:0.2px;
-  margin-bottom:10px;
-  color:#fff;
+  font-weight:700;
+  margin-bottom:8px;
 }
 
 .book-meta{
-  font-size:0.95rem;
-  line-height:1.5;
-  opacity:0.95;
+  font-size:14px;
+  color:var(--muted);
   margin-bottom:10px;
 }
 
-.book-links{
-  display:flex;
-  gap:10px;
-  margin:10px 0 12px 0;
-  flex-wrap:wrap;
-}
-
-.link-btn{
+.book a{
   display:inline-block;
-  padding:9px 12px;
-  border-radius:10px;
-  background:#1f2f46;
-  color:#fff;
-  font-weight:700;
+  margin-right:10px;
+  margin-top:6px;
+  font-size:13px;
   text-decoration:none;
-  border:1px solid rgba(255,255,255,0.14);
+  padding:6px 10px;
+  border-radius:5px;
+  background:var(--accent);
+  color:#072236;
+  font-weight:600;
 }
 
-.link-btn:hover{
-  background:#00c2b5;
-  color:#0f172a;
+/* FOOTER */
+.footer{
+  margin-top:70px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
 }
 
-.book-summary-title{
-  font-weight:800;
-  margin-bottom:6px;
-  color:#fff;
+@media(max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .books{grid-template-columns:1fr;}
 }
-
-.book-summary{
-  font-size:0.95rem;
-  line-height:1.55;
-  opacity:0.95;
-}
-
-@media (max-width: 900px){
-  .cards-2{ grid-template-columns:1fr; }
-  .book-card{ grid-template-columns:120px 1fr; }
-}
-
-  }
-
-  body{
-    margin:0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-  }
-
-  .container{
-    max-width:1100px;
-    margin:auto;
-    padding:34px 18px 60px 18px;
-  }
-
-  /* HERO (DARK) */
-  .hero{
-    background:linear-gradient(135deg, var(--dark1) 0%, var(--dark2) 100%);
-    border-radius:22px;
-    box-shadow:var(--shadow);
-    overflow:hidden;
-    position:relative;
-  }
-
-  .hero-inner{
-    padding:34px 30px 26px 30px;
-    color:#fff;
-  }
-
-  .hero-top{
-    display:flex;
-    gap:28px;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
-  }
-
-  .hero-left{
-    flex:1;
-    min-width:280px;
-  }
-
-  h1{
-    margin:0 0 10px 0;
-    font-size:40px;
-    letter-spacing:0.3px;
-  }
-
-  .tagline{
-    margin:0;
-    line-height:1.75;
-    font-size:15px;
-    color:rgba(255,255,255,0.86);
-  }
-
-  .loc{
-    margin:12px 0 0 0;
-    font-size:14px;
-    color:rgba(255,255,255,0.72);
-  }
-
-  .actions{
-    margin-top:18px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    align-items:center;
-  }
-
-  .btn{
-    display:inline-block;
-    padding:10px 16px;
-    border-radius:999px;
-    font-size:13.5px;
-    font-weight:700;
-    text-decoration:none;
-    color:#fff;
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.22);
-    transition:0.25s ease;
-  }
-
-  .btn:hover{
-    background:rgba(0,194,181,0.95);
-    border-color:rgba(0,194,181,0.95);
-    color:#072236;
-  }
-
-  .btn.cv{
-    background:#111827;
-    border-color:#111827;
-    color:#fff;
-    padding:10px 18px;
-  }
-
-  .btn.cv:hover{
-    background:var(--accent);
-    border-color:var(--accent);
-    color:#072236;
-  }
-
-  .hero-right{
-    width:260px;
-    min-width:260px;
-    display:flex;
-    justify-content:flex-end;
-  }
-
-  .portrait-wrap{
-    width:210px;
-    height:210px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .ring{
-    position:absolute;
-    inset:0;
-    border-radius:50%;
-    background:
-      radial-gradient(circle at 30% 30%, rgba(0,194,181,0.20), transparent 56%),
-      radial-gradient(circle at 70% 70%, rgba(255,255,255,0.10), transparent 60%);
-    border:2px solid rgba(255,255,255,0.12);
-  }
-
-  .portrait{
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid rgba(255,255,255,0.95);
-    box-shadow:0 14px 28px rgba(0,0,0,0.35);
-    position:relative;
-    z-index:1;
-    background:#fff;
-  }
-
-  /* PROFILE + RESEARCH AREAS (INSIDE HERO) */
-  .hero-mid{
-    margin-top:20px;
-    padding-top:18px;
-    border-top:1px solid rgba(255,255,255,0.12);
-    display:flex;
-    gap:18px;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
-  }
-
-  .profile{
-    flex:1;
-    min-width:280px;
-  }
-
-  .profile h2{
-    margin:0 0 10px 0;
-    font-size:20px;
-    letter-spacing:0.2px;
-    color:#fff;
-  }
-
-  .profile p{
-    margin:0;
-    font-size:15px;
-    line-height:1.85;
-    color:rgba(255,255,255,0.86);
-  }
-
-  .profile p b{
-    color:#fff;
-  }
-
-  .areas{
-    width:330px;
-    min-width:280px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.16);
-    border-radius:16px;
-    padding:14px 14px 12px 14px;
-    box-shadow:0 10px 22px rgba(0,0,0,0.18);
-  }
-
-  .areas-head{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:10px;
-  }
-
-  .badge{
-    width:28px;
-    height:28px;
-    border-radius:10px;
-    background:rgba(0,194,181,0.95);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .badge svg{
-    width:16px;
-    height:16px;
-    fill:#072236;
-  }
-
-  .areas-title{
-    margin:0;
-    font-size:13px;
-    font-weight:900;
-    letter-spacing:0.9px;
-    color:#fff;
-  }
-
-  .areas ul{
-    margin:0;
-    padding:0 0 0 18px;
-    color:rgba(255,255,255,0.86);
-    line-height:1.9;
-    font-size:14.5px;
-  }
-
-  /* STATS INSIDE HERO */
-  .stats{
-    margin-top:18px;
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:12px;
-  }
-
-  .stat{
-    background:#ffffff;
-    border-radius:16px;
-    padding:14px;
-    display:flex;
-    gap:10px;
-    align-items:center;
-    box-shadow:0 12px 26px rgba(0,0,0,0.16);
-  }
-
-  .ico{
-    width:38px;
-    height:38px;
-    border-radius:14px;
-    background:rgba(11,42,74,0.10);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .ico svg{
-    width:18px;
-    height:18px;
-    fill:#0b2a4a;
-  }
-
-  .stat strong{
-    display:block;
-    font-size:18px;
-    color:#0f172a;
-    line-height:1.1;
-  }
-
-  .stat span{
-    display:block;
-    margin-top:3px;
-    font-size:12.5px;
-    color:#64748b;
-  }
-
-  /* SECTIONS BELOW */
-  .section{
-    margin-top:42px;
-  }
-
-  .section h2{
-    margin:0 0 14px 0;
-    padding-bottom:10px;
-    border-bottom:2px solid #e2e8f0;
-    font-size:22px;
-  }
-
-  .grid2{
-    display:flex;
-    gap:22px;
-    flex-wrap:wrap;
-  }
-
-  .book-card{
-    flex:1;
-    min-width:260px;
-    background:var(--card);
-    border:1px solid #eef2f7;
-    border-radius:18px;
-    padding:18px;
-    box-shadow:var(--softshadow);
-    text-align:center;
-  }
-
-  .book-card img{
-    width:170px;
-    border-radius:12px;
-    box-shadow:0 12px 24px rgba(2,8,23,0.12);
-    margin-bottom:12px;
-  }
-
-  .item{
-    background:var(--card);
-    border:1px solid #eef2f7;
-    border-radius:18px;
-    padding:18px;
-    box-shadow:var(--softshadow);
-    margin-top:12px;
-  }
-
-  .muted{
-    color:var(--muted);
-  }
-
-  .footer{
-    margin-top:70px;
-    text-align:center;
-    color:#718096;
-    font-size:14px;
-  }
-
-  @media (max-width: 980px){
-    .stats{ grid-template-columns:repeat(2, 1fr); }
-  }
-
-  @media (max-width: 520px){
-    .stats{ grid-template-columns:1fr; }
-  }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
   <div class="hero">
-    <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Dr. Nidal Al Said</h1>
+      <p>Associate Professor at Ajman University</p>
+      <p>Artificial Intelligence · Human–Computer Interaction · Data Analytics · Smart Digital Systems</p>
 
-      <div class="hero-top">
-        <div class="hero-left">
-          <h1>Nidal Al Said</h1>
-          <p class="tagline">
-            Associate Professor at Ajman University | AI, HCI & Data Analytics | Smart Digital Systems |
-            Interdisciplinary Research and Innovation in Technology, Media, Design & Education
-          </p>
-          <p class="loc">United Arab Emirates</p>
-
-          <div class="actions">
-            <a class="btn" href="books.html">Book Profiles</a>
-            <a class="btn" href="research.html">Research Profiles</a>
-            <a class="btn" href="ip.html">Intellectual Property</a>
-            <a class="btn" href="contact.html">Contact</a>
-            <a class="btn cv" href="cv.pdf" target="_blank">Download Full CV (PDF)</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="portrait-wrap">
-            <div class="ring" aria-hidden="true"></div>
-            <img class="portrait" src="profile.jpg" alt="Dr. Nidal Al Said">
-          </div>
-        </div>
+      <div class="actions">
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="ip.html">Intellectual Property</a>
+        <a href="contact.html">Contact</a>
+        <a href="cv.pdf" target="_blank">Download CV</a>
       </div>
-
-      <div class="hero-mid">
-        <div class="profile">
-          <h2>Professional Profile</h2>
-          <p>
-            Associate Professor of Information Technology with extensive academic, research, and leadership experience across the UAE, Oman, Jordan, and Greece.
-            Recognized expertise in <b>Institutional Effectiveness</b>, <b>Academic Accreditation</b>, <b>Curriculum Design</b>, and <b>Outcome-Based Education</b>.
-            Research interests include <b>Artificial Intelligence</b>, <b>Machine Learning</b>, <b>Data Mining</b>, <b>Human–Computer Interaction</b>, <b>Smart Applications</b>,
-            and AI integration in education and digital media systems.
-          </p>
-        </div>
-
-        <div class="areas">
-          <div class="areas-head">
-            <div class="badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.8 6.6L22 9.2l-5.4 4.4L18.3 21 12 17.2 5.7 21l1.7-7.4L2 9.2l7.2-.6z"/></svg>
-            </div>
-            <p class="areas-title">RESEARCH AREAS</p>
-          </div>
-          <ul>
-            <li>Artificial Intelligence</li>
-            <li>Machine Learning</li>
-            <li>Data Mining</li>
-            <li>Human–Computer Interaction</li>
-            <li>Smart Applications</li>
-            <li>AI in Education & Digital Media</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <div class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1zm1 11.414V6a1 1 0 0 0-2 0v7a1 1 0 0 0 .293.707l4 4a1 1 0 0 0 1.414-1.414z"/></svg>
-          </div>
-          <div><strong>20+</strong><span>Years of Experience</span></div>
-        </div>
-
-        <div class="stat">
-          <div class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M19 2H8a2 2 0 0 0-2 2v2H5a2 2 0 0 0-2 2v11a3 3 0 0 0 3 3h13a3 3 0 0 0 3-3V4a2 2 0 0 0-2-2zm-1 18H6a1 1 0 0 1-1-1V8h13zM8 6V4h11v2z"/></svg>
-          </div>
-          <div><strong>20+</strong><span>Publications</span></div>
-        </div>
-
-        <div class="stat">
-          <div class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.1L18.5 21 12 16.9 5.5 21l2-7.9L2 9h7z"/></svg>
-          </div>
-          <div><strong>6</strong><span>Research Areas</span></div>
-        </div>
-
-        <div class="stat">
-          <div class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2c-5 0-9 3.1-9 7v6c0 3.9 4 7 9 7s9-3.1 9-7V9c0-3.9-4-7-9-7zm7 13c0 2.7-3.1 5-7 5s-7-2.3-7-5v-1.1A12.5 12.5 0 0 0 12 16a12.5 12.5 0 0 0 7-2.1zm0-4A10.8 10.8 0 0 1 12 14a10.8 10.8 0 0 1-7-3V9c0-2.7 3.1-5 7-5s7 2.3 7 5z"/></svg>
-          </div>
-          <div><strong>3</strong><span>Languages</span></div>
-        </div>
-      </div>
-
     </div>
+
+    <img src="profile.jpg" alt="Dr. Nidal Al Said" class="portrait">
   </div>
 
- <section class="section" id="selected-books">
-  <h2>Selected Books</h2>
-
-  <div class="cards-2">
-    <div class="book-card">
-      <div class="book-media">
-        <img src="images/book1.jpg" alt="Advanced Deep Learning Architectures &amp; Techniques cover">
-      </div>
-
-      <div class="book-body">
-        <div class="book-label">Book Details</div>
-
-        <div class="book-title">Advanced Deep Learning Architectures &amp; Techniques</div>
-
-        <div class="book-meta">
-          <div><strong>Authors:</strong> Dr. Anurag Shrivastava, Dr. Betshrine Rachel Jibinsingh, and Dr. Nidal Al Said</div>
-          <div><strong>Publisher:</strong> IIP Books - Advanced Deep Learning</div>
-        </div>
-
-        <div class="book-links">
-          <a class="link-btn" target="_blank"
-             href="https://iipbooks.com/?s=Advanced+Deep+Learning+Architectures+%26+Techniques">
-            Publisher Page
-          </a>
-
-          <a class="link-btn" target="_blank"
-             href="https://www.amazon.com/s?k=Advanced+Deep+Learning+Architectures+%26+Techniques">
-            Amazon
-          </a>
-        </div>
-
-        <div class="book-summary">
-          <div class="book-summary-title">Summary</div>
-          <div>
-            This book provides a comprehensive exploration of AI’s latest trends and practical applications while addressing critical ethical and socio-economic challenges. It aims to foster responsible discourse and inspire readers across all expertise levels to contribute to the evolving narrative of technology.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="book-card">
-      <div class="book-media">
-        <img src="images/book2.jpg" alt="Advanced Deep Learning Architectures &amp; Techniques cover">
-      </div>
-
-      <div class="book-body">
-        <div class="book-label">Book Details</div>
-
-        <div class="book-title">Advanced Deep Learning Architectures &amp; Techniques</div>
-
-        <div class="book-meta">
-          <div><strong>Authors:</strong> Dr. Anurag Shrivastava, Dr. Betshrine Rachel Jibinsingh, and Dr. Nidal Al Said</div>
-          <div><strong>Publisher:</strong> IIP Books - Advanced Deep Learning</div>
-        </div>
-
-        <div class="book-links">
-          <a class="link-btn" target="_blank"
-             href="https://iipbooks.com/?s=Advanced+Deep+Learning+Architectures+%26+Techniques">
-            Publisher Page
-          </a>
-
-          <a class="link-btn" target="_blank"
-             href="https://www.amazon.com/s?k=Advanced+Deep+Learning+Architectures+%26+Techniques">
-            Amazon
-          </a>
-        </div>
-
-        <div class="book-summary">
-          <div class="book-summary-title">Summary</div>
-          <div>
-            This book provides a comprehensive exploration of AI’s latest trends and practical applications while addressing critical ethical and socio-economic challenges. It aims to foster responsible discourse and inspire readers across all expertise levels to contribute to the evolving narrative of technology.
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="stats">
+    <div class="stat"><strong>20+</strong><span>Years Experience</span></div>
+    <div class="stat"><strong>20+</strong><span>Publications</span></div>
+    <div class="stat"><strong>6</strong><span>Research Areas</span></div>
+    <div class="stat"><strong>3</strong><span>Languages</span></div>
   </div>
-</section>
 
   <div class="section">
-    <h2>Selected Intellectual Property</h2>
-    <div class="item">
-      <strong>Selected patents and innovations will be added soon.</strong><br />
-      <span class="muted">Patents, inventions, and innovation projects.</span>
+    <h2>Selected Books</h2>
+
+    <div class="books">
+
+      <div class="book">
+        <img src="images/book1.jpg" alt="Book Cover">
+        <div class="book-title">Advanced Deep Learning Architectures & Techniques</div>
+        <div class="book-meta">Anurag Shrivastava · Betshrine Rachel Jibinsingh · Nidal Al Said · IIP Books</div>
+        <p>This book explores advanced deep learning models, practical architectures, and ethical AI considerations.</p>
+        <a href="https://iipbooks.com/" target="_blank">Publisher</a>
+        <a href="https://amazon.com/" target="_blank">Amazon</a>
+      </div>
+
+      <div class="book">
+        <img src="images/book2.jpg" alt="Book Cover">
+        <div class="book-title">Advanced Deep Learning Architectures & Techniques</div>
+        <div class="book-meta">Anurag Shrivastava · Betshrine Rachel Jibinsingh · Nidal Al Said · IIP Books</div>
+        <p>Comprehensive analysis of AI applications with focus on responsible and scalable systems.</p>
+        <a href="https://iipbooks.com/" target="_blank">Publisher</a>
+        <a href="https://amazon.com/" target="_blank">Amazon</a>
+      </div>
+
     </div>
   </div>
 
   <div class="section">
-    <h2>Selected News</h2>
-    <div class="item">Recent updates will be added soon.</div>
+    <h2>Selected Intellectual Property</h2>
+    <p>Patents and innovation projects will be listed here.</p>
   </div>
 
-  <div class="footer">© 2026 Nidal Al Said | nidalalsaid.github.io</div>
+  <div class="footer">
+    © 2026 Dr. Nidal Al Said · Ajman University
+  </div>
 
 </div>
+
 </body>
 </html>
