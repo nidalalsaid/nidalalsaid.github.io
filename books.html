@@ -1,91 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Books | Dr. Nidal Al Said</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .book-row{
-      display:grid;
-      grid-template-columns:140px 1fr;
-      gap:18px;
-      align-items:start;
-    }
-    .book-cover{
-      margin-bottom:0;
-    }
-    @media (max-width: 720px){
-      .book-row{ grid-template-columns:1fr; }
-      .book-cover{ width:100%; height:auto; max-height:320px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books | Dr. Nidal Al Said</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ===== Page Header (Same as IP) ===== */
+
+.page-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:25px;
+}
+
+.page-title{
+  font-size:44px;
+  font-weight:800;
+  margin:0;
+}
+
+.page-sub{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+.page-nav{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.rule{
+  height:1px;
+  background:var(--border);
+  margin:18px 0;
+}
+
+/* ===== Section Design (IP Style) ===== */
+
+.section{
+  margin-top:35px;
+}
+
+.section-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.section-icon{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  background:var(--teal-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.section-icon svg{
+  width:20px;
+  height:20px;
+  fill:var(--teal-dark);
+}
+
+.section-title{
+  font-size:20px;
+  font-weight:800;
+}
+
+/* ===== Table (Modernized IP Style) ===== */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+th, td{
+  padding:12px 14px;
+  text-align:left;
+  font-size:14px;
+}
+
+th{
+  background:#eaf2f3;
+  font-weight:800;
+  border-bottom:1px solid var(--border);
+}
+
+td{
+  border-bottom:1px solid var(--border);
+}
+
+tr:hover{
+  background:#f7fbfc;
+}
+
+.view-link{
+  font-weight:700;
+  color:var(--teal-dark);
+  text-decoration:none;
+}
+
+@media(max-width:760px){
+  .page-head{flex-direction:column;}
+  .page-nav{margin-top:15px;}
+  .page-title{font-size:36px;}
+}
+
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="hero">
-      <div>
-        <h1>Dr. Nidal Al Said</h1>
-        <div class="role">Associate Professor at Ajman University</div>
-        <div class="areas">Artificial Intelligence · Human–Computer Interaction · Data Analytics · Smart Digital Systems</div>
+<div class="container">
 
-        <div class="navbar">
-          <a class="navbtn" href="index.html">Home</a>
-          <a class="navbtn primary" href="books.html">Books</a>
-          <a class="navbtn" href="research.html">Research</a>
-          <a class="navbtn" href="ip.html">Intellectual Property</a>
-          <a class="navbtn" href="contact.html">Contact</a>
-          <a class="navbtn" href="cv.pdf">Download CV</a>
-        </div>
-      </div>
-
-      <div class="avatar">
-        <img src="profile.jpg" alt="Dr. Nidal Al Said" />
-      </div>
+<!-- HEADER -->
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Books & Scholarly Contributions</h1>
+    <div class="page-sub">
+      Authored books, edited volumes, and peer-reviewed book chapters.
     </div>
-
-    <div class="panel">
-      <div class="section-title">Selected Books</div>
-
-      <div class="book-grid">
-
-        <div class="book-card">
-          <div class="book-row">
-            <img class="book-cover" src="book-advanced-deep-learning.jpg" alt="Advanced Deep Learning Architectures &amp; Techniques cover" />
-            <div>
-              <div class="book-title">Advanced Deep Learning Architectures &amp; Techniques</div>
-              <div class="book-meta">Anurag Shrivastava · Betshrine Rachel Jibinsingh · Nidal Al Said · IIP Books</div>
-              <div class="book-desc">
-                Machine learning and deep learning have rapidly evolved, creating vast opportunities for engineering students but lacking unified, structured study material that covers core concepts, applications, and emerging research. This book aims to bridge that gap by presenting foundational ideas alongside real-world applications, empowering learners to build practical ML solutions across diverse domains.
-              </div>
-              <a class="btn" href="https://iipbooks.com/books/2928/Advanced-Deep-Learning-Architectures-Techniques" target="_blank" rel="noopener">Publisher</a>
-              <a class="btn" href="https://www.amazon.com/Advanced-Deep-Learning-Architectures-Techniques-ebook/dp/B0FN3D5X8C/" target="_blank" rel="noopener">Amazon</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <div class="book-row">
-            <img class="book-cover" src="book-intelligent-web-mining.jpg" alt="INTELLIGENT WEB MINING cover" />
-            <div>
-              <div class="book-title">INTELLIGENT WEB MINING: DISCOVERING PATTERNS IN ONLINE DATA</div>
-              <div class="book-meta">Dr. Nidal Al Said</div>
-              <div class="book-desc">
-                This book offers a structured, comprehensive introduction to web mining by covering its three core pillars—web content, structure, and usage mining—along with modern tools and frameworks. It provides an integrated perspective on analyzing user behavior, hyperlink patterns, and social media data, while also addressing scalable mining approaches in cloud environments.
-              </div>
-              <a class="btn" href="https://redshine.co.in/product/9789349154742/" target="_blank" rel="noopener">Publisher</a>
-              <a class="btn" href="https://www.amazon.com/INTELLIGENT-WEB-MINING-DISCOVERING-PATTERNS/dp/B0FGXZG1LR/" target="_blank" rel="noopener">Amazon</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="footer">© 2026 Dr. Nidal Al Said · Ajman University</div>
-
   </div>
+
+  <!-- Books hidden because we are inside this page -->
+  <div class="page-nav">
+    <a class="navbtn" href="index.html">Home</a>
+    <a class="navbtn" href="research.html">Research</a>
+    <a class="navbtn" href="ip.html">Intellectual Property</a>
+    <a class="navbtn" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<div class="panel">
+
+<!-- ================= SINGLE AUTHOR ================= -->
+
+<div class="section">
+
+<div class="section-head">
+<div class="section-icon">
+<svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+</div>
+<div class="section-title">Single-Author Books</div>
+</div>
+
+<table>
+<tr><th>Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
+
+<tr><td>Mining Minds: Smart Data-Driven Solutions in a Connected World</td><td>Jhanvika Technologies</td><td>2017</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Designing Social Media Interfaces</td><td>COSMAS Scientific</td><td>2018</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Information Society: Foundations, Impact, and Future</td><td>Essay Publication</td><td>2019</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Interactive Multimedia Design</td><td>Redshine</td><td>2019</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Intelligent Web Mining</td><td>Redshine</td><td>2020</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Social Media Intelligence</td><td>Infinity Publications</td><td>2021</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>AI and Society</td><td>Redshine</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>The AI Revolution</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>The Digital Nexus</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Intelligent Evolution</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+
+</table>
+</div>
+
+
+<!-- ================= CO AUTHORED ================= -->
+
+<div class="section">
+
+<div class="section-head">
+<div class="section-icon">
+<svg viewBox="0 0 24 24"><path d="M12 2l4 7h-8zM4 13h16v9H4z"/></svg>
+</div>
+<div class="section-title">Co-Authored Books</div>
+</div>
+
+<table>
+<tr><th>Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
+
+<tr><td>Satellite Networks and Communication</td><td>COSMAS Scientific</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>AI & Cybersecurity</td><td>AG Publishing</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>AI-Powered Research</td><td>SAN International</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Artificial Intelligence Fundamentals and Applications</td><td>Iterative International</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Advanced Deep Learning Architectures & Techniques</td><td>Iterative International</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Generative AI</td><td>Scientific International</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
+
+</table>
+</div>
+
+
+<!-- ================= EDITED ================= -->
+
+<div class="section">
+
+<div class="section-head">
+<div class="section-icon">
+<svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
+</div>
+<div class="section-title">Edited Books</div>
+</div>
+
+<table>
+<tr><th>Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
+
+<tr><td>Innovative Trends in Multidisciplinary Research</td><td>Redshine</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>AI and ChatGPT: New Learning Techniques in Education</td><td>Infinity Publications</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Frontiers of Multidisciplinary Research</td><td>Innovative Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Synergy in Research</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Intersecting Realms</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Contemporary Challenges in Multidisciplinary Research (Vol. 2)</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Beyond Boundaries</td><td>Redshine</td><td>2021</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Contemporary Challenges in Multidisciplinary Research: Collaborative Approach</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Bridging Disciplines</td><td>Redshine</td><td>2022</td><td><a class="view-link" href="#">View</a></td></tr>
+
+</table>
+</div>
+
+
+<!-- ================= CHAPTERS ================= -->
+
+<div class="section">
+
+<div class="section-head">
+<div class="section-icon">
+<svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/></svg>
+</div>
+<div class="section-title">Book Chapters</div>
+</div>
+
+<table>
+<tr><th>Chapter Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
+
+<tr><td>Integrating Business Intelligence and AI for Collaborative Leadership</td><td>IGI Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Economic Policy Optimization Powered by AI-Driven Business Intelligence</td><td>IGI Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+<tr><td>Transforming Marketing Campaign Effectiveness with AI-Based Analytics</td><td>IGI Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
+
+</table>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Dr. Nidal Al Said · Ajman University
+</div>
+
+</div>
 </body>
 </html>
