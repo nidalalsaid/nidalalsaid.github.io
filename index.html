@@ -7,7 +7,17 @@
 <link rel="stylesheet" href="theme.css" />
 
 <style>
-/* Home-only additions (safe) */
+/* prevent any global svg rules from breaking layout */
+svg{ width:auto; height:auto; }
+
+/* safe icon style only when explicitly used */
+.sicon{
+  width:18px;
+  height:18px;
+  fill:#1f6f63;
+  flex:none;
+}
+
 .grid-2{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -76,6 +86,23 @@
   background:var(--border);
   margin:14px 0;
 }
+
+.section-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 14px 0;
+  font-size:20px;
+  font-weight:800;
+  color:var(--primary);
+}
+.section-head::before{
+  content:"";
+  width:5px;
+  height:26px;
+  border-radius:3px;
+  background:var(--accent);
+}
 </style>
 </head>
 
@@ -102,25 +129,13 @@
     <div class="page-sub">AI · HCI · Data Analytics · Smart Digital Systems</div>
     <div class="rule"></div>
 
-    <div class="block">
-      <div class="ico">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.2 4.6-3.1 6.1L16 22H8l.1-6.9C6.2 13.6 5 11.5 5 9a7 7 0 0 1 7-7Zm-2 18h4l-.1-4.6 1.3-.9A5 5 0 1 0 7 9c0 1.8.9 3.5 2.4 4.5l1.5 1V20Z"/>
-        </svg>
-      </div>
-      <div>
-        <div class="btitle">Focus</div>
-        <div class="bsub">Human-centered AI, intelligent analytics, and smart digital systems with applied impact in education and media.</div>
-      </div>
-    </div>
-
     <div class="section">
-      <h2>
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <div class="section-head">
+        <svg class="sicon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 2h11a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm1 4v14h10V6H7Zm2 2h6v2H9V8Zm0 4h6v2H9v-2Z"/>
         </svg>
         Selected Books
-      </h2>
+      </div>
 
       <div class="grid-2">
 
@@ -130,7 +145,7 @@
           <p class="card-sub">Dr. Betshrine Rachel Jibinsingh · Dr. Anurag Shrivastava · Dr. Nidal Al Said</p>
           <div class="divider"></div>
           <div class="note">
-            Machine learning and deep learning have rapidly evolved, creating vast opportunities for engineering students but lacking unified, structured study material that covers core concepts, applications, and emerging research. This book bridges that gap by presenting foundational ideas alongside real-world applications, enabling learners to build practical ML solutions across diverse domains.
+            Machine learning and deep learning have rapidly evolved, creating vast opportunities for engineering students but lacking unified, structured study material. This book bridges that gap with foundations and real-world applications for practical ML solutions.
           </div>
           <div class="pills">
             <a class="primary" href="https://www.amazon.com/Advanced-Deep-Learning-Architectures-Techniques-ebook/dp/B0FN3D5X8C/ref=sr_1_5?dib=eyJ2IjoiMSJ9.pnYL1-89FDmlRI33ZfoYXFAmu_30EvkNvRSRwD09o0DGjHj071QN20LucGBJIEps.cFFJOeK5XvTmX237ScqbGHPga8zHAVUraXc6AY7ynPM&dib_tag=se&qid=1771526999&refinements=p_27%3ADr.+Nidal+Al+Said&s=books&sr=1-5&text=Dr.+Nidal+Al+Said" target="_blank" rel="noopener">Amazon</a>
@@ -144,7 +159,7 @@
           <p class="card-sub">Dr. Nidal Al Said</p>
           <div class="divider"></div>
           <div class="note">
-            A structured, comprehensive introduction to web mining through its three core pillars: web content, structure, and usage mining. It presents an integrated view of analyzing user behavior, hyperlink patterns, and social media data, with attention to scalable mining approaches in cloud environments.
+            A structured introduction to web mining across web content, structure, and usage mining, with an integrated view of user behavior, hyperlink patterns, social media data, and scalable approaches in cloud environments.
           </div>
           <div class="pills">
             <a class="primary" href="https://www.amazon.com/INTELLIGENT-WEB-MINING-DISCOVERING-PATTERNS/dp/B0FGXZG1LR/ref=sr_1_1?crid=1S4ZIKPMDNR09&dib=eyJ2IjoiMSJ9.pnYL1-89FDmlRI33ZfoYXEMGSuaEFNqpxmFQY7WBLBJIUwMq_x1pxmDDC7IhpnKj.3tsizry3Pl7lsy5rk6NJV3Sevsc2DcA0pSyFQ1o5jjg&dib_tag=se&keywords=nidal+al+said&qid=1771527130&s=digital-text&sprefix=nidal+al+said%2Cdigital-text%2C289&sr=1-1-catcorr" target="_blank" rel="noopener">Amazon</a>
@@ -156,12 +171,12 @@
     </div>
 
     <div class="section">
-      <h2>
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <div class="section-head">
+        <svg class="sicon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm2 4h6v2H9V7Zm0 4h6v2H9v-2Zm0 4h6v2H9v-2Z"/>
         </svg>
         Selected Publications
-      </h2>
+      </div>
 
       <div class="card">
         <div class="tag">Profiles</div>
@@ -176,56 +191,50 @@
     </div>
 
     <div class="section">
-      <h2>
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <div class="section-head">
+        <svg class="sicon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.2 4.6-3.1 6.1L16 22H8l.1-6.9C6.2 13.6 5 11.5 5 9a7 7 0 0 1 7-7Zm-2 18h4l-.1-4.6 1.3-.9A5 5 0 1 0 7 9c0 1.8.9 3.5 2.4 4.5l1.5 1V20Z"/>
         </svg>
         Selected Intellectual Property
-      </h2>
+      </div>
 
       <div class="grid-2">
-
         <div class="card">
           <div class="tag">Registered Design · United Kingdom</div>
           <h3 class="card-title">Data Analytics and Visualization Device</h3>
-          <div class="meta">Reg Design No. 6499329 | Registered: 15 January 2026 | Granted: 28 January 2026</div>
+          <div class="card-sub">Reg Design No. 6499329 | Registered: 15 January 2026 | Granted: 28 January 2026</div>
           <div class="divider"></div>
           <div class="note">
-            A specialized device created for advanced data processing, analytical interpretation, and visual information display. Its protected status confirms the device’s physical form and aesthetic configuration are uniquely innovative, ensuring exclusive rights to its appearance and preventing unauthorized reproduction.
+            A specialized device created for advanced data processing, analytical interpretation, and visual information display, protected to ensure exclusive rights to its unique physical form and aesthetic configuration.
           </div>
         </div>
 
         <div class="card">
           <div class="tag">Copyright · Canada</div>
           <h3 class="card-title">Human-Centered Artificial Intelligence System for Intelligent Data Analytics</h3>
-          <div class="meta">Reg No. 1242009 | Registered: 07 February 2026</div>
+          <div class="card-sub">Reg No. 1242009 | Registered: 07 February 2026</div>
           <div class="divider"></div>
           <div class="note">
-            A human-centered AI framework blending intelligent analytics with transparency, ethical governance, and continuous human oversight. It addresses black-box limitations by supporting explainability, accountability, and user-driven decision support across diverse real-world domains.
+            A human-centered AI framework that blends intelligent analytics with transparency, ethical governance, and continuous human oversight, supporting explainability and accountable decision support.
           </div>
         </div>
-
       </div>
 
-      <div class="note" style="margin-top:12px;">
-        This section intentionally shows selected records only. For the full list, use the IP page.
-      </div>
+      <div class="note" style="margin-top:12px;">Note: This section shows selected records only. See the IP page for full details.</div>
     </div>
 
     <div class="section">
-      <h2>
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <div class="section-head">
+        <svg class="sicon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 4h16v14H6a2 2 0 0 1-2-2V4Zm4 16h12v2H8v-2Zm0-12h8v2H8V8Zm0 4h10v2H8v-2Z"/>
         </svg>
         Latest News
-      </h2>
+      </div>
 
       <div class="card">
         <div class="tag">Coming Soon</div>
         <h3 class="card-title">Intelligent Visual Design: An Essential Guide for Non-Designers in the Age of AI</h3>
-        <div class="note">
-          A forthcoming book focused on visual judgment for non-designers, emphasizing how AI changes creation while making human evaluation and decision quality more essential.
-        </div>
+        <div class="note">Coming soon.</div>
       </div>
     </div>
 
