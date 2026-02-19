@@ -579,4 +579,20 @@ a{color:inherit}
   border-color: rgba(26,188,156,0.35);
   color:#0f2f3a;
 }
+.top{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(244,247,249,0.92);
+  backdrop-filter: blur(10px);
+  padding: 14px 0;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
 
