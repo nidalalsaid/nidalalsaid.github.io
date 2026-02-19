@@ -645,3 +645,9 @@ a{color:inherit}
   flex-wrap:wrap;
   gap:10px;
 }
+.books{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  align-items:stretch;
+}
