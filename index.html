@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Nidal Al Said</title>
+  <title>Dr. Nidal Al Said | Associate Professor | AI, Data Mining, HCI</title>
+  <meta name="description" content="Dr. Nidal Al Said — Associate Professor of Information Technology. Research and academic contributions in AI, data mining, HCI, smart applications, and digital media." />
 
   <style>
     :root{
@@ -12,10 +13,14 @@
       --text:#0f172a;
       --muted:#64748b;
       --line:#e6eaef;
-      --mint:#5fb59f;
+
+      --mint:#2f7f6e;
+      --mint-deep:#1f6f61;
       --mint-weak:#eaf6f2;
+
       --shadow: 0 12px 30px rgba(16,24,40,.08);
       --shadow2: 0 10px 24px rgba(16,24,40,.06);
+
       --radius:22px;
       --radius2:18px;
     }
@@ -31,83 +36,176 @@
     .wrap{
       max-width:1100px;
       margin:0 auto;
-      padding:28px 22px 44px;
+      padding:22px 22px 44px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:18px;
+      margin:6px 0 18px;
+    }
+
+    .topnav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-weight:750;
+      font-size:14px;
+    }
+
+    .topnav a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 4px;
+      border-bottom:2px solid transparent;
+      transition:color .12s ease, border-color .12s ease;
+    }
+
+    .topnav a:hover{
+      color:var(--text);
+      border-color:rgba(47,127,110,.35);
+    }
+
+    .topnav a.active{
+      color:var(--text);
+      border-color:rgba(47,127,110,.65);
+    }
+
+    .cvbtn{
+      text-decoration:none;
+      background:rgba(47,127,110,.92);
+      color:#fff;
+      font-weight:850;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(47,127,110,.38);
+      box-shadow:0 10px 22px rgba(16,24,40,.10);
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      transition:transform .08s ease, box-shadow .12s ease, filter .12s ease;
+      font-size:14px;
+      white-space:nowrap;
+    }
+
+    .cvbtn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 26px rgba(16,24,40,.12);
+      filter:saturate(1.02);
+    }
+
+    .cvbtn svg{
+      width:16px;
+      height:16px;
+      fill:#fff;
+      opacity:.95;
     }
 
     .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(245,247,248,1) 100%);
+      border:1px solid rgba(230,234,239,.9);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.3fr .9fr;
+      gap:22px;
+      align-items:center;
+    }
+
+    .name-row{
       display:flex;
       align-items:flex-start;
-      justify-content:space-between;
-      gap:26px;
-      margin-bottom:18px;
+      gap:12px;
     }
 
-    .hero-left h1{
+    .accentbar{
+      width:6px;
+      height:44px;
+      border-radius:8px;
+      background:rgba(47,127,110,.72);
+      margin-top:6px;
+      flex:0 0 6px;
+    }
+
+    .hero h1{
       margin:0;
-      font-size:52px;
-      letter-spacing:-0.9px;
+      font-size:46px;
+      letter-spacing:-0.8px;
       line-height:1.05;
+      font-weight:950;
     }
 
-    .hero-left .subtitle{
-      margin:12px 0 0;
-      color:var(--muted);
-      font-size:20px;
-      line-height:1.5;
-    }
-
-    .hero-left .areas{
+    .hero p{
       margin:10px 0 0;
       color:var(--muted);
-      font-size:16px;
-      line-height:1.6;
+      font-size:15px;
+      line-height:1.75;
+      max-width:720px;
+      font-weight:650;
     }
 
-    .nav{
-      margin-top:16px;
+    .hero-badges{
+      margin-top:12px;
       display:flex;
       gap:10px;
       flex-wrap:wrap;
       align-items:center;
     }
 
-    .nav a{
-      text-decoration:none;
-      color:#0f172a;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:10px 16px;
-      font-weight:650;
-      box-shadow:0 6px 18px rgba(16,24,40,.06);
-      transition:transform .08s ease, box-shadow .12s ease;
-    }
-
-    .nav a:hover{
-      transform:translateY(-1px);
-      box-shadow:0 10px 22px rgba(16,24,40,.08);
-    }
-
-    .nav a.primary{
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
       background:var(--mint-weak);
-      border-color:#cfeae2;
+      border:1px solid #d6efe7;
+      color:var(--mint-deep);
+      font-weight:850;
+      font-size:13px;
+      letter-spacing:.01em;
+      white-space:nowrap;
     }
 
-    .hero-right{
+    .pill svg{
+      width:16px;
+      height:16px;
+      fill:var(--mint-deep);
+      opacity:.95;
+    }
+
+    .portrait{
       display:flex;
       justify-content:flex-end;
-      min-width:180px;
-      padding-top:6px;
+      align-items:center;
     }
 
     .avatar{
-      width:160px;
-      height:160px;
+      width:210px;
+      height:210px;
       border-radius:999px;
-      border:5px solid rgba(95,181,159,.9);
+      border:8px solid rgba(47,127,110,.18);
       background:#fff;
       overflow:hidden;
       box-shadow:0 16px 36px rgba(16,24,40,.10);
+      position:relative;
+    }
+
+    .avatar:before{
+      content:"";
+      position:absolute;
+      inset:-10px;
+      border-radius:999px;
+      border:10px solid rgba(47,127,110,.08);
+      pointer-events:none;
     }
 
     .avatar img{
@@ -133,35 +231,78 @@
       display:flex;
       align-items:center;
       gap:12px;
-      margin:0 0 10px;
-      font-size:28px;
+      margin:0 0 12px;
+      font-size:26px;
       letter-spacing:-0.35px;
+      font-weight:950;
     }
 
     .section-title .bar{
       width:6px;
       height:34px;
       border-radius:6px;
-      background:var(--mint);
+      background:rgba(47,127,110,.72);
     }
 
-    .profile-grid{
+    /* ===== Professional Profile (new block like your screenshot) ===== */
+    .profile-wrap{
       display:grid;
-      grid-template-columns: 1.3fr .9fr;
-      gap:18px;
+      grid-template-columns: 1.05fr 1fr;
+      gap:16px;
       align-items:stretch;
     }
 
-    .profile-text{
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow2);
+      padding:16px;
+    }
+
+    .card-head{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:10px;
+    }
+
+    .card-icon{
+      width:34px;
+      height:34px;
+      border-radius:12px;
+      background:var(--mint-weak);
+      border:1px solid #d6efe7;
+      display:grid;
+      place-items:center;
+      flex:0 0 34px;
+    }
+
+    .card-icon svg{
+      width:18px;
+      height:18px;
+      fill:var(--mint-deep);
+    }
+
+    .card-cap{
+      font-size:12px;
+      letter-spacing:.14em;
+      font-weight:950;
+      color:var(--text);
+      text-transform:uppercase;
+      margin:0;
+    }
+
+    .overview-text{
+      margin:0;
       color:var(--muted);
-      font-size:16px;
-      line-height:1.7;
-      margin:0 0 12px;
-      max-width:680px;
+      font-size:14px;
+      line-height:1.75;
+      font-weight:650;
     }
 
     .checklist{
-      margin:0;
+      margin:12px 0 0;
       padding:0;
       list-style:none;
       display:grid;
@@ -172,8 +313,8 @@
       display:flex;
       gap:10px;
       align-items:flex-start;
-      color:#0f172a;
-      font-weight:650;
+      color:var(--text);
+      font-weight:850;
     }
 
     .tick{
@@ -191,43 +332,49 @@
     .tick svg{
       width:14px;
       height:14px;
-      fill:#2f7f6e;
+      fill:var(--mint-deep);
     }
 
-    .side-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:var(--radius2);
-      box-shadow:var(--shadow2);
-      padding:18px 18px 12px;
+    .skills-pills{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
     }
 
-    .side-card .cap{
-      font-size:13px;
-      letter-spacing:.12em;
-      font-weight:800;
-      color:#0f172a;
-      text-transform:uppercase;
-      margin:2px 0 10px;
-    }
-
-    .side-list{
-      margin:0;
-      padding:0;
-      list-style:none;
+    .stats{
+      margin-top:12px;
       display:grid;
-      gap:0;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
     }
 
-    .side-list li{
-      padding:10px 0;
-      border-top:1px solid var(--line);
+    .stat{
+      border:1px solid rgba(47,127,110,.18);
+      background:linear-gradient(180deg, rgba(47,127,110,.10) 0%, rgba(255,255,255,1) 70%);
+      border-radius:16px;
+      padding:12px;
+      text-align:center;
+      box-shadow:var(--shadow2);
+    }
+
+    .stat .n{
+      font-size:30px;
+      font-weight:950;
+      letter-spacing:-.8px;
+      color:var(--mint-deep);
+      line-height:1;
+    }
+
+    .stat .t{
+      margin-top:6px;
       color:var(--muted);
-      font-weight:650;
+      font-weight:800;
+      font-size:12.5px;
+      line-height:1.2;
     }
 
-    .side-list li:first-child{ border-top:none; }
-
+    /* ===== Cards below (kept as your old design) ===== */
     .items-grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -268,12 +415,13 @@
       font-size:20px;
       letter-spacing:-0.25px;
       line-height:1.25;
+      font-weight:950;
     }
 
     .meta{
       margin:8px 0 0;
       color:var(--muted);
-      font-weight:650;
+      font-weight:750;
       font-size:14px;
       line-height:1.5;
     }
@@ -295,12 +443,12 @@
     .btn{
       display:inline-block;
       text-decoration:none;
-      background:rgba(95,181,159,.92);
+      background:rgba(47,127,110,.92);
       color:#fff;
-      font-weight:750;
+      font-weight:850;
       padding:10px 14px;
       border-radius:12px;
-      border:1px solid rgba(95,181,159,.40);
+      border:1px solid rgba(47,127,110,.40);
       box-shadow:0 10px 22px rgba(16,24,40,.10);
       transition:transform .08s ease, box-shadow .12s ease, filter .12s ease;
       font-size:14px;
@@ -312,13 +460,6 @@
       filter:saturate(1.02);
     }
 
-    .btn.ghost{
-      background:#fff;
-      color:#0f172a;
-      border:1px solid var(--line);
-      box-shadow:0 8px 18px rgba(16,24,40,.06);
-    }
-
     .ip-card{
       background:#fff;
       border:1px solid var(--line);
@@ -328,10 +469,11 @@
     }
 
     .ip-top{
-      color:#0f172a;
-      font-weight:850;
+      color:var(--text);
+      font-weight:950;
       margin:0 0 8px;
       letter-spacing:-0.2px;
+      font-size:14px;
     }
 
     .ip-title{
@@ -339,14 +481,14 @@
       font-size:18px;
       letter-spacing:-0.2px;
       line-height:1.25;
-      font-weight:850;
+      font-weight:950;
     }
 
     .ip-meta{
       margin:10px 0 0;
       color:var(--muted);
       font-size:13px;
-      font-weight:650;
+      font-weight:700;
     }
 
     .ip-desc{
@@ -368,10 +510,10 @@
       display:inline-block;
       background:var(--mint-weak);
       border:1px solid #d6efe7;
-      color:#2f7f6e;
+      color:var(--mint-deep);
       padding:6px 10px;
       border-radius:999px;
-      font-weight:850;
+      font-weight:950;
       font-size:12px;
       letter-spacing:.02em;
     }
@@ -381,6 +523,7 @@
       font-size:18px;
       letter-spacing:-0.2px;
       line-height:1.25;
+      font-weight:950;
     }
 
     .news p{
@@ -398,41 +541,77 @@
     }
 
     @media (max-width: 980px){
-      .hero{ flex-direction:column; }
-      .hero-right{ justify-content:flex-start; }
-      .profile-grid{ grid-template-columns:1fr; }
+      .hero-inner{ grid-template-columns:1fr; }
+      .portrait{ justify-content:flex-start; }
+      .profile-wrap{ grid-template-columns:1fr; }
       .items-grid{ grid-template-columns:1fr; }
       .item-card{ flex-direction:column; }
       .cover{ width:100%; height:220px; flex:0 0 auto; }
+      .topbar{ justify-content:flex-start; }
     }
 
     @media (max-width: 520px){
-      .hero-left h1{ font-size:40px; }
-      .avatar{ width:140px; height:140px; }
+      .hero h1{ font-size:40px; }
+      .avatar{ width:175px; height:175px; }
+      .stats{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <div class="hero">
-      <div class="hero-left">
-        <h1>Dr. Nidal Al Said</h1>
-        <div class="subtitle">___________________________________________</div>
-        <div class="areas">Associate Professor at Ajman University |AI, HCI & Data Analytics | Smart Digital Systems| Interdisciplinary Research and Innovation in Technology, Media, Design & Education</div>
 
-        <div class="nav">
-          <a class="primary" href="books.html">Books</a>
-          <a href="research.html">Research</a>
-          <a href="ip.html">Intellectual Property</a>
-          <a href="contact.html">Contact</a>
-          <a class="ghost" href="cv.pdf" download>Download CV</a>
-        </div>
+    <div class="topbar">
+      <div class="topnav" aria-label="Primary navigation">
+        <a class="active" href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="ip.html">Intellectual Property</a>
+        <a href="contact.html">Contact</a>
       </div>
+      <a class="cvbtn" href="cv.pdf" download>
+        Download CV
+        <svg viewBox="0 0 24 24"><path d="M12 3a1 1 0 011 1v9.6l2.3-2.3 1.4 1.4-4.7 4.7-4.7-4.7 1.4-1.4 2.3 2.3V4a1 1 0 011-1zM5 19h14v2H5v-2z"/></svg>
+      </a>
+    </div>
 
-      <div class="hero-right">
-        <div class="avatar">
-          <img src="profile.jpg" alt="Dr. Nidal Al Said" />
+    <div class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="name-row">
+            <span class="accentbar" aria-hidden="true"></span>
+            <div>
+              <h1>Dr. Nidal Al Said</h1>
+              <p>
+                Academic expert in AI, HCI, Data Analytics & Smart Digital Systems. Dedicated to interdisciplinary research and innovation in technology, media, education, and accreditation.
+              </p>
+
+              <div class="hero-badges">
+                <span class="pill">
+                  <svg viewBox="0 0 24 24"><path d="M12 2l4 4v5c0 2.8-1.9 5.3-4.6 6.2L12 22l-2.9-4.8C6.4 16.3 4.5 13.8 4.5 11V6l4-4h3.5z"/></svg>
+                  AI Research & Smart Systems
+                </span>
+                <span class="pill">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 6h10v4H4v-4zm0 6h16v4H4v-4z"/></svg>
+                  Data Mining & Analytics
+                </span>
+                <span class="pill">
+                  <svg viewBox="0 0 24 24"><path d="M7 2h10v4H7V2zM5 8h14a3 3 0 013 3v6a3 3 0 01-3 3H5a3 3 0 01-3-3v-6a3 3 0 013-3z"/></svg>
+                  HCI & Digital Media
+                </span>
+                <span class="pill">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12v6H6V2zm-2 9h16v11H4V11zm3 2v7h2v-7H7zm4 0v7h2v-7h-2zm4 0v7h2v-7h-2z"/></svg>
+                  Accreditation & OBE Leadership
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <div class="avatar">
+            <img src="profile.jpg" alt="Dr. Nidal Al Said" />
+          </div>
         </div>
       </div>
     </div>
@@ -440,10 +619,18 @@
     <div class="panel section">
       <div class="section-title"><span class="bar"></span>Professional Profile</div>
 
-      <div class="profile-grid">
-        <div>
-          <p class="profile-text">
-            Associate Professor of Information Technology with extensive academic and research experience across the UAE, Oman, Jordan, and Greece.
+      <div class="profile-wrap">
+
+        <div class="card">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a6 6 0 016 6c0 2.2-1.2 4.2-3.1 5.2 2.8 1.2 4.6 3.7 4.6 6.8v1H4v-1c0-3.1 1.8-5.6 4.6-6.8A6 6 0 016 8a6 6 0 016-6zm0 2a4 4 0 00-4 4 4 4 0 008 0 4 4 0 00-4-4z"/></svg>
+            </div>
+            <div class="card-cap">Overview</div>
+          </div>
+
+          <p class="overview-text">
+            Associate Professor with <strong>20+ years</strong> of academic, research and leadership experience spanning the UAE, Oman, Jordan, and Greece.
           </p>
 
           <ul class="checklist">
@@ -474,22 +661,42 @@
           </ul>
         </div>
 
-        <div class="side-card">
-          <div class="cap">Research Areas</div>
-          <ul class="side-list">
-            <li>Artificial Intelligence</li>
-            <li>Machine Learning</li>
-            <li>Data Mining</li>
-            <li>Human–Computer Interaction</li>
-            <li>Smart Applications</li>
-            <li>AI in Education & Digital Media</li>
-          </ul>
+        <div class="card">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 6h10v4H4v-4zm0 6h16v4H4v-4z"/></svg>
+            </div>
+            <div class="card-cap">Skills & Competencies</div>
+          </div>
+
+          <div class="skills-pills">
+            <span class="pill">AI & Machine Learning</span>
+            <span class="pill">Data Mining & Analytics</span>
+            <span class="pill">Human–Computer Interaction</span>
+            <span class="pill">Accreditation & OBE Leadership</span>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="n">20+</div>
+              <div class="t">Years of Experience</div>
+            </div>
+            <div class="stat">
+              <div class="n">50+</div>
+              <div class="t">Publications</div>
+            </div>
+            <div class="stat">
+              <div class="n">3</div>
+              <div class="t">Languages</div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
 
     <div class="panel section">
-      <div class="section-title"><span class="bar"></span>Selected s</div>
+      <div class="section-title"><span class="bar"></span>Selected Books</div>
 
       <div class="items-grid">
         <div class="item-card">
@@ -500,11 +707,11 @@
             <h3>Advanced Deep Learning Architectures & Techniques (Kindle Edition)</h3>
             <div class="meta">Dr. Betshrine Rachel Jibinsingh · Dr. Anurag Shrivastava · Dr. Nidal Al Said</div>
             <p class="desc">
-              Machine learning and deep learning have rapidly evolved, creating vast opportunities for engineering students but lacking unified, structured study material that covers core concepts, applications, and emerging research. This book aims to bridge that gap by presenting foundational ideas alongside real-world applications, empowering learners to build practical ML solutions across diverse domains.
+              Machine learning and deep learning have rapidly evolved, creating vast opportunities for engineering students but lacking unified, structured study material that covers core concepts, applications, and emerging research.
             </p>
             <div class="actions">
               <a class="btn" href="https://iipbooks.com/books/2928/Advanced-Deep-Learning-Architectures-Techniques" target="_blank" rel="noopener">Publisher</a>
-              <a class="btn" href="https://www.amazon.com/Advanced-Deep-Learning-Architectures-Techniques-ebook/dp/B0FN3D5X8C/ref=sr_1_5?dib=eyJ2IjoiMSJ9.pnYL1-89FDmlRI33ZfoYXFAmu_30EvkNvRSRwD09o0DGjHj071QN20LucGBJIEps.cFFJOeK5XvTmX237ScqbGHPga8zHAVUraXc6AY7ynPM&dib_tag=se&qid=1771526999&refinements=p_27%3ADr.+Nidal+Al+Said&s=books&sr=1-5&text=Dr.+Nidal+Al+Said" target="_blank" rel="noopener">Amazon</a>
+              <a class="btn" href="https://www.amazon.com/Advanced-Deep-Learning-Architectures-Techniques-ebook/dp/B0FN3D5X8C/" target="_blank" rel="noopener">Amazon</a>
             </div>
           </div>
         </div>
@@ -517,11 +724,11 @@
             <h3>INTELLIGENT WEB MINING: DISCOVERING PATTERNS IN ONLINE DATA</h3>
             <div class="meta">Dr. Nidal Al Said</div>
             <p class="desc">
-              This book offers a structured, comprehensive introduction to web mining by covering its three core pillars—web content, structure, and usage mining—along with modern tools and frameworks. It provides an integrated perspective on analyzing user behavior, hyperlink patterns, and social media data, while also addressing scalable mining approaches in cloud environments.
+              This book offers a structured, comprehensive introduction to web mining by covering web content, structure, and usage mining, alongside modern frameworks and practical perspectives on scalable analytics.
             </p>
             <div class="actions">
               <a class="btn" href="https://redshine.co.in/product/9789349154742/" target="_blank" rel="noopener">Publisher</a>
-              <a class="btn" href="https://www.amazon.com/INTELLIGENT-WEB-MINING-DISCOVERING-PATTERNS/dp/B0FGXZG1LR/ref=sr_1_1?crid=1S4ZIKPMDNR09&dib=eyJ2IjoiMSJ9.pnYL1-89FDmlRI33ZfoYXEMGSuaEFNqpxmFQY7WBLBJIUwMq_x1pxmDDC7IhpnKj.3tsizry3Pl7lsy5rk6NJV3Sevsc2DcA0pSyFQ1o5jjg&dib_tag=se&keywords=nidal+al+said&qid=1771527130&s=digital-text&sprefix=nidal+al+said%2Cdigital-text%2C289&sr=1-1-catcorr" target="_blank" rel="noopener">Amazon</a>
+              <a class="btn" href="https://www.amazon.com/INTELLIGENT-WEB-MINING-DISCOVERING-PATTERNS/dp/B0FGXZG1LR/" target="_blank" rel="noopener">Amazon</a>
             </div>
           </div>
         </div>
@@ -534,15 +741,13 @@
       <div class="items-grid">
         <div class="item-card">
           <div class="cover">
-            <img src="pub1.jpg" alt="Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical
-study of Zain Telecom company in Jordan" />
+            <img src="pub1.jpg" alt="Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical study of Zain Telecom company in Jordan" />
           </div>
           <div class="item-body">
-            <h3>Does Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical
-study of Zain Telecom company in Jordan</h3>
+            <h3>Does Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical study of Zain Telecom company in Jordan</h3>
             <div class="meta">Al Said, N. (2024). International Journal of Data and Network Science, 8, 1–10.</div>
             <p class="desc">
-              This research examines how AI-driven trust mechanisms mediate the negative impact of data privacy concerns on digital marketing effectiveness among ZAIN Telecom employees. The findings show that robust AI trust systems are essential for mitigating privacy risks and sustaining competitive advantage.
+              This research examines how AI-driven trust mechanisms mediate the impact of data privacy concerns on digital marketing effectiveness among ZAIN Telecom employees.
             </p>
             <div class="actions">
               <a class="btn" href="https://doi.org/10.5267/j.ijdns.2024.8.023" target="_blank" rel="noopener">Click to view the publication</a>
@@ -558,7 +763,7 @@ study of Zain Telecom company in Jordan</h3>
             <h3>A Hybrid GAN-CNN Network with Attention Mechanism for Detecting Fake Profile Images in Microblogs</h3>
             <div class="meta">Al Said, N. (2025). Ingénierie des Systèmes d’Information, 30(6), 1145–1152.</div>
             <p class="desc">
-              This work develops the “GAMN” model, a hybrid GAN-CNN architecture using a Gram matrix and self-attention to detect synthetic profile images. The model achieved 89.27% accuracy, outperforming ResNet and Co-detect benchmarks.
+              This work develops the “GAMN” model, a hybrid GAN-CNN architecture using a Gram matrix and self-attention to detect synthetic profile images, achieving strong performance against benchmark models.
             </p>
             <div class="actions">
               <a class="btn" href="https://doi.org/10.18280/isi.300604" target="_blank" rel="noopener">Click to view the publication</a>
@@ -566,10 +771,6 @@ study of Zain Telecom company in Jordan</h3>
           </div>
         </div>
       </div>
-
-      <p style="margin:12px 0 0; color:var(--muted); font-size:13px; line-height:1.6;">
-        
-      </p>
     </div>
 
     <div class="panel section">
@@ -581,7 +782,7 @@ study of Zain Telecom company in Jordan</h3>
           <p class="ip-title">Data Analytics and Visualization Device</p>
           <div class="ip-meta">Reg Design No. 6499329 | Registered: 15 January 2026 | Granted: 28 January 2026</div>
           <p class="ip-desc">
-            This registered design represents a specialized device created for advanced data processing, analytical interpretation, and visual information display. Its protected status confirms that the device’s physical form and aesthetic configuration are uniquely innovative, ensuring exclusive rights to its appearance and preventing any unauthorized reproduction.
+            This registered design represents a specialized device created for advanced data processing, analytical interpretation, and visual information display. Its protected status confirms that the device’s physical form and aesthetic configuration are uniquely innovative.
           </p>
         </div>
 
@@ -590,7 +791,7 @@ study of Zain Telecom company in Jordan</h3>
           <p class="ip-title">Human-Centered Artificial Intelligence System for Intelligent Data Analytics</p>
           <div class="ip-meta">Reg No. 1242009 | Registered: 07 February 2026 | Category: Literary</div>
           <p class="ip-desc">
-            This project introduces a human-centered AI framework that blends intelligent analytics with transparency, ethical governance, and continuous human oversight. It addresses the limitations of black-box AI by ensuring explainability, accountability, and user-driven decision support across diverse real-world domains.
+            This project introduces a human-centered AI framework that blends intelligent analytics with transparency, ethical governance, and continuous human oversight, ensuring explainability and accountable decision support.
           </p>
         </div>
       </div>
