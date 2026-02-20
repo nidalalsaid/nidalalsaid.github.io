@@ -1,81 +1,143 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Books | Dr. Nidal Al Said</title>
-<link rel="stylesheet" href="style.css">
 
 <style>
+/* نفس ألوان وتنسيق ip.html حرفياً */
+:root{
+  --bg:#f4f7f9;
+  --card:#ffffff;
+  --accent:#1abc9c;
+  --accent2:#0f766e;
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --shadow:0 10px 22px rgba(2,8,23,0.06);
+}
 
-/* ===== Page Header (Same as IP) ===== */
+*{box-sizing:border-box;margin:0;padding:0}
 
-.page-head{
+body{
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+.container{
+  width:90%;
+  max-width:1050px;
+  margin:auto;
+  padding:50px 0;
+}
+
+/* Header مطابق ip.html */
+.top{
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
-  margin-bottom:25px;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:26px;
+}
+
+.title h1{
+  font-size:30px;
+  margin-bottom:6px;
+}
+
+.title p{
+  color:var(--muted);
+}
+
+.nav a{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  margin-left:8px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.panel{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:26px;
+  box-shadow:var(--shadow);
 }
 
 .page-title{
-  font-size:44px;
+  font-size:28px;
   font-weight:800;
-  margin:0;
-}
-
-.page-sub{
-  margin-top:10px;
-  color:var(--muted);
-  font-size:16px;
-}
-
-.page-nav{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  margin-bottom:10px;
 }
 
 .rule{
   height:1px;
   background:var(--border);
-  margin:18px 0;
+  margin:12px 0 18px 0;
 }
 
-/* ===== Section Design (IP Style) ===== */
-
+/* Section Header مثل group-head في ip.html */
 .section{
-  margin-top:35px;
+  margin-top:22px;
 }
 
 .section-head{
   display:flex;
   align-items:center;
   gap:12px;
-  margin-bottom:15px;
+  padding:14px 14px;
+  border:1px solid rgba(26,188,156,0.28);
+  background:linear-gradient(180deg, rgba(26,188,156,0.10) 0%, rgba(255,255,255,0.95) 100%);
+  border-radius:12px;
+  margin-bottom:10px;
 }
 
 .section-icon{
-  width:42px;
-  height:42px;
-  border-radius:10px;
-  background:var(--teal-soft);
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:rgba(26,188,156,0.18);
   display:flex;
   align-items:center;
   justify-content:center;
+  flex:0 0 38px;
 }
 
 .section-icon svg{
-  width:20px;
-  height:20px;
-  fill:var(--teal-dark);
+  width:18px;
+  height:18px;
+  fill:var(--accent2);
 }
 
 .section-title{
-  font-size:20px;
-  font-weight:800;
+  font-size:17px;
+  font-weight:900;
+  margin:0;
+  color:var(--text);
 }
 
-/* ===== Table (Modernized IP Style) ===== */
+/* Tables (نفس روح IP لكن جدول) */
+.table-wrap{
+  margin-top:10px;
+  border-left:3px solid rgba(26,188,156,0.18);
+  padding-left:14px;
+}
 
 table{
   width:100%;
@@ -84,7 +146,7 @@ table{
   border:1px solid var(--border);
   border-radius:14px;
   overflow:hidden;
-  box-shadow:var(--shadow);
+  box-shadow:0 10px 22px rgba(2,8,23,0.06);
 }
 
 th, td{
@@ -97,6 +159,7 @@ th{
   background:#eaf2f3;
   font-weight:800;
   border-bottom:1px solid var(--border);
+  color:var(--text);
 }
 
 td{
@@ -109,124 +172,114 @@ tr:hover{
 
 .view-link{
   font-weight:700;
-  color:var(--teal-dark);
+  color:var(--accent2);
   text-decoration:none;
 }
 
-@media(max-width:760px){
-  .page-head{flex-direction:column;}
-  .page-nav{margin-top:15px;}
-  .page-title{font-size:36px;}
+.view-link:hover{
+  color:var(--accent);
+  text-decoration:underline;
 }
 
+.footer{
+  margin-top:60px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<!-- HEADER -->
-<div class="page-head">
-  <div>
-    <h1 class="page-title">Books & Scholarly Contributions</h1>
-    <div class="page-sub">
-      Authored books, edited volumes, and peer-reviewed book chapters.
+  <div class="top">
+    <div class="title">
+      <h1>Books</h1>
+      <p>Authored books, edited volumes, and peer-reviewed book chapters.</p>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="ip.html">Intellectual Property</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 
-  <!-- Books hidden because we are inside this page -->
-  <div class="page-nav">
-    <a class="navbtn" href="index.html">Home</a>
-    <a class="navbtn" href="research.html">Research</a>
-    <a class="navbtn" href="ip.html">Intellectual Property</a>
-    <a class="navbtn" href="contact.html">Contact</a>
+  <div class="panel">
+    <div class="page-title">Books & Scholarly Contributions</div>
+    <div class="rule"></div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+        </div>
+        <div class="section-title">Single-Author Books</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <tr><th>Title</th><th>Link</th></tr>
+          <tr><td>Mining Minds: Smart Data-Driven Solutions in a Connected World</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Designing Social Media Interfaces</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Information Society: Foundations, Impact, and Future</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Interactive Multimedia Design</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Intelligent Web Mining</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Social Media Intelligence</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>AI and Society</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>The AI Revolution</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>The Digital Nexus</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Intelligent Evolution</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l4 7h-8zM4 13h16v9H4z"/></svg>
+        </div>
+        <div class="section-title">Co-Authored Books</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <tr><th>Title</th><th>Link</th></tr>
+          <tr><td>Satellite Networks and Communication</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>AI & Cybersecurity</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>AI-Powered Research</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Artificial Intelligence Fundamentals and Applications</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Advanced Deep Learning Architectures & Techniques</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Generative AI</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/></svg>
+        </div>
+        <div class="section-title">Book Chapters</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <tr><th>Chapter Title</th><th>Link</th></tr>
+          <tr><td>Integrating Business Intelligence and AI for Collaborative Leadership</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Economic Policy Optimization Powered by AI-Driven Business Intelligence</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+          <tr><td>Transforming Marketing Campaign Effectiveness with AI-Based Analytics</td><td><a class="view-link" href="https://iipbooks.com/" target="_blank" rel="noopener">View</a></td></tr>
+        </table>
+      </div>
+    </div>
+
   </div>
-</div>
 
-<div class="panel">
-
-<!-- ================= SINGLE AUTHOR ================= -->
-
-<div class="section">
-
-<div class="section-head">
-<div class="section-icon">
-<svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
-</div>
-<div class="section-title">Single-Author Books</div>
-</div>
-
-<table>
-<tr><th>Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
-
-<tr><td>Mining Minds: Smart Data-Driven Solutions in a Connected World</td><td>Jhanvika Technologies</td><td>2017</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Designing Social Media Interfaces</td><td>COSMAS Scientific</td><td>2018</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Information Society: Foundations, Impact, and Future</td><td>Essay Publication</td><td>2019</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Interactive Multimedia Design</td><td>Redshine</td><td>2019</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Intelligent Web Mining</td><td>Redshine</td><td>2020</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Social Media Intelligence</td><td>Infinity Publications</td><td>2021</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>AI and Society</td><td>Redshine</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>The AI Revolution</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>The Digital Nexus</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Intelligent Evolution</td><td>Redshine</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-
-</table>
-</div>
-
-
-<!-- ================= CO AUTHORED ================= -->
-
-<div class="section">
-
-<div class="section-head">
-<div class="section-icon">
-<svg viewBox="0 0 24 24"><path d="M12 2l4 7h-8zM4 13h16v9H4z"/></svg>
-</div>
-<div class="section-title">Co-Authored Books</div>
-</div>
-
-<table>
-<tr><th>Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
-
-<tr><td>Satellite Networks and Communication</td><td>COSMAS Scientific</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>AI & Cybersecurity</td><td>AG Publishing</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>AI-Powered Research</td><td>SAN International</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Artificial Intelligence Fundamentals and Applications</td><td>Iterative International</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Advanced Deep Learning Architectures & Techniques</td><td>Iterative International</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Generative AI</td><td>Scientific International</td><td>2024</td><td><a class="view-link" href="#">View</a></td></tr>
-
-</table>
-</div>
-
-
-
-<!-- ================= CHAPTERS ================= -->
-
-<div class="section">
-
-<div class="section-head">
-<div class="section-icon">
-<svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/></svg>
-</div>
-<div class="section-title">Book Chapters</div>
-</div>
-
-<table>
-<tr><th>Chapter Title</th><th>Publisher</th><th>Year</th><th>Link</th></tr>
-
-<tr><td>Integrating Business Intelligence and AI for Collaborative Leadership</td><td>IGI Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Economic Policy Optimization Powered by AI-Driven Business Intelligence</td><td>IGI Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-<tr><td>Transforming Marketing Campaign Effectiveness with AI-Based Analytics</td><td>IGI Global</td><td>2025</td><td><a class="view-link" href="#">View</a></td></tr>
-
-</table>
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 Dr. Nidal Al Said · Ajman University
-</div>
+  <div class="footer">
+    © 2026 Dr. Nidal Al Said · Ajman University
+  </div>
 
 </div>
 </body>
