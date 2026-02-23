@@ -1,11 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Dr. Nidal Al Said</title>
 
-<meta name="description" content="Academic biography of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in AI, Machine Learning, Human–Computer Interaction, curriculum development, and institutional effectiveness." />
+<meta name="description" content="Academic profile of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in Artificial Intelligence, Machine Learning, Human–Computer Interaction, curriculum development, and institutional effectiveness." />
 <link rel="canonical" href="https://nidalalsaid.github.io/about.html" />
 <meta name="robots" content="index, follow" />
 
@@ -90,28 +90,60 @@ body{
 .page-title{
   font-size:28px;
   font-weight:800;
-  margin-bottom:10px;
+  margin-bottom:8px;
+}
+
+.summary{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.badge{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(15,118,110,0.10);
+  color:var(--accent2);
 }
 
 .rule{
   height:1px;
   background:var(--border);
-  margin:12px 0 18px 0;
+  margin:16px 0 20px 0;
 }
 
-/* GROUP HEADER (CLEAR + ICON) */
-.group{
-  margin-top:22px;
+/* Accordion */
+details.group{
+  margin-top:18px;
+}
+
+details.group > summary{
+  list-style:none;
+  cursor:pointer;
+}
+
+details.group > summary::-webkit-details-marker{
+  display:none;
 }
 
 .group-head{
   display:flex;
   align-items:center;
   gap:12px;
-  padding:14px 14px;
+  padding:14px;
   border:1px solid rgba(26,188,156,0.28);
   background:linear-gradient(180deg, rgba(26,188,156,0.10) 0%, rgba(255,255,255,0.95) 100%);
   border-radius:12px;
+  transition:0.2s;
+}
+
+details.group[open] .group-head{
+  border-color: rgba(26,188,156,0.45);
+  box-shadow:0 8px 18px rgba(2,8,23,0.06);
 }
 
 .group-icon{
@@ -134,7 +166,6 @@ body{
 .group-title{
   font-size:17px;
   font-weight:900;
-  margin:0;
   color:var(--text);
 }
 
@@ -144,7 +175,28 @@ body{
   margin-top:2px;
 }
 
-/* ITEMS */
+.chev{
+  margin-left:auto;
+  width:28px;
+  height:28px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(26,188,156,0.14);
+}
+
+.chev svg{
+  width:14px;
+  height:14px;
+  fill:var(--accent2);
+  transition:0.2s;
+}
+
+details.group[open] .chev svg{
+  transform:rotate(180deg);
+}
+
 .items{
   margin-top:10px;
   border-left:3px solid rgba(26,188,156,0.18);
@@ -163,25 +215,13 @@ body{
 .item-title{
   font-size:16px;
   font-weight:800;
-  margin-bottom:7px;
+  margin-bottom:6px;
   color:#0f2f3a;
 }
 
 .item-meta{
   font-size:13.5px;
   color:var(--muted);
-}
-
-/* Small label style like IP badges */
-.badge{
-  display:inline-block;
-  font-size:12px;
-  font-weight:700;
-  padding:4px 10px;
-  border-radius:999px;
-  background:rgba(15,118,110,0.10);
-  color:var(--accent2);
-  margin-bottom:8px;
 }
 
 .footer{
@@ -214,188 +254,99 @@ body{
 
   <div class="panel">
 
-    <div class="page-title">About Dr. Nidal Al Said</div>
+    <div class="page-title">Dr. Nidal Al Said</div>
+
+    <div class="summary">
+      <span class="badge">Artificial Intelligence</span>
+      <span class="badge">Machine Learning</span>
+      <span class="badge">Human–Computer Interaction</span>
+      <span class="badge">Data Analytics</span>
+      <span class="badge">Curriculum Development</span>
+      <span class="badge">Accreditation & QA</span>
+    </div>
+
     <div class="rule"></div>
 
-    <div class="group">
-      <div class="group-head">
-        <div class="group-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0-4.2-4.2A4.2 4.2 0 0 0 12 12zm0 2c-4.1 0-7.5 2.1-7.5 4.8V21h15v-2.2c0-2.7-3.4-4.8-7.5-4.8z"/></svg>
+    <!-- Academic Overview -->
+    <details class="group" open>
+      <summary>
+        <div class="group-head">
+          <div class="group-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0-4.2-4.2A4.2 4.2 0 0 0 12 12zm0 2c-4.1 0-7.5 2.1-7.5 4.8V21h15v-2.2c0-2.7-3.4-4.8-7.5-4.8z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Academic Overview</div>
+            <div class="group-sub">Position and interdisciplinary focus</div>
+          </div>
+          <div class="chev">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
-        <div>
-          <div class="group-title">Academic Overview</div>
-          <div class="group-sub">Position, focus areas, and academic identity</div>
-        </div>
-      </div>
+      </summary>
 
       <div class="items">
         <div class="item">
-          <div class="badge">Profile</div>
           <div class="item-title">Associate Professor of Information Technology</div>
           <div class="item-meta">
-            Dr. Nidal Al Said is an Associate Professor with over two decades of academic, research, and leadership experience. His work integrates Artificial Intelligence, Machine Learning, Human–Computer Interaction, Data Analytics, and Smart Digital Systems within interdisciplinary environments.
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="badge">Strength</div>
-          <div class="item-title">Scholar and academic developer</div>
-          <div class="item-meta">
-            His profile combines research excellence, curriculum innovation, institutional effectiveness leadership, and strategic accreditation expertise—supporting measurable academic and organizational impact.
+            Over two decades of experience integrating AI, Machine Learning, HCI, and intelligent systems within academic and institutional environments.
           </div>
         </div>
       </div>
-    </div>
+    </details>
 
-    <div class="group">
-      <div class="group-head">
-        <div class="group-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
+    <!-- Research -->
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Research & Publications</div>
+            <div class="group-sub">AI-driven intelligent systems and analytics</div>
+          </div>
+          <div class="chev">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
-        <div>
-          <div class="group-title">Research and Scholarly Contribution</div>
-          <div class="group-sub">AI, intelligent systems, and applied impact</div>
-        </div>
-      </div>
+      </summary>
 
       <div class="items">
         <div class="item">
-          <div class="badge">Research</div>
-          <div class="item-title">Core research focus</div>
+          <div class="item-title">Core Research Areas</div>
           <div class="item-meta">
-            His research focuses on Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, Smart Applications, and AI-driven analytics for education, media, and organizational environments.
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="badge">Publications</div>
-          <div class="item-title">Methodological rigor and relevance</div>
-          <div class="item-meta">
-            He has published in reputable peer-reviewed journals, international conferences, and edited academic volumes. His work bridges algorithmic performance with usability, interpretability, and measurable institutional value.
+            Artificial Intelligence, Machine Learning, Human–AI Interaction, Smart Applications, Data Mining, and intelligent analytics for media and education.
           </div>
         </div>
       </div>
-    </div>
+    </details>
 
-    <div class="group">
-      <div class="group-head">
-        <div class="group-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6V2zm2 7h8v2H8V9zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg>
+    <!-- Teaching -->
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3l10 6-10 6L2 9l10-6zm0 13l10-6v8l-10 5-10-5v-8l10 6z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Teaching & Curriculum Development</div>
+            <div class="group-sub">Outcome-driven and AI-integrated education</div>
+          </div>
+          <div class="chev">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
-        <div>
-          <div class="group-title">Books, Intellectual Property, and Innovation</div>
-          <div class="group-sub">Authorship, patents, and applied innovation</div>
-        </div>
-      </div>
+      </summary>
 
       <div class="items">
         <div class="item">
-          <div class="badge">Books</div>
-          <div class="item-title">Structured, teachable knowledge</div>
+          <div class="item-title">Modern Pedagogical Practice</div>
           <div class="item-meta">
-            He is the author and co-author of multiple academic books addressing Artificial Intelligence, intelligent systems, digital transformation, and smart analytics, translating complex technologies into structured and application-oriented learning.
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="badge">IP</div>
-          <div class="item-title">Patents and registered designs</div>
-          <div class="item-meta">
-            He is actively engaged in intellectual property development, with patents, registered designs, and copyrighted works related to intelligent systems, analytics devices, and technology-driven digital solutions.
+            Course design, AI-integrated learning strategies, curriculum mapping, assessment alignment, and interdisciplinary program modernization.
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="group">
-      <div class="group-head">
-        <div class="group-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 3l10 6-10 6L2 9l10-6zm0 13l10-6v8l-10 5-10-5v-8l10 6z"/></svg>
-        </div>
-        <div>
-          <div class="group-title">Teaching and Curriculum Development</div>
-          <div class="group-sub">Learner-centered practice and program modernization</div>
-        </div>
-      </div>
-
-      <div class="items">
-        <div class="item">
-          <div class="badge">Teaching</div>
-          <div class="item-title">Advanced pedagogical practice</div>
-          <div class="item-meta">
-            With more than twenty years of teaching experience, he has designed and delivered courses in AI, HCI, smart applications, multimedia systems, game design, data mining, educational technology, and digital analytics.
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="badge">Curriculum</div>
-          <div class="item-title">Outcome-driven modernization</div>
-          <div class="item-meta">
-            His work includes curriculum mapping, learning outcomes formulation, assessment alignment, benchmarking, and integration of AI competencies across interdisciplinary programs.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="group">
-      <div class="group-head">
-        <div class="group-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.6 9.7-9 10-5.4-.3-9-5-9-10V6l9-4zm-1 6h2v6h-2V8zm0 8h2v2h-2v-2z"/></svg>
-        </div>
-        <div>
-          <div class="group-title">Institutional Effectiveness and Accreditation</div>
-          <div class="group-sub">Quality assurance, assessment, and continuous improvement</div>
-        </div>
-      </div>
-
-      <div class="items">
-        <div class="item">
-          <div class="badge">IE & QA</div>
-          <div class="item-title">Quality systems and governance</div>
-          <div class="item-meta">
-            He has led and contributed to accreditation and quality assurance initiatives including self-study preparation, compliance documentation, KPI analysis, and continuous improvement implementation aligned with international and regional standards.
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="badge">Leadership</div>
-          <div class="item-title">Committees and task forces</div>
-          <div class="item-meta">
-            He has served in leadership roles related to assessment committees, institutional effectiveness coordination, and accreditation task forces, supporting sustainable academic quality and strategic planning.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="group">
-      <div class="group-head">
-        <div class="group-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.6-1.5 4.9-3.6 6.1V20l-3.4-2-3.4 2v-4.9C6.5 13.9 5 11.6 5 9a7 7 0 0 1 7-7z"/></svg>
-        </div>
-        <div>
-          <div class="group-title">Professional Service and Reviewing</div>
-          <div class="group-sub">Scholarly reviewing and international engagement</div>
-        </div>
-      </div>
-
-      <div class="items">
-        <div class="item">
-          <div class="badge">Reviewing</div>
-          <div class="item-title">Editorial support and scholarly rigor</div>
-          <div class="item-meta">
-            He serves as a reviewer for numerous international peer-reviewed journals and academic publishers across AI, data analytics, digital systems, and interdisciplinary technology fields.
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="badge">Collaboration</div>
-          <div class="item-title">Global academic participation</div>
-          <div class="item-meta">
-            He participates in international conferences, editorial collaborations, and cross-institutional research initiatives across multiple regions.
-          </div>
-        </div>
-      </div>
-    </div>
+    </details>
 
   </div>
 
