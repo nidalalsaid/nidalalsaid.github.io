@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -97,7 +97,7 @@ body{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
-  margin-bottom:14px;
+  margin-bottom:10px;
 }
 
 .badge{
@@ -108,6 +108,12 @@ body{
   border-radius:999px;
   background:rgba(15,118,110,0.10);
   color:var(--accent2);
+}
+
+.summary-note{
+  font-size:13.5px;
+  color:var(--muted);
+  margin-bottom:6px;
 }
 
 .rule{
@@ -224,6 +230,32 @@ details.group[open] .chev svg{
   color:var(--muted);
 }
 
+.links{
+  margin-top:8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.link-pill{
+  display:inline-block;
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(26,188,156,0.28);
+  background:rgba(26,188,156,0.10);
+  color:var(--accent2);
+  font-weight:700;
+  font-size:12.5px;
+  text-decoration:none;
+  transition:0.2s;
+}
+
+.link-pill:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+
 .footer{
   margin-top:60px;
   text-align:center;
@@ -255,94 +287,286 @@ details.group[open] .chev svg{
   <div class="panel">
 
     <div class="page-title">Dr. Nidal Al Said</div>
-
+    <div class="summary-note">Quick academic snapshot</div>
     <div class="summary">
       <span class="badge">Artificial Intelligence</span>
       <span class="badge">Machine Learning</span>
       <span class="badge">Human–Computer Interaction</span>
       <span class="badge">Data Analytics</span>
+      <span class="badge">Smart Applications</span>
       <span class="badge">Curriculum Development</span>
+      <span class="badge">Institutional Effectiveness</span>
       <span class="badge">Accreditation & QA</span>
+      <span class="badge">Academic Publishing</span>
+      <span class="badge">Patents & IP</span>
+    </div>
+
+    <div class="links">
+      <a class="link-pill" href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="link-pill" href="contact.html">Contact</a>
+      <a class="link-pill" href="research.html">Research Profile</a>
+      <a class="link-pill" href="ip.html">IP Portfolio</a>
     </div>
 
     <div class="rule"></div>
 
-    <!-- Academic Overview -->
+    <!-- 1) Academic Overview -->
     <details class="group" open>
       <summary>
         <div class="group-head">
-          <div class="group-icon">
+          <div class="group-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0-4.2-4.2A4.2 4.2 0 0 0 12 12zm0 2c-4.1 0-7.5 2.1-7.5 4.8V21h15v-2.2c0-2.7-3.4-4.8-7.5-4.8z"/></svg>
           </div>
           <div>
             <div class="group-title">Academic Overview</div>
-            <div class="group-sub">Position and interdisciplinary focus</div>
+            <div class="group-sub">Position, identity, and interdisciplinary focus</div>
           </div>
-          <div class="chev">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
-          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
+          <div class="badge">Role</div>
           <div class="item-title">Associate Professor of Information Technology</div>
           <div class="item-meta">
-            Over two decades of experience integrating AI, Machine Learning, HCI, and intelligent systems within academic and institutional environments.
+            An academic profile shaped by research, teaching, and leadership across technology-driven higher education environments, with a strong focus on AI-enabled innovation and measurable institutional value.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Focus</div>
+          <div class="item-title">AI, Intelligent Systems, and Human-Centered Technology</div>
+          <div class="item-meta">
+            Core interests include Artificial Intelligence, Machine Learning, Human–Computer Interaction, data analytics, smart applications, and responsible AI integration in education, media, and organizational settings.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Strength</div>
+          <div class="item-title">Scholar and academic developer</div>
+          <div class="item-meta">
+            Combines scholarly contribution with curriculum modernization, assessment design, and quality systems—supporting both academic excellence and institutional performance.
           </div>
         </div>
       </div>
     </details>
 
-    <!-- Research -->
+    <!-- 2) Research & Publications -->
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2z"/></svg>
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
           </div>
           <div>
             <div class="group-title">Research & Publications</div>
-            <div class="group-sub">AI-driven intelligent systems and analytics</div>
+            <div class="group-sub">AI-driven intelligent systems, analytics, and impact</div>
           </div>
-          <div class="chev">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
-          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <div class="item-title">Core Research Areas</div>
+          <div class="badge">Research</div>
+          <div class="item-title">Core research areas</div>
           <div class="item-meta">
-            Artificial Intelligence, Machine Learning, Human–AI Interaction, Smart Applications, Data Mining, and intelligent analytics for media and education.
+            Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, and AI-driven analytics for education, media, and organizational decision-making.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Approach</div>
+          <div class="item-title">From model performance to real adoption</div>
+          <div class="item-meta">
+            Emphasizes not only algorithmic accuracy and robustness, but also usability, interpretability, and alignment with real constraints in academic and institutional environments.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Outputs</div>
+          <div class="item-title">Peer-reviewed scholarship</div>
+          <div class="item-meta">
+            Publications include journal articles, international conference papers, and edited volumes, reflecting methodological rigor, applied relevance, and interdisciplinary integration.
           </div>
         </div>
       </div>
     </details>
 
-    <!-- Teaching -->
+    <!-- 3) Teaching & Curriculum Development -->
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon">
+          <div class="group-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 3l10 6-10 6L2 9l10-6zm0 13l10-6v8l-10 5-10-5v-8l10 6z"/></svg>
           </div>
           <div>
             <div class="group-title">Teaching & Curriculum Development</div>
-            <div class="group-sub">Outcome-driven and AI-integrated education</div>
+            <div class="group-sub">Outcome-driven, tech-enhanced, and industry aware</div>
           </div>
-          <div class="chev">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
-          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <div class="item-title">Modern Pedagogical Practice</div>
+          <div class="badge">Teaching</div>
+          <div class="item-title">Courses and learning experience</div>
           <div class="item-meta">
-            Course design, AI-integrated learning strategies, curriculum mapping, assessment alignment, and interdisciplinary program modernization.
+            Designs and delivers courses across AI foundations, HCI, smart applications, multimedia systems, data analytics, and emerging digital technologies, with a focus on clarity, application, and employability skills.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Practice</div>
+          <div class="item-title">Modern pedagogy</div>
+          <div class="item-meta">
+            Uses learner-centered strategies, structured problem-solving, applied projects, and technology-enhanced teaching to ensure conceptual understanding and professional readiness.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Curriculum</div>
+          <div class="item-title">Program and course modernization</div>
+          <div class="item-meta">
+            Contributes to curriculum mapping, learning outcomes formulation, assessment alignment, benchmarking, and the integration of AI competencies across interdisciplinary programs.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 4) Books, IP, and Innovation -->
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6V2zm2 7h8v2H8V9zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Books, Intellectual Property & Innovation</div>
+            <div class="group-sub">Authorship, patents, and applied innovation</div>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Books</div>
+          <div class="item-title">Academic authorship</div>
+          <div class="item-meta">
+            Author and co-author of academic books that translate complex AI and intelligent systems topics into structured, teachable, and application-oriented knowledge for students and professionals.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">IP</div>
+          <div class="item-title">Patents and registered designs</div>
+          <div class="item-meta">
+            Engaged in intellectual property development including patents, registered designs, and copyrighted works related to intelligent systems, analytics devices, and technology-driven solutions.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 5) Institutional Effectiveness & Accreditation -->
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.6 9.7-9 10-5.4-.3-9-5-9-10V6l9-4zm-1 6h2v6h-2V8zm0 8h2v2h-2v-2z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Institutional Effectiveness & Accreditation</div>
+            <div class="group-sub">Quality assurance, assessment, KPIs, and improvement systems</div>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Quality</div>
+          <div class="item-title">Assessment and continuous improvement</div>
+          <div class="item-meta">
+            Contributes to assessment design, evidence-based reporting, KPI interpretation, and improvement planning to ensure strong academic performance and measurable outcomes.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Accreditation</div>
+          <div class="item-title">Documentation and compliance readiness</div>
+          <div class="item-meta">
+            Supports accreditation-related processes through structured documentation, benchmarking, performance analysis, and alignment with institutional standards and external expectations.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 6) Professional Service & Reviewing -->
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.6-1.5 4.9-3.6 6.1V20l-3.4-2-3.4 2v-4.9C6.5 13.9 5 11.6 5 9a7 7 0 0 1 7-7z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Professional Service & Reviewing</div>
+            <div class="group-sub">Peer review, editorial support, and academic engagement</div>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Review</div>
+          <div class="item-title">Journal and publisher reviewing</div>
+          <div class="item-meta">
+            Active reviewer for international peer-reviewed venues across AI, data analytics, intelligent systems, and interdisciplinary technology research, supporting scholarly rigor and quality standards.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Community</div>
+          <div class="item-title">Conferences and collaboration</div>
+          <div class="item-meta">
+            Participates in international academic initiatives and cross-institutional collaborations across multiple regions, supporting knowledge exchange and research development.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 7) Collaboration -->
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 12a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm10 0a3 3 0 1 1 3-3 3 3 0 0 1-3 3zM2 21a5 5 0 0 1 10 0H2zm10 0a5 5 0 0 1 10 0H12z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Academic Collaboration</div>
+            <div class="group-sub">Visiting roles, research partnerships, and joint projects</div>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Open</div>
+          <div class="item-title">Opportunities and partnerships</div>
+          <div class="item-meta">
+            ==>> academic collaborations, visiting professorships, research partnerships, and institutional leadership opportunities where AI, curriculum innovation, and quality systems intersect.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Value</div>
+          <div class="item-title">What I bring to institutions</div>
+          <div class="item-meta">
+            A balanced combination of research capability, teaching excellence, program development, and institutional effectiveness experience—aligned with strategic goals and measurable impact.
           </div>
         </div>
       </div>
