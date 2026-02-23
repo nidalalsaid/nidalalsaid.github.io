@@ -1,101 +1,408 @@
- <!doctype html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Dr. Nidal Al Said</title>
 
-  <title>About Dr. Nidal Al Said | AI, Academic Leadership, Institutional Effectiveness</title>
-  <meta name="description" content="Official academic biography of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in Artificial Intelligence, Machine Learning, HCI, Smart Systems, Curriculum Development, Institutional Effectiveness, and International Accreditation." />
+<meta name="description" content="Academic biography of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in AI, Machine Learning, Human–Computer Interaction, curriculum development, and institutional effectiveness." />
+<link rel="canonical" href="https://nidalalsaid.github.io/about.html" />
+<meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://YOUR-DOMAIN/about.html" />
+<style>
+:root{
+  --bg:#f4f7f9;
+  --card:#ffffff;
+  --accent:#1abc9c;
+  --accent2:#0f766e;
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+.container{
+  width:90%;
+  max-width:1050px;
+  margin:auto;
+  padding:50px 0;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:26px;
+}
+
+.title h1{
+  font-size:30px;
+  margin-bottom:6px;
+}
+
+.title p{
+  color:var(--muted);
+}
+
+.nav a{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  margin-left:8px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.nav a.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:rgba(26,188,156,0.55);
+}
+
+.panel{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:26px;
+  box-shadow:0 10px 22px rgba(2,8,23,0.06);
+}
+
+.page-title{
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.rule{
+  height:1px;
+  background:var(--border);
+  margin:12px 0 18px 0;
+}
+
+/* GROUP HEADER (CLEAR + ICON) */
+.group{
+  margin-top:22px;
+}
+
+.group-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 14px;
+  border:1px solid rgba(26,188,156,0.28);
+  background:linear-gradient(180deg, rgba(26,188,156,0.10) 0%, rgba(255,255,255,0.95) 100%);
+  border-radius:12px;
+}
+
+.group-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:rgba(26,188,156,0.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 38px;
+}
+
+.group-icon svg{
+  width:18px;
+  height:18px;
+  fill:var(--accent2);
+}
+
+.group-title{
+  font-size:17px;
+  font-weight:900;
+  margin:0;
+  color:var(--text);
+}
+
+.group-sub{
+  font-size:13.5px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+/* ITEMS */
+.items{
+  margin-top:10px;
+  border-left:3px solid rgba(26,188,156,0.18);
+  padding-left:14px;
+}
+
+.item{
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.item:last-child{
+  border-bottom:0;
+}
+
+.item-title{
+  font-size:16px;
+  font-weight:800;
+  margin-bottom:7px;
+  color:#0f2f3a;
+}
+
+.item-meta{
+  font-size:13.5px;
+  color:var(--muted);
+}
+
+/* Small label style like IP badges */
+.badge{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(15,118,110,0.10);
+  color:var(--accent2);
+  margin-bottom:8px;
+}
+
+.footer{
+  margin-top:60px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+}
+</style>
 </head>
 
 <body>
-  <main class="container about-page">
+<div class="container">
 
-    <header class="page-header">
-      <h1>Dr. Nidal Al Said</h1>
-      <p>
-        Dr. Nidal Al Said is an Associate Professor of Information Technology with over two decades of academic, research, and leadership experience across higher education institutions in the Middle East and Europe. His work integrates Artificial Intelligence, Machine Learning, Human–Computer Interaction, Data Analytics, and Smart Digital Systems within interdisciplinary academic environments.
-      </p>
-      <p>
-        His academic profile combines research excellence, curriculum innovation, institutional effectiveness leadership, and strategic accreditation expertise—positioning him as both a scholar and an academic developer capable of contributing at institutional, college, and program levels.
-      </p>
-    </header>
+  <div class="top">
+    <div class="title">
+      <h1>About</h1>
+      <p>Academic profile and professional overview.</p>
+    </div>
 
-    <section>
-      <h2>Research and Scholarly Contribution</h2>
-      <p>
-        Dr. Nidal Al Said’s research focuses on Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, Smart Applications, and AI-driven analytics for education, media, and organizational environments. His work emphasizes not only algorithmic performance but also usability, interpretability, and measurable institutional impact.
-      </p>
-      <p>
-        He has published extensively in reputable peer-reviewed journals, international conferences, and edited academic volumes. His publications span AI-based predictive modeling, hybrid intelligent systems, data-driven decision support frameworks, and smart digital transformation strategies. His scholarship reflects methodological rigor, applied relevance, and interdisciplinary integration.
-      </p>
-    </section>
+    <div class="nav">
+      <a href="/">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="research.html">Research</a>
+      <a href="books.html">Books</a>
+      <a href="ip.html">Intellectual Property</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 
-    <section>
-      <h2>Books, Intellectual Property, and Innovation</h2>
-      <p>
-        In addition to journal publications, Dr. Nidal Al Said is the author and co-author of multiple academic books addressing Artificial Intelligence, intelligent systems, digital transformation, and smart analytics. His books aim to translate complex technologies into structured, teachable, and application-oriented knowledge.
-      </p>
-      <p>
-        He is actively engaged in intellectual property development, with patents, registered designs, and copyrighted works related to intelligent systems, analytics devices, and technology-driven digital solutions. This integration of research, authorship, and innovation reflects a sustained commitment to scalable and impactful technological advancement.
-      </p>
-    </section>
+  <div class="panel">
 
-    <section>
-      <h2>Teaching Philosophy and Advanced Pedagogical Practice</h2>
-      <p>
-        With more than twenty years of teaching experience, Dr. Nidal Al Said has designed and delivered courses in Artificial Intelligence, Human–Computer Interaction, Smart Application Design, Multimedia Systems, Game Design, Data Mining, Educational Technology, and Digital Analytics.
-      </p>
-      <p>
-        His teaching philosophy is grounded in structured problem-solving, learner-centered methodologies, and technology-enhanced instruction. He integrates AI-supported learning environments, applied project-based strategies, and outcome-driven assessment models to ensure both conceptual clarity and professional readiness.
-      </p>
-      <p>
-        He actively supervises student research, mentors early-career academics, and continuously updates course content to align with emerging technologies, industry demands, and accreditation standards.
-      </p>
-    </section>
+    <div class="page-title">About Dr. Nidal Al Said</div>
+    <div class="rule"></div>
 
-    <section>
-      <h2>Curriculum Development and Academic Program Innovation</h2>
-      <p>
-        Dr. Nidal Al Said has extensive experience in curriculum development, academic program design, and strategic modernization of study plans. His contributions include curriculum mapping, learning outcome formulation, course alignment, assessment benchmarking, and the integration of Artificial Intelligence competencies across interdisciplinary programs.
-      </p>
-      <p>
-        He has played a central role in revising and enhancing undergraduate and postgraduate programs to ensure academic coherence, market relevance, and international competitiveness.
-      </p>
-    </section>
+    <div class="group">
+      <div class="group-head">
+        <div class="group-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0-4.2-4.2A4.2 4.2 0 0 0 12 12zm0 2c-4.1 0-7.5 2.1-7.5 4.8V21h15v-2.2c0-2.7-3.4-4.8-7.5-4.8z"/></svg>
+        </div>
+        <div>
+          <div class="group-title">Academic Overview</div>
+          <div class="group-sub">Position, focus areas, and academic identity</div>
+        </div>
+      </div>
 
-    <section>
-      <h2>Institutional Effectiveness and Accreditation Leadership</h2>
-      <p>
-        A recognized expert in institutional effectiveness and quality assurance, Dr. Nidal Al Said has led and contributed to accreditation processes aligned with international and regional standards. His experience includes program self-study preparation, compliance documentation, performance indicator analysis, and continuous improvement system implementation.
-      </p>
-      <p>
-        He has served in leadership roles related to assessment committees, institutional effectiveness coordination, and accreditation task forces, contributing to sustainable academic quality systems and strategic institutional planning.
-      </p>
-    </section>
+      <div class="items">
+        <div class="item">
+          <div class="badge">Profile</div>
+          <div class="item-title">Associate Professor of Information Technology</div>
+          <div class="item-meta">
+            Dr. Nidal Al Said is an Associate Professor with over two decades of academic, research, and leadership experience. His work integrates Artificial Intelligence, Machine Learning, Human–Computer Interaction, Data Analytics, and Smart Digital Systems within interdisciplinary environments.
+          </div>
+        </div>
 
-    <section>
-      <h2>Professional Service and Academic Reviewing</h2>
-      <p>
-        Dr. Nidal Al Said serves as a reviewer for a large number of international peer-reviewed journals and academic publishers across Artificial Intelligence, data analytics, digital systems, and interdisciplinary technology fields. His reviewing work supports research quality, editorial standards, and scholarly rigor within the global academic community.
-      </p>
-      <p>
-        He also participates in international conferences, editorial collaborations, and cross-institutional research initiatives across Europe, Asia, the Gulf region, and North America.
-      </p>
-    </section>
+        <div class="item">
+          <div class="badge">Strength</div>
+          <div class="item-title">Scholar and academic developer</div>
+          <div class="item-meta">
+            His profile combines research excellence, curriculum innovation, institutional effectiveness leadership, and strategic accreditation expertise—supporting measurable academic and organizational impact.
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <h2>Academic Engagement and Future Collaboration</h2>
-      <p>
-        Dr. Nidal Al Said is open to academic appointments, visiting professorships, research partnerships, and institutional leadership opportunities where advanced technology, curriculum innovation, accreditation excellence, and AI-driven transformation intersect.
-      </p>
-      <p>
-        His professional objective remains clear: to contribute to institutions seeking measurable academic growth, sustainable quality systems, interdisciplinary innovation, and responsible integration of Artificial Intelligence into teaching, research, and governance.
-      </p>
-    </section>
+    <div class="group">
+      <div class="group-head">
+        <div class="group-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
+        </div>
+        <div>
+          <div class="group-title">Research and Scholarly Contribution</div>
+          <div class="group-sub">AI, intelligent systems, and applied impact</div>
+        </div>
+      </div>
 
-  </main>
+      <div class="items">
+        <div class="item">
+          <div class="badge">Research</div>
+          <div class="item-title">Core research focus</div>
+          <div class="item-meta">
+            His research focuses on Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, Smart Applications, and AI-driven analytics for education, media, and organizational environments.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Publications</div>
+          <div class="item-title">Methodological rigor and relevance</div>
+          <div class="item-meta">
+            He has published in reputable peer-reviewed journals, international conferences, and edited academic volumes. His work bridges algorithmic performance with usability, interpretability, and measurable institutional value.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6V2zm2 7h8v2H8V9zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg>
+        </div>
+        <div>
+          <div class="group-title">Books, Intellectual Property, and Innovation</div>
+          <div class="group-sub">Authorship, patents, and applied innovation</div>
+        </div>
+      </div>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Books</div>
+          <div class="item-title">Structured, teachable knowledge</div>
+          <div class="item-meta">
+            He is the author and co-author of multiple academic books addressing Artificial Intelligence, intelligent systems, digital transformation, and smart analytics, translating complex technologies into structured and application-oriented learning.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">IP</div>
+          <div class="item-title">Patents and registered designs</div>
+          <div class="item-meta">
+            He is actively engaged in intellectual property development, with patents, registered designs, and copyrighted works related to intelligent systems, analytics devices, and technology-driven digital solutions.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l10 6-10 6L2 9l10-6zm0 13l10-6v8l-10 5-10-5v-8l10 6z"/></svg>
+        </div>
+        <div>
+          <div class="group-title">Teaching and Curriculum Development</div>
+          <div class="group-sub">Learner-centered practice and program modernization</div>
+        </div>
+      </div>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Teaching</div>
+          <div class="item-title">Advanced pedagogical practice</div>
+          <div class="item-meta">
+            With more than twenty years of teaching experience, he has designed and delivered courses in AI, HCI, smart applications, multimedia systems, game design, data mining, educational technology, and digital analytics.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Curriculum</div>
+          <div class="item-title">Outcome-driven modernization</div>
+          <div class="item-meta">
+            His work includes curriculum mapping, learning outcomes formulation, assessment alignment, benchmarking, and integration of AI competencies across interdisciplinary programs.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.6 9.7-9 10-5.4-.3-9-5-9-10V6l9-4zm-1 6h2v6h-2V8zm0 8h2v2h-2v-2z"/></svg>
+        </div>
+        <div>
+          <div class="group-title">Institutional Effectiveness and Accreditation</div>
+          <div class="group-sub">Quality assurance, assessment, and continuous improvement</div>
+        </div>
+      </div>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">IE & QA</div>
+          <div class="item-title">Quality systems and governance</div>
+          <div class="item-meta">
+            He has led and contributed to accreditation and quality assurance initiatives including self-study preparation, compliance documentation, KPI analysis, and continuous improvement implementation aligned with international and regional standards.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Leadership</div>
+          <div class="item-title">Committees and task forces</div>
+          <div class="item-meta">
+            He has served in leadership roles related to assessment committees, institutional effectiveness coordination, and accreditation task forces, supporting sustainable academic quality and strategic planning.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.6-1.5 4.9-3.6 6.1V20l-3.4-2-3.4 2v-4.9C6.5 13.9 5 11.6 5 9a7 7 0 0 1 7-7z"/></svg>
+        </div>
+        <div>
+          <div class="group-title">Professional Service and Reviewing</div>
+          <div class="group-sub">Scholarly reviewing and international engagement</div>
+        </div>
+      </div>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Reviewing</div>
+          <div class="item-title">Editorial support and scholarly rigor</div>
+          <div class="item-meta">
+            He serves as a reviewer for numerous international peer-reviewed journals and academic publishers across AI, data analytics, digital systems, and interdisciplinary technology fields.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Collaboration</div>
+          <div class="item-title">Global academic participation</div>
+          <div class="item-meta">
+            He participates in international conferences, editorial collaborations, and cross-institutional research initiatives across multiple regions.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 Dr. Nidal Al Said · Ajman University
+  </div>
+
+</div>
 </body>
 </html>
