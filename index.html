@@ -4,10 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Dr. Nidal Al Said | AI, Data Mining, HCI</title>
-<meta name="description" content="Dr. Nidal Al Said — Associate Professor of Information Technology. Research in AI, data mining, HCI, and smart applications. Books, publications, and intellectual property." />
 
+<meta name="description" content="Dr. Nidal Al Said — Associate Professor of Information Technology. Research in AI, data mining, HCI, and smart applications. Books, publications, and intellectual property." />
 <link rel="canonical" href="https://nidalalsaid.github.io/" />
 <meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Dr. Nidal Al Said | AI, Data Mining, HCI" />
+<meta property="og:description" content="Associate Professor of Information Technology. Research in AI, data mining, HCI, and smart applications. Books, publications, and intellectual property." />
+<meta property="og:url" content="https://nidalalsaid.github.io/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
 
 <style>
 :root{
@@ -24,9 +30,6 @@
   --shadow:0 6px 18px rgba(0,0,0,0.05);
   --radius:14px;
 
-  --line:#e5eaef;
-  --mint-weak:#eaf6f2;
-  --radius2:16px;
   --shadow2:0 6px 16px rgba(0,0,0,0.045);
 }
 
@@ -46,7 +49,7 @@ body{
   padding:40px 24px;
 }
 
-/* TOP NAV (as in your new navigation idea but same old site font + sizing) */
+/* TOP NAV */
 .topbar{
   display:flex;
   justify-content:flex-end;
@@ -195,7 +198,7 @@ body{
   background:var(--teal);
 }
 
-/* NEW Professional Profile block (same look as screenshot but with your site typography sizes) */
+/* Professional Profile block */
 .profile-wrap{
   display:grid;
   grid-template-columns:1.05fr 1fr;
@@ -325,7 +328,32 @@ body{
   line-height:1.2;
 }
 
-/* BOOK/PUB CARDS (same as your old card system but keep sizes softer) */
+/* Academic profiles links */
+.profiles{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0;
+}
+
+.profiles a{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  color:var(--teal-dark);
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
+}
+
+.profiles a:hover{
+  border-color:rgba(92,168,147,0.55);
+  color:var(--text);
+}
+
+/* BOOK/PUB CARDS */
 .items-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -490,7 +518,8 @@ body{
   .stats{ grid-template-columns:1fr; }
 }
 </style>
-   <script type="application/ld+json">
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -524,10 +553,10 @@ body{
 <div class="container">
 
   <div class="topbar">
-    <div class="topnav">
-       <a href="about.html">About</a>
+    <div class="topnav" aria-label="Primary navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
       <a href="books.html">Books</a>
-     
       <a href="research.html">Research</a>
       <a href="ip.html">Intellectual Property</a>
       <a href="contact.html">Contact</a>
@@ -542,28 +571,28 @@ body{
         Academic expert in AI, HCI, Data Analytics & Smart Digital Systems. Dedicated to interdisciplinary research and innovation in technology, media, education, and accreditation.
       </div>
 
-      <div class="hero-badges">
+      <div class="hero-badges" aria-label="Focus areas">
         <span class="pill">
-          <svg viewBox="0 0 24 24"><path d="M12 2l4 4v5c0 2.8-1.9 5.3-4.6 6.2L12 22l-2.9-4.8C6.4 16.3 4.5 13.8 4.5 11V6l4-4h3.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l4 4v5c0 2.8-1.9 5.3-4.6 6.2L12 22l-2.9-4.8C6.4 16.3 4.5 13.8 4.5 11V6l4-4h3.5z"/></svg>
           AI Research & Smart Systems
         </span>
         <span class="pill">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 6h10v4H4v-4zm0 6h16v4H4v-4z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v4H4V4zm0 6h10v4H4v-4zm0 6h16v4H4v-4z"/></svg>
           Data Mining & Analytics
         </span>
         <span class="pill">
-          <svg viewBox="0 0 24 24"><path d="M7 2h10v4H7V2zM5 8h14a3 3 0 013 3v6a3 3 0 01-3 3H5a3 3 0 01-3-3v-6a3 3 0 013-3z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10v4H7V2zM5 8h14a3 3 0 013 3v6a3 3 0 01-3 3H5a3 3 0 01-3-3v-6a3 3 0 013-3z"/></svg>
           HCI & Digital Media
         </span>
         <span class="pill">
-          <svg viewBox="0 0 24 24"><path d="M6 2h12v6H6V2zm-2 9h16v11H4V11zm3 2v7h2v-7H7zm4 0v7h2v-7h-2zm4 0v7h2v-7h-2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12v6H6V2zm-2 9h16v11H4V11zm3 2v7h2v-7H7zm4 0v7h2v-7h-2zm4 0v7h2v-7h-2z"/></svg>
           Accreditation & OBE Leadership
         </span>
       </div>
     </div>
 
     <div class="avatar">
-      <img src="profile.jpg" alt="Dr. Nidal Al Said" />
+      <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
     </div>
   </div>
 
@@ -599,14 +628,14 @@ body{
           <div class="card-cap">Skills & Competencies</div>
         </div>
 
-        <div class="skills-pills">
+        <div class="skills-pills" aria-label="Skills">
           <span class="pill">AI & Machine Learning</span>
           <span class="pill">Data Mining & Analytics</span>
           <span class="pill">Human–Computer Interaction</span>
           <span class="pill">Accreditation & OBE Leadership</span>
         </div>
 
-        <div class="stats">
+        <div class="stats" aria-label="Highlights">
           <div class="stat">
             <div class="n">20+</div>
             <div class="t">Years of Experience</div>
@@ -623,24 +652,26 @@ body{
       </div>
     </div>
   </div>
-<div class="panel">
-  <div class="section-title">Academic Profiles</div>
-  <p>
-    <a href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ" target="_blank" rel="noopener">Google Scholar</a> |
-    <a href="https://orcid.org/0000-0001-9599-2492" target="_blank" rel="noopener">ORCID</a> |
-    <a href="https://www.scopus.com/authid/detail.uri?authorId=57910230100" target="_blank" rel="noopener">Scopus</a> |
-    <a href="https://www.webofscience.com/wos/author/record/AAT-6855-2021" target="_blank" rel="noopener">Web of Science</a> |
-    <a href="https://www.linkedin.com/in/nidal-al-said-74269210/" target="_blank" rel="noopener">LinkedIn</a>
-  </p>
-</div>
+
+  <div class="panel">
+    <div class="section-title">Academic Profiles</div>
+    <p class="profiles">
+      <a href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0000-0001-9599-2492" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=57910230100" target="_blank" rel="noopener">Scopus</a>
+      <a href="https://www.webofscience.com/wos/author/record/AAT-6855-2021" target="_blank" rel="noopener">Web of Science</a>
+      <a href="https://www.linkedin.com/in/nidal-al-said-74269210/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+
   <div class="panel">
     <div class="section-title">Selected Books</div>
 
     <div class="items-grid">
       <div class="item-card">
-        <img class="cover" src="book1.jpg" alt="Advanced Deep Learning Architectures & Techniques" />
+        <img class="cover" src="book1.jpg" alt="Advanced Deep Learning Architectures & Techniques" loading="lazy" />
         <div class="item-body">
-          <h3>Advanced Deep Learning Architectures & Techniques </h3>
+          <h3>Advanced Deep Learning Architectures & Techniques</h3>
           <div class="meta">Dr. Betshrine Rachel Jibinsingh · Dr. Anurag Shrivastava · Dr. Nidal Al Said</div>
           <p class="desc">
             Machine learning and deep learning have rapidly evolved, creating vast opportunities for engineering students but lacking unified, structured study material that covers core concepts, applications, and emerging research.
@@ -653,9 +684,9 @@ body{
       </div>
 
       <div class="item-card">
-        <img class="cover" src="book2.jpg" alt="Intelligent Web Mining: Discovering Patterns in Online Data" />
+        <img class="cover" src="book2.jpg" alt="Intelligent Web Mining: Discovering Patterns in Online Data" loading="lazy" />
         <div class="item-body">
-          <h3>INTELLIGENT WEB MINING: DISCOVERING PATTERNS IN ONLINE DATA</h3>
+          <h3>Intelligent Web Mining: Discovering Patterns in Online Data</h3>
           <div class="meta">Dr. Nidal Al Said</div>
           <p class="desc">
             This book offers a structured, comprehensive introduction to web mining by covering web content, structure, and usage mining, alongside modern frameworks and practical perspectives on scalable analytics.
@@ -674,9 +705,9 @@ body{
 
     <div class="items-grid">
       <div class="item-card">
-        <img class="cover" src="pub1.jpg" alt="Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical study of Zain Telecom company in Jordan" />
+        <img class="cover" src="pub1.jpg" alt="Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical study of Zain Telecom company in Jordan" loading="lazy" />
         <div class="item-body">
-          <h3>Does Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical study of Zain Telecom company in Jordan</h3>
+          <h3>Does data privacy influence digital marketing? The mediating role of AI-driven trust: An empirical study of Zain Telecom company in Jordan</h3>
           <div class="meta">Al Said, N. (2024). International Journal of Data and Network Science, 8, 1–10.</div>
           <p class="desc">
             This research examines how AI-driven trust mechanisms mediate the impact of data privacy concerns on digital marketing effectiveness among ZAIN Telecom employees.
@@ -688,7 +719,7 @@ body{
       </div>
 
       <div class="item-card">
-        <img class="cover" src="pub2.jpg" alt="A Hybrid GAN-CNN Network with Attention Mechanism for Detecting Fake Profile Images in Microblogs" />
+        <img class="cover" src="pub2.jpg" alt="A Hybrid GAN-CNN Network with Attention Mechanism for Detecting Fake Profile Images in Microblogs" loading="lazy" />
         <div class="item-body">
           <h3>A Hybrid GAN-CNN Network with Attention Mechanism for Detecting Fake Profile Images in Microblogs</h3>
           <div class="meta">Al Said, N. (2025). Ingénierie des Systèmes d’Information, 30(6), 1145–1152.</div>
