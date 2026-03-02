@@ -1,226 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Dr. Nidal Al Said</title>
 
 <meta name="description" content="Academic profile of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in Artificial Intelligence, Machine Learning, Human–Computer Interaction, curriculum development, and institutional effectiveness." />
 <link rel="canonical" href="https://nidalalsaid.github.io/about.html" />
 <meta name="robots" content="index, follow" />
 
-<meta property="og:title" content="About | Dr. Nidal Al Said" />
-<meta property="og:description" content="Academic profile and professional overview of Dr. Nidal Al Said." />
-<meta property="og:url" content="https://nidalalsaid.github.io/about.html" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-
 <style>
 :root{
-  --bg:#f4f6f8;
-  --panel:#ffffff;
-  --text:#1e2a35;
-  --muted:#6f8093;
-
-  --teal:#5ca893;
-  --teal-dark:#4a8f7c;
-  --teal-soft:#e7f3ef;
-
-  --border:#e5eaef;
-  --shadow:0 6px 18px rgba(0,0,0,0.05);
-  --shadow2:0 6px 16px rgba(0,0,0,0.045);
-  --radius:14px;
+  --bg:#f4f7f9;
+  --card:#ffffff;
+  --accent:#1abc9c;
+  --accent2:#0f766e;
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
 }
 
-*{ box-sizing:border-box; }
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  margin:0;
-  font-family:"Segoe UI", Arial, sans-serif;
+  font-family:Segoe UI, Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
   line-height:1.7;
 }
 
 .container{
-  max-width:1180px;
-  margin:0 auto;
-  padding:40px 24px;
+  width:90%;
+  max-width:1050px;
+  margin:auto;
+  padding:50px 0;
 }
 
-/* TOP NAV */
-.topbar{
+.top{
   display:flex;
-  justify-content:flex-end;
+  justify-content:space-between;
   align-items:center;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:18px;
-}
-
-.topnav{
-  display:flex;
   gap:18px;
-  align-items:center;
   flex-wrap:wrap;
+  margin-bottom:26px;
 }
 
-.topnav a{
-  text-decoration:none;
+.title h1{
+  font-size:30px;
+  margin-bottom:6px;
+}
+
+.title p{
   color:var(--muted);
-  font-size:14px;
-  font-weight:600;
-  padding:6px 2px;
-  border-bottom:2px solid transparent;
 }
 
-.topnav a:hover{
-  color:var(--text);
-  border-bottom-color:rgba(92,168,147,0.35);
-}
-
-.topnav a.active{
-  color:var(--text);
-  border-bottom-color:rgba(92,168,147,0.7);
-}
-
-.cvbtn{
+.nav a{
   display:inline-block;
-  padding:10px 16px;
-  font-size:14px;
-  font-weight:600;
-  border-radius:999px;
-  background:var(--teal);
-  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
   text-decoration:none;
-  transition:background .2s ease;
-}
-
-.cvbtn:hover{
-  background:var(--teal-dark);
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(244,246,248,1) 100%);
+  font-weight:600;
+  font-size:14px;
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:22px;
-  display:grid;
-  grid-template-columns:1fr 240px;
-  gap:26px;
-  align-items:start;
+  background:var(--card);
+  color:var(--text);
+  margin-left:8px;
+  transition:0.3s;
 }
 
-.hero h1{
-  margin:0;
-  font-size:36px;
-  font-weight:800;
-  letter-spacing:-0.4px;
+.nav a:hover{
+  background:var(--accent);
+  color:#fff;
 }
 
-.identity{
-  margin-top:10px;
-  color:var(--muted);
-  font-size:15px;
-  max-width:860px;
-}
-
-.hero-badges{
-  margin-top:12px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.pill{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 12px;
-  border-radius:999px;
-  background:var(--teal-soft);
-  border:1px solid #cfe7df;
-  color:var(--teal-dark);
-  font-weight:700;
-  font-size:13px;
-}
-
-.pill svg{
-  width:16px;
-  height:16px;
-  fill:var(--teal-dark);
-  opacity:.95;
+.nav a.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:rgba(26,188,156,0.55);
 }
 
 .avatar{
-  display:flex;
-  justify-content:flex-end;
+  width:88px;
+  height:88px;
+  border-radius:16px;
+  overflow:hidden;
 }
 
 .avatar img{
-  width:170px;
-  height:170px;
-  border-radius:50%;
+  width:100%;
+  height:100%;
   object-fit:cover;
-  border:4px solid var(--teal);
-  background:#fff;
+  display:block;
 }
 
-/* PANEL */
 .panel{
-  margin-top:22px;
-  background:var(--panel);
+  background:var(--card);
   border:1px solid var(--border);
-  border-radius:var(--radius);
+  border-radius:14px;
   padding:26px;
-  box-shadow:var(--shadow);
+  box-shadow:0 10px 22px rgba(2,8,23,0.06);
 }
 
-.section-title{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:22px;
-  font-weight:700;
-  margin:0 0 14px 0;
+.page-title{
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:8px;
 }
 
-.section-title::before{
-  content:"";
-  width:4px;
-  height:24px;
-  border-radius:3px;
-  background:var(--teal);
-}
-
-/* SNAPSHOT */
 .summary{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
-  margin:10px 0 12px 0;
+  margin-bottom:10px;
 }
 
 .badge{
   display:inline-block;
   font-size:12px;
-  font-weight:800;
-  padding:6px 12px;
+  font-weight:700;
+  padding:4px 10px;
   border-radius:999px;
-  background:var(--teal-soft);
-  border:1px solid #cfe7df;
-  color:var(--teal-dark);
+  background:rgba(15,118,110,0.10);
+  color:var(--accent2);
 }
 
 .summary-note{
-  font-size:14px;
+  font-size:13.5px;
   color:var(--muted);
-  margin-top:-6px;
+  margin-bottom:6px;
+}
+
+.expand-hint{
+  margin:6px 0 14px;
+  color:var(--muted);
+  font-size:13.5px;
+}
+
+.rule{
+  height:1px;
+  background:var(--border);
+  margin:16px 0 20px 0;
 }
 
 .links{
-  margin-top:10px;
+  margin-top:8px;
   display:flex;
   flex-wrap:wrap;
   gap:10px;
@@ -228,32 +151,26 @@ body{
 
 .link-pill{
   display:inline-block;
-  padding:8px 12px;
+  padding:7px 10px;
   border-radius:999px;
-  border:1px solid rgba(92,168,147,0.30);
-  background:rgba(92,168,147,0.12);
-  color:var(--teal-dark);
-  font-weight:800;
-  font-size:13px;
+  border:1px solid rgba(26,188,156,0.28);
+  background:rgba(26,188,156,0.10);
+  color:var(--accent2);
+  font-weight:700;
+  font-size:12.5px;
   text-decoration:none;
   transition:0.2s;
 }
 
 .link-pill:hover{
-  background:var(--teal);
-  border-color:var(--teal);
+  background:var(--accent);
+  border-color:var(--accent);
   color:#fff;
-}
-
-.rule{
-  height:1px;
-  background:var(--border);
-  margin:18px 0 18px 0;
 }
 
 /* Accordion */
 details.group{
-  margin-top:16px;
+  margin-top:18px;
 }
 
 details.group > summary{
@@ -270,14 +187,21 @@ details.group > summary::-webkit-details-marker{
   align-items:center;
   gap:12px;
   padding:14px;
-  border:1px solid rgba(92,168,147,0.28);
-  background:linear-gradient(180deg, rgba(92,168,147,0.12) 0%, rgba(255,255,255,0.95) 100%);
+  border:1px solid rgba(26,188,156,0.28);
+  background:linear-gradient(180deg, rgba(26,188,156,0.10) 0%, rgba(255,255,255,0.95) 100%);
   border-radius:12px;
   transition:0.2s;
+  cursor:pointer;
+}
+
+.group-head:hover{
+  border-color: rgba(26,188,156,0.55);
+  box-shadow:0 10px 20px rgba(2,8,23,0.06);
+  transform: translateY(-1px);
 }
 
 details.group[open] .group-head{
-  border-color: rgba(92,168,147,0.45);
+  border-color: rgba(26,188,156,0.45);
   box-shadow:0 8px 18px rgba(2,8,23,0.06);
 }
 
@@ -285,8 +209,7 @@ details.group[open] .group-head{
   width:38px;
   height:38px;
   border-radius:12px;
-  background:rgba(92,168,147,0.16);
-  border:1px solid rgba(92,168,147,0.22);
+  background:rgba(26,188,156,0.18);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -296,7 +219,7 @@ details.group[open] .group-head{
 .group-icon svg{
   width:18px;
   height:18px;
-  fill:var(--teal-dark);
+  fill:var(--accent2);
 }
 
 .group-title{
@@ -311,22 +234,43 @@ details.group[open] .group-head{
   margin-top:2px;
 }
 
-.chev{
+.tapnote{
   margin-left:auto;
+  font-size:12.5px;
+  font-weight:800;
+  background:rgba(26,188,156,0.12);
+  border:1px solid rgba(26,188,156,0.25);
+  padding:6px 10px;
+  border-radius:999px;
+  color:var(--accent2);
+  user-select:none;
+  white-space:nowrap;
+}
+
+details.group[open] .tapnote{
+  background:rgba(15,118,110,0.10);
+  border-color:rgba(15,118,110,0.18);
+  color:#0f2f3a;
+}
+
+.tapnote .when-open{ display:none; }
+details.group[open] .tapnote .when-open{ display:inline; }
+details.group[open] .tapnote .when-closed{ display:none; }
+
+.chev{
   width:28px;
   height:28px;
   border-radius:10px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:rgba(92,168,147,0.14);
-  border:1px solid rgba(92,168,147,0.22);
+  background:rgba(26,188,156,0.14);
 }
 
 .chev svg{
   width:14px;
   height:14px;
-  fill:var(--teal-dark);
+  fill:var(--accent2);
   transition:0.2s;
 }
 
@@ -336,7 +280,7 @@ details.group[open] .chev svg{
 
 .items{
   margin-top:10px;
-  border-left:3px solid rgba(92,168,147,0.18);
+  border-left:3px solid rgba(26,188,156,0.18);
   padding-left:14px;
 }
 
@@ -351,26 +295,23 @@ details.group[open] .chev svg{
 
 .item-title{
   font-size:16px;
-  font-weight:900;
-  margin:6px 0 6px 0;
-  color:var(--text);
+  font-weight:800;
+  margin-bottom:6px;
+  color:#0f2f3a;
 }
 
 .item-meta{
-  font-size:14px;
+  font-size:13.5px;
   color:var(--muted);
 }
 
-/* Footer */
 .footer{
-  margin-top:28px;
+  margin-top:60px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
   text-align:center;
-  font-size:13px;
+  font-size:14px;
   color:var(--muted);
-}
-@media (max-width: 980px){
-  .hero{ grid-template-columns:1fr; }
-  .avatar{ justify-content:flex-start; }
 }
 </style>
 </head>
@@ -378,50 +319,32 @@ details.group[open] .chev svg{
 <body>
 <div class="container">
 
-  <div class="topbar">
-    <div class="topnav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a class="active" href="about.html">About</a>
-      <a href="books.html">Books</a>
+  <div class="top">
+    <div class="title">
+      <h1>About</h1>
+      <p>Academic profile and professional overview.</p>
+    </div>
+
+    <div class="nav">
+      <a href="/">Home</a>
+      <a href="about.html" class="active">About</a>
       <a href="research.html">Research</a>
+      <a href="books.html">Books</a>
       <a href="ip.html">Intellectual Property</a>
       <a href="contact.html">Contact</a>
     </div>
-    <a class="cvbtn" href="cv.pdf" download>Download CV</a>
-  </div>
-
-  <div class="hero">
-    <div>
-      <h1>About</h1>
-      <div class="identity">
-        Academic profile and professional overview, with an interdisciplinary focus on AI, human-centered computing, data analytics, and institutional quality systems.
-      </div>
-
-      <div class="hero-badges" aria-label="Snapshot tags">
-        <span class="pill">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a6 6 0 0 1 6 6c0 2.2-1.2 4.2-3.1 5.2 2.8 1.2 4.6 3.7 4.6 6.8v1H4v-1c0-3.1 1.8-5.6 4.6-6.8A6 6 0 0 1 6 8a6 6 0 0 1 6-6z"/></svg>
-          Academic Profile
-        </span>
-        <span class="pill">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v4H4V4zm0 6h10v4H4v-4zm0 6h16v4H4v-4z"/></svg>
-          Research & Teaching
-        </span>
-        <span class="pill">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12v6H6V2zm-2 9h16v11H4V11z"/></svg>
-          QA & Accreditation
-        </span>
-      </div>
-    </div>
 
     <div class="avatar">
-      <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+      <img src="profile.jpg" alt="Dr. Nidal Al Said">
     </div>
   </div>
 
   <div class="panel">
-    <div class="section-title">Dr. Nidal Al Said</div>
 
+    <div class="page-title">Dr. Nidal Al Said</div>
     <div class="summary-note">Quick academic snapshot</div>
+    <div class="expand-hint">Tip: click any section header below to expand and view details.</div>
+
     <div class="summary">
       <span class="badge">Artificial Intelligence</span>
       <span class="badge">Machine Learning</span>
@@ -437,14 +360,15 @@ details.group[open] .chev svg{
 
     <div class="links">
       <a class="link-pill" href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a class="link-pill" href="research.html">Research Profiles</a>
-      <a class="link-pill" href="ip.html">IP Portfolio</a>
       <a class="link-pill" href="contact.html">Contact</a>
+      <a class="link-pill" href="research.html">Research Profile</a>
+      <a class="link-pill" href="ip.html">IP Portfolio</a>
     </div>
 
     <div class="rule"></div>
 
-    <details class="group" open>
+    <!-- 1) Academic Overview -->
+    <details class="group">
       <summary>
         <div class="group-head">
           <div class="group-icon" aria-hidden="true">
@@ -454,21 +378,29 @@ details.group[open] .chev svg{
             <div class="group-title">Academic Overview</div>
             <div class="group-sub">Position, identity, and interdisciplinary focus</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Role</span>
+          <div class="badge">Role</div>
           <div class="item-title">Associate Professor of Information Technology</div>
           <div class="item-meta">
-            An academic profile shaped by research, teaching, and academic leadership across technology-driven higher education environments, with a focus on AI-enabled innovation and program development.
+            An academic profile shaped by research, teaching, and academic leadership across technology-driven higher education environments, with a strong focus on AI-enabled innovation and program development.
           </div>
         </div>
 
         <div class="item">
-          <span class="badge">Focus</span>
+          <div class="badge">Focus</div>
           <div class="item-title">AI, Intelligent Systems, and Human-Centered Technology</div>
           <div class="item-meta">
             Core interests include Artificial Intelligence, Machine Learning, Human–Computer Interaction, data analytics, smart applications, and responsible AI integration in education, media, and organizational settings.
@@ -476,7 +408,7 @@ details.group[open] .chev svg{
         </div>
 
         <div class="item">
-          <span class="badge">Strength</span>
+          <div class="badge">Strength</div>
           <div class="item-title">Scholar and academic developer</div>
           <div class="item-meta">
             Combines scholarly contribution with curriculum modernization, assessment alignment, and structured quality practices to support academic excellence and continuous improvement.
@@ -485,6 +417,7 @@ details.group[open] .chev svg{
       </div>
     </details>
 
+    <!-- 2) Research & Publications -->
     <details class="group">
       <summary>
         <div class="group-head">
@@ -495,13 +428,21 @@ details.group[open] .chev svg{
             <div class="group-title">Research & Publications</div>
             <div class="group-sub">AI-driven intelligent systems, analytics, and impact</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Research</span>
+          <div class="badge">Research</div>
           <div class="item-title">Core research areas</div>
           <div class="item-meta">
             Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, and AI-driven analytics for education, media, and organizational decision-making.
@@ -509,15 +450,15 @@ details.group[open] .chev svg{
         </div>
 
         <div class="item">
-          <span class="badge">Approach</span>
+          <div class="badge">Approach</div>
           <div class="item-title">From model performance to real adoption</div>
           <div class="item-meta">
-            Emphasizes algorithmic robustness alongside usability, interpretability, and alignment with real constraints in academic and institutional environments.
+            Emphasizes not only algorithmic accuracy and robustness, but also usability, interpretability, and alignment with real constraints in academic and institutional environments.
           </div>
         </div>
 
         <div class="item">
-          <span class="badge">Outputs</span>
+          <div class="badge">Outputs</div>
           <div class="item-title">Peer-reviewed scholarship</div>
           <div class="item-meta">
             Publications include journal articles, international conference papers, and edited volumes, reflecting methodological rigor, applied relevance, and interdisciplinary integration.
@@ -526,6 +467,7 @@ details.group[open] .chev svg{
       </div>
     </details>
 
+    <!-- 3) Teaching & Curriculum Development -->
     <details class="group">
       <summary>
         <div class="group-head">
@@ -536,21 +478,37 @@ details.group[open] .chev svg{
             <div class="group-title">Teaching & Curriculum Development</div>
             <div class="group-sub">Outcome-driven, tech-enhanced, and industry aware</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Teaching</span>
+          <div class="badge">Teaching</div>
           <div class="item-title">Courses and learning experience</div>
           <div class="item-meta">
-            Designs and delivers courses across AI foundations, HCI, smart applications, multimedia systems, and data analytics, with a focus on clarity, application, and employability skills.
+            Designs and delivers courses across AI foundations, HCI, smart applications, multimedia systems, data analytics, and emerging digital technologies, with a focus on clarity, application, and employability skills.
           </div>
         </div>
 
         <div class="item">
-          <span class="badge">Curriculum</span>
+          <div class="badge">Practice</div>
+          <div class="item-title">Modern pedagogy</div>
+          <div class="item-meta">
+            Uses learner-centered strategies, structured problem-solving, applied projects, and technology-enhanced teaching to ensure conceptual understanding and professional readiness.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Curriculum</div>
           <div class="item-title">Program and course modernization</div>
           <div class="item-meta">
             Contributes to curriculum mapping, learning outcomes formulation, assessment alignment, benchmarking, and the integration of AI competencies across interdisciplinary programs.
@@ -559,6 +517,7 @@ details.group[open] .chev svg{
       </div>
     </details>
 
+    <!-- 4) Books, IP, and Innovation -->
     <details class="group">
       <summary>
         <div class="group-head">
@@ -569,13 +528,21 @@ details.group[open] .chev svg{
             <div class="group-title">Books, Intellectual Property & Innovation</div>
             <div class="group-sub">Authorship, patents, and applied innovation</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Books</span>
+          <div class="badge">Books</div>
           <div class="item-title">Academic authorship</div>
           <div class="item-meta">
             Author and co-author of academic books that translate complex AI and intelligent systems topics into structured, teachable, and application-oriented knowledge for students and professionals.
@@ -583,7 +550,7 @@ details.group[open] .chev svg{
         </div>
 
         <div class="item">
-          <span class="badge">IP</span>
+          <div class="badge">IP</div>
           <div class="item-title">Patents and registered designs</div>
           <div class="item-meta">
             Engaged in intellectual property development including patents, registered designs, and copyrighted works related to intelligent systems, analytics devices, and technology-driven solutions.
@@ -592,6 +559,7 @@ details.group[open] .chev svg{
       </div>
     </details>
 
+    <!-- 5) Institutional Effectiveness & Accreditation -->
     <details class="group">
       <summary>
         <div class="group-head">
@@ -602,13 +570,21 @@ details.group[open] .chev svg{
             <div class="group-title">Institutional Effectiveness & Accreditation</div>
             <div class="group-sub">Quality assurance, assessment, KPIs, and improvement systems</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Quality</span>
+          <div class="badge">Quality</div>
           <div class="item-title">Assessment and continuous improvement</div>
           <div class="item-meta">
             Contributes to assessment design, evidence-based reporting, KPI interpretation, and improvement planning to support structured academic development.
@@ -616,7 +592,7 @@ details.group[open] .chev svg{
         </div>
 
         <div class="item">
-          <span class="badge">Accreditation</span>
+          <div class="badge">Accreditation</div>
           <div class="item-title">Documentation and compliance readiness</div>
           <div class="item-meta">
             Supports accreditation-related processes through structured documentation, benchmarking, performance analysis, and alignment with institutional standards and external expectations.
@@ -625,6 +601,7 @@ details.group[open] .chev svg{
       </div>
     </details>
 
+    <!-- 6) Professional Service & Reviewing -->
     <details class="group">
       <summary>
         <div class="group-head">
@@ -635,21 +612,38 @@ details.group[open] .chev svg{
             <div class="group-title">Professional Service & Reviewing</div>
             <div class="group-sub">Peer review, editorial support, and academic engagement</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Review</span>
+          <div class="badge">Review</div>
           <div class="item-title">Journal and publisher reviewing</div>
           <div class="item-meta">
             Active reviewer for international peer-reviewed venues across AI, data analytics, intelligent systems, and interdisciplinary technology research, supporting scholarly rigor and quality standards.
           </div>
         </div>
+
+        <div class="item">
+          <div class="badge">Community</div>
+          <div class="item-title">Conferences and collaboration</div>
+          <div class="item-meta">
+            Participates in international academic initiatives and cross-institutional collaborations across multiple regions, supporting knowledge exchange and research development.
+          </div>
+        </div>
       </div>
     </details>
 
+    <!-- 7) Academic Collaboration -->
     <details class="group">
       <summary>
         <div class="group-head">
@@ -660,16 +654,32 @@ details.group[open] .chev svg{
             <div class="group-title">Academic Collaboration</div>
             <div class="group-sub">Academic networks, joint research, and scholarly exchange</div>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+
+          <div class="chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+          </div>
         </div>
       </summary>
 
       <div class="items">
         <div class="item">
-          <span class="badge">Engagement</span>
+          <div class="badge">Engagement</div>
           <div class="item-title">International academic collaboration</div>
           <div class="item-meta">
             Actively engaged in collaborative research initiatives, academic networks, and joint scholarly activities that advance Artificial Intelligence, intelligent systems, and interdisciplinary innovation.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Contribution</div>
+          <div class="item-title">Scholarly and professional involvement</div>
+          <div class="item-meta">
+            Contributes to the academic community through research collaboration, peer reviewing, editorial engagement, and knowledge exchange aligned with global academic standards.
           </div>
         </div>
       </div>
@@ -677,7 +687,9 @@ details.group[open] .chev svg{
 
   </div>
 
-  <div class="footer">© 2026 Dr. Nidal Al Said · Ajman University</div>
+  <div class="footer">
+    © 2026 Dr. Nidal Al Said · Ajman University
+  </div>
 
 </div>
 </body>
