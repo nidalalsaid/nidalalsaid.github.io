@@ -1,117 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Dr. Nidal Al Said</title>
-  <link rel="stylesheet" href="style.css?v=3">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact | Dr. Nidal Al Said</title>
+
+<meta name="description" content="Contact Dr. Nidal Al Said — Associate Professor of Information Technology at Ajman University. Email, affiliation, and a direct message form." />
+<link rel="canonical" href="https://nidalalsaid.github.io/contact.html" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Contact | Dr. Nidal Al Said" />
+<meta property="og:description" content="Get in touch via email or send a direct message." />
+<meta property="og:url" content="https://nidalalsaid.github.io/contact.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+
+<style>
+:root{
+  --bg:#f4f6f8;
+  --panel:#ffffff;
+  --text:#1e2a35;
+  --muted:#6f8093;
+
+  --teal:#5ca893;
+  --teal-dark:#4a8f7c;
+  --teal-soft:#e7f3ef;
+
+  --border:#e5eaef;
+  --shadow:0 6px 18px rgba(0,0,0,0.05);
+  --shadow2:0 6px 16px rgba(0,0,0,0.045);
+  --radius:14px;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+.container{
+  max-width:1180px;
+  margin:0 auto;
+  padding:40px 24px;
+}
+
+/* TOP NAV */
+.topbar{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.topnav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.topnav a{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:600;
+  padding:6px 2px;
+  border-bottom:2px solid transparent;
+}
+
+.topnav a:hover{
+  color:var(--text);
+  border-bottom-color:rgba(92,168,147,0.35);
+}
+
+.topnav a.active{
+  color:var(--text);
+  border-bottom-color:rgba(92,168,147,0.7);
+}
+
+.cvbtn{
+  display:inline-block;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:999px;
+  background:var(--teal);
+  color:#fff;
+  text-decoration:none;
+  transition:background .2s ease;
+}
+
+.cvbtn:hover{
+  background:var(--teal-dark);
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(244,246,248,1) 100%);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+  display:grid;
+  grid-template-columns:1fr 240px;
+  gap:26px;
+  align-items:start;
+}
+
+.hero h1{
+  margin:0;
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:-0.4px;
+}
+
+.identity{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:15px;
+  max-width:860px;
+}
+
+.hero-badges{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  color:var(--teal-dark);
+  font-weight:700;
+  font-size:13px;
+}
+
+.pill svg{
+  width:16px;
+  height:16px;
+  fill:var(--teal-dark);
+  opacity:.95;
+}
+
+.avatar{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.avatar img{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--teal);
+  background:#fff;
+}
+
+/* PANELS */
+.panel{
+  margin-top:22px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:22px;
+  font-weight:700;
+  margin:0 0 16px 0;
+}
+
+.section-title::before{
+  content:"";
+  width:4px;
+  height:24px;
+  border-radius:3px;
+  background:var(--teal);
+}
+
+.note{
+  margin-top:-10px;
+  color:var(--muted);
+  font-size:14.5px;
+  max-width:980px;
+}
+
+/* CARDS GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:14px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:var(--shadow2);
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.iconbox{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+}
+
+.iconbox svg{
+  width:20px;
+  height:20px;
+  fill:var(--teal-dark);
+}
+
+.card h3{
+  margin:0;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--text);
+}
+
+.card p{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:14.5px;
+}
+
+.card a{
+  color:var(--teal-dark);
+  font-weight:800;
+  text-decoration:none;
+}
+
+.card a:hover{
+  color:var(--teal);
+  text-decoration:underline;
+}
+
+/* FORM */
+.form{
+  margin-top:12px;
+  max-width:860px;
+}
+
+.field{
+  margin-top:14px;
+}
+
+label{
+  display:block;
+  font-weight:800;
+  font-size:13.5px;
+  color:var(--text);
+}
+
+input, textarea{
+  margin-top:8px;
+  width:100%;
+  padding:12px 12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  font-size:14.5px;
+  outline:none;
+}
+
+input:focus, textarea:focus{
+  border-color:rgba(92,168,147,0.55);
+  box-shadow:0 0 0 4px rgba(92,168,147,0.14);
+}
+
+.actions{
+  margin-top:16px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:800;
+  border-radius:999px;
+  background:var(--teal);
+  color:#fff;
+  text-decoration:none;
+  border:0;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+
+.btn:hover{
+  background:var(--teal-dark);
+}
+
+.form-message{
+  font-size:14.5px;
+  font-weight:800;
+}
+
+.form-message.ok{ color:var(--teal-dark); }
+.form-message.err{ color:#b42318; }
+
+/* FOOTER */
+.footer{
+  margin-top:28px;
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+}
+
+@media (max-width: 980px){
+  .hero{ grid-template-columns:1fr; }
+  .avatar{ justify-content:flex-start; }
+  .grid{ grid-template-columns:1fr; }
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <h1>Dr. Nidal Al Said</h1>
-        <div class="role">Associate Professor at Ajman University</div>
-        <div class="areas">
-          Artificial Intelligence · Human–Computer Interaction · Data Analytics · Smart Digital Systems
-        </div>
+  <div class="topbar">
+    <div class="topnav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="research.html">Research</a>
+      <a href="ip.html">Intellectual Property</a>
+      <a class="active" href="contact.html">Contact</a>
+    </div>
+    <a class="cvbtn" href="cv.pdf" download>Download CV</a>
+  </div>
 
-        <div class="navbar">
-          <a class="navbtn" href="/">Home</a>
-           <a class="navbtn" href="about.html">About</a>
-          <a class="navbtn" href="books.html">Books</a>
-          <a class="navbtn" href="research.html">Research</a>
-          <a class="navbtn" href="ip.html">Intellectual Property</a>
-          <a class="navbtn primary" href="contact.html">Contact</a>
-          <a class="navbtn" href="cv.pdf">Download CV</a>
-        </div>
+  <div class="hero">
+    <div>
+      <h1>Contact</h1>
+      <div class="identity">
+        For academic collaboration, research opportunities, speaking invitations, or professional inquiries, you may reach me via email or the message form below.
       </div>
 
-      <div class="avatar">
-        <img src="profile.jpg" alt="Dr. Nidal Al Said">
+      <div class="hero-badges" aria-label="Highlights">
+        <span class="pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v6l10 5 10-5V4l-10 5Zm0 6L2 10v7l10 5 10-5v-7l-10 5Z"/></svg>
+          Ajman University
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
+          Direct Email
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+          Ajman, UAE
+        </span>
       </div>
     </div>
 
-    <!-- CONTACT PANEL -->
-    <div class="panel">
-      <div class="section-title">Contact</div>
+    <div class="avatar">
+      <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+    </div>
+  </div>
 
-      <div class="profile-grid">
+  <div class="panel">
+    <div class="section-title">Contact Details</div>
+    <div class="note">Preferred contact channel is email. The form is available for quick messages.</div>
 
-        <!-- Affiliation -->
-        <div class="pcard">
-          <div class="picon">
-            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v6l10 5 10-5V4l-10 5Zm0 6L2 10v7l10 5 10-5v-7l-10 5Z"/>
-            </svg>
-          </div>
-          <div class="pinfo">
-            <div class="ptitle">Affiliation</div>
-            <div style="color:var(--muted); font-size:14px;">
-              College of Mass Communication, Ajman University
-            </div>
-          </div>
+    <div class="grid">
+      <div class="card">
+        <div class="iconbox" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v6l10 5 10-5V4l-10 5Zm0 6L2 10v7l10 5 10-5v-7l-10 5Z"/></svg>
         </div>
-
-        <!-- Email -->
-        <div class="pcard">
-          <div class="picon">
-            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/>
-            </svg>
-          </div>
-          <div class="pinfo">
-            <div class="ptitle">Email</div>
-            <div style="font-size:14px;">
-              <a href="mailto:n.alsaid@ajman.ac.ae">n.alsaid@ajman.ac.ae</a><br>
-              <a href="mailto:nidal_alsaid@yahoo.com">nidal_alsaid@yahoo.com</a>
-            </div>
-          </div>
+        <div>
+          <h3>Affiliation</h3>
+          <p>College of Mass Communication, Ajman University</p>
         </div>
+      </div>
 
-        <!-- Mailing Address -->
-        <div class="pcard">
-          <div class="picon">
-            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/>
-            </svg>
-          </div>
-          <div class="pinfo">
-            <div class="ptitle">Mailing Address</div>
-            <div style="color:var(--muted); font-size:14px;">
-              P.O Box 5099, Ajman, UAE
-            </div>
-          </div>
+      <div class="card">
+        <div class="iconbox" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
         </div>
+        <div>
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:n.alsaid@ajman.ac.ae">n.alsaid@ajman.ac.ae</a><br />
+            <a href="mailto:nidal_alsaid@yahoo.com">nidal_alsaid@yahoo.com</a>
+          </p>
+        </div>
+      </div>
 
+      <div class="card" style="grid-column:1 / -1;">
+        <div class="iconbox" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+        </div>
+        <div>
+          <h3>Mailing Address</h3>
+          <p>P.O Box 5099, Ajman, UAE</p>
+        </div>
       </div>
     </div>
-<!-- CONTACT FORM -->
+  </div>
 
-<div class="panel">
-  <div class="section-title">Send a Message</div>
+  <div class="panel">
+    <div class="section-title">Send a Message</div>
+    <div class="note">Messages are delivered via Formspree. You will see a confirmation once the message is sent.</div>
 
-  <form id="contactForm" action="https://formspree.io/f/xeeldywp" method="POST">
+    <form class="form" id="contactForm" action="https://formspree.io/f/xeeldywp" method="POST" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" autocomplete="name" required />
+      </div>
 
-    <label>Name</label><br>
-    <input type="text" name="name" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:14px;border:1px solid #ddd;border-radius:6px;">
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" autocomplete="email" required />
+      </div>
 
-    <label>Email</label><br>
-    <input type="email" name="email" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:14px;border:1px solid #ddd;border-radius:6px;">
+      <div class="field">
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" name="subject" />
+      </div>
 
-    <label>Subject</label><br>
-    <input type="text" name="subject" style="width:100%;padding:10px;margin-top:6px;margin-bottom:14px;border:1px solid #ddd;border-radius:6px;">
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
 
-    <label>Message</label><br>
-    <textarea name="message" rows="5" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:14px;border:1px solid #ddd;border-radius:6px;"></textarea>
+      <div class="actions">
+        <button type="submit" class="btn">Send Message</button>
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+      </div>
+    </form>
+  </div>
 
-    <button type="submit" class="navbtn primary">Send Message</button>
+  <div class="footer">© 2026 Dr. Nidal Al Said · Ajman University</div>
 
-   <div id="formMessage" style="margin-top:16px;color:#d62828;font-size:18px;font-weight:700;"></div>
-  </form>
 </div>
 
 <script>
@@ -121,29 +473,32 @@ const msg = document.getElementById("formMessage");
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
 
-  msg.innerHTML = "Sending...";
+  msg.className = "form-message";
+  msg.textContent = "Sending...";
 
-  const data = new FormData(form);
+  try{
+    const data = new FormData(form);
 
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
 
-  if (response.ok) {
-    form.reset();
-    msg.innerHTML = "Thank you. Your message has been sent successfully.";
-  } else {
-    msg.innerHTML = "There was a problem sending the message.";
+    if (response.ok) {
+      form.reset();
+      msg.classList.add("ok");
+      msg.textContent = "Thank you. Your message has been sent successfully.";
+    } else {
+      msg.classList.add("err");
+      msg.textContent = "There was a problem sending the message. Please try again.";
+    }
+  }catch(err){
+    msg.classList.add("err");
+    msg.textContent = "Network error. Please try again.";
   }
 });
 </script>
-    <!-- FOOTER -->
-    <div class="footer">
-      © 2026 Dr. Nidal Al Said · Ajman University
-    </div>
 
-  </div>
 </body>
 </html>
