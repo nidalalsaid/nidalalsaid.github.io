@@ -771,5 +771,16 @@ body{
   <div class="footer">© 2026 Dr. Nidal Al Said · Ajman University</div>
 
 </div>
+  <div style="margin-top:20px; font-size:18px;">
+    Visitors: <span id="visitor-count">Loading...</span>
+  </div>
+
+  <script>
+    fetch('https://api.countapi.xyz/hit/nidalalsaid.github.io/visits')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visitor-count').textContent = data.value;
+      });
+  </script>
 </body>
 </html>
