@@ -1,157 +1,776 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About | Dr. Nidal Al Said</title>
 
-<title>About Dr. Nidal Al Said | AI, HCI, Data Mining Researcher</title>
-
-<meta name="description" content="Learn about Dr. Nidal Al Said, Associate Professor at Ajman University specializing in Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, and Smart Systems." />
-
+<meta name="description" content="Academic profile of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in Artificial Intelligence, Machine Learning, Human–Computer Interaction, curriculum development, and institutional effectiveness." />
 <link rel="canonical" href="https://nidalalsaid.github.io/about.html" />
 <meta name="robots" content="index, follow" />
 
-<meta property="og:title" content="About Dr. Nidal Al Said" />
-<meta property="og:description" content="Associate Professor at Ajman University with expertise in AI, HCI, Data Mining, and Smart Systems." />
+<meta property="og:title" content="About | Dr. Nidal Al Said" />
+<meta property="og:description" content="Academic profile and professional overview." />
 <meta property="og:url" content="https://nidalalsaid.github.io/about.html" />
 <meta property="og:type" content="website" />
-
 <meta name="twitter:card" content="summary" />
 
 <style>
+:root{
+  --bg:#f4f6f8;
+  --panel:#ffffff;
+  --text:#1e2a35;
+  --muted:#6f8093;
+
+  --teal:#5ca893;
+  --teal-dark:#4a8f7c;
+  --teal-soft:#e7f3ef;
+
+  --border:#e5eaef;
+  --shadow:0 6px 18px rgba(0,0,0,0.05);
+  --shadow2:0 6px 16px rgba(0,0,0,0.045);
+  --radius:14px;
+}
+
+*{ box-sizing:border-box; }
+
 body{
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#f4f6f8;
-  color:#1e2a35;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
   line-height:1.7;
 }
+
 .container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
+  max-width:1180px;
+  margin:0 auto;
+  padding:40px 24px;
 }
-h1{
-  font-size:34px;
-  margin-bottom:10px;
+
+/* TOP NAV (same as Contact) */
+.topbar{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
 }
-h2{
-  margin-top:30px;
-  font-size:22px;
-}
-p{
-  color:#555;
-}
+
 .topnav{
-  margin-bottom:30px;
+  display:flex;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap;
 }
+
 .topnav a{
-  margin-right:15px;
   text-decoration:none;
-  color:#5ca893;
-  font-weight:bold;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:600;
+  padding:6px 2px;
+  border-bottom:2px solid transparent;
 }
+
 .topnav a:hover{
-  text-decoration:underline;
+  color:var(--text);
+  border-bottom-color:rgba(92,168,147,0.35);
 }
-.section{
+
+.topnav a.active{
+  color:var(--text);
+  border-bottom-color:rgba(92,168,147,0.7);
+}
+
+.cvbtn{
+  display:inline-block;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:999px;
+  background:var(--teal);
+  color:#fff;
+  text-decoration:none;
+  transition:background .2s ease;
+}
+
+.cvbtn:hover{
+  background:var(--teal-dark);
+}
+
+/* HERO (same as Contact) */
+.hero{
+  background:linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(244,246,248,1) 100%);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+  display:grid;
+  grid-template-columns:1fr 240px;
+  gap:26px;
+  align-items:start;
+}
+
+.hero h1{
+  margin:0;
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:-0.4px;
+}
+
+.identity{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:15px;
+  max-width:860px;
+}
+
+.hero-badges{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  color:var(--teal-dark);
+  font-weight:700;
+  font-size:13px;
+}
+
+.pill svg{
+  width:16px;
+  height:16px;
+  fill:var(--teal-dark);
+  opacity:.95;
+}
+
+.avatar{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.avatar img{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--teal);
   background:#fff;
-  padding:20px;
-  margin-top:20px;
-  border-radius:10px;
 }
+
+/* PANELS (same base as Contact) */
+.panel{
+  margin-top:22px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:22px;
+  font-weight:700;
+  margin:0 0 16px 0;
+}
+
+.section-title::before{
+  content:"";
+  width:4px;
+  height:24px;
+  border-radius:3px;
+  background:var(--teal);
+}
+
+.note{
+  margin-top:-10px;
+  color:var(--muted);
+  font-size:14.5px;
+  max-width:980px;
+}
+
+/* About-specific bits, recolored to match Contact palette */
+.page-title{
+  font-size:28px;
+  font-weight:800;
+  margin:0 0 6px 0;
+}
+
+.summary{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:12px 0 10px 0;
+}
+
+.badge{
+  display:inline-block;
+  font-size:12px;
+  font-weight:800;
+  padding:6px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  color:var(--teal-dark);
+}
+
+.summary-note{
+  font-size:13.5px;
+  color:var(--muted);
+  margin:0;
+}
+
+.expand-hint{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:13.5px;
+}
+
+.rule{
+  height:1px;
+  background:var(--border);
+  margin:18px 0 18px 0;
+}
+
+.links{
+  margin-top:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.link-pill{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid #cfe7df;
+  background:var(--teal-soft);
+  color:var(--teal-dark);
+  font-weight:800;
+  font-size:12.5px;
+  text-decoration:none;
+  transition:0.2s;
+}
+
+.link-pill:hover{
+  background:var(--teal);
+  border-color:var(--teal);
+  color:#fff;
+}
+
+/* Accordion */
+details.group{
+  margin-top:16px;
+}
+
+details.group > summary{
+  list-style:none;
+  cursor:pointer;
+}
+
+details.group > summary::-webkit-details-marker{
+  display:none;
+}
+
+.group-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border:1px solid #cfe7df;
+  background:linear-gradient(180deg, rgba(231,243,239,1) 0%, rgba(255,255,255,0.95) 100%);
+  border-radius:12px;
+  transition:0.2s;
+}
+
+.group-head:hover{
+  border-color: rgba(92,168,147,0.55);
+  box-shadow:0 10px 20px rgba(2,8,23,0.06);
+  transform: translateY(-1px);
+}
+
+details.group[open] .group-head{
+  border-color: rgba(92,168,147,0.55);
+  box-shadow:0 8px 18px rgba(2,8,23,0.06);
+}
+
+.group-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 38px;
+}
+
+.group-icon svg{
+  width:18px;
+  height:18px;
+  fill:var(--teal-dark);
+}
+
+.group-title{
+  font-size:17px;
+  font-weight:900;
+  color:var(--text);
+}
+
+.group-sub{
+  font-size:13.5px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.tapnote{
+  margin-left:auto;
+  font-size:12.5px;
+  font-weight:800;
+  background:rgba(92,168,147,0.12);
+  border:1px solid rgba(92,168,147,0.25);
+  padding:6px 10px;
+  border-radius:999px;
+  color:var(--teal-dark);
+  user-select:none;
+  white-space:nowrap;
+}
+
+details.group[open] .tapnote{
+  background:rgba(92,168,147,0.10);
+  border-color:rgba(92,168,147,0.18);
+  color:#0f2f3a;
+}
+
+.tapnote .when-open{ display:none; }
+details.group[open] .tapnote .when-open{ display:inline; }
+details.group[open] .tapnote .when-closed{ display:none; }
+
+.chev{
+  width:28px;
+  height:28px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(92,168,147,0.14);
+}
+
+.chev svg{
+  width:14px;
+  height:14px;
+  fill:var(--teal-dark);
+  transition:0.2s;
+}
+
+details.group[open] .chev svg{
+  transform:rotate(180deg);
+}
+
+.items{
+  margin-top:10px;
+  border-left:3px solid rgba(92,168,147,0.18);
+  padding-left:14px;
+}
+
+.item{
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.item:last-child{
+  border-bottom:0;
+}
+
+.item-title{
+  font-size:16px;
+  font-weight:800;
+  margin:0 0 6px 0;
+  color:#0f2f3a;
+}
+
+.item-meta{
+  font-size:13.5px;
+  color:var(--muted);
+}
+
+/* FOOTER (same as Contact) */
 .footer{
+  margin-top:28px;
   text-align:center;
-  margin-top:40px;
-  color:#888;
+  font-size:13px;
+  color:var(--muted);
+}
+
+@media (max-width: 980px){
+  .hero{ grid-template-columns:1fr; }
+  .avatar{ justify-content:flex-start; }
 }
 </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dr. Nidal Al Said",
-  "url": "https://nidalalsaid.github.io/",
-  "jobTitle": "Associate Professor of Information Technology",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Ajman University"
-  },
-  "sameAs": [
-    "https://scholar.google.ae/citations?user=yqhE_ksAAAAJ",
-    "https://orcid.org/0000-0001-9599-2492",
-    "https://www.linkedin.com/in/nidal-al-said-74269210/"
-  ]
-}
-</script>
-
 </head>
 
 <body>
-
 <div class="container">
 
-<div class="topnav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="books.html">Books</a>
-<a href="research.html">Research</a>
-<a href="ip.html">IP</a>
-<a href="contact.html">Contact</a>
+  <div class="topbar">
+    <div class="topnav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="research.html">Research</a>
+      <a href="ip.html">Intellectual Property</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="cvbtn" href="cv.pdf" download>Download CV</a>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>About</h1>
+      <div class="identity">
+        Academic profile and professional overview, highlighting research interests, teaching, innovation, and institutional contributions.
+      </div>
+
+      <div class="hero-badges" aria-label="Highlights">
+        <span class="pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v6l10 5 10-5V4l-10 5Zm0 6L2 10v7l10 5 10-5v-7l-10 5Z"/></svg>
+          Ajman University
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
+          Academic Profile
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+          Ajman, UAE
+        </span>
+      </div>
+    </div>
+
+    <div class="avatar">
+      <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="page-title">Dr. Nidal Al Said</div>
+    <p class="summary-note">Quick academic snapshot</p>
+    <div class="expand-hint">Tip: click any section header below to expand and view details.</div>
+
+    <div class="summary">
+      <span class="badge">Artificial Intelligence</span>
+      <span class="badge">Machine Learning</span>
+      <span class="badge">Human–Computer Interaction</span>
+      <span class="badge">Data Analytics</span>
+      <span class="badge">Smart Applications</span>
+      <span class="badge">Curriculum Development</span>
+      <span class="badge">Institutional Effectiveness</span>
+      <span class="badge">Accreditation & QA</span>
+      <span class="badge">Academic Publishing</span>
+      <span class="badge">Patents & IP</span>
+    </div>
+
+    <div class="links">
+      <a class="link-pill" href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="link-pill" href="contact.html">Contact</a>
+      <a class="link-pill" href="research.html">Research Profile</a>
+      <a class="link-pill" href="ip.html">IP Portfolio</a>
+    </div>
+
+    <div class="rule"></div>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0-4.2-4.2A4.2 4.2 0 0 0 12 12zm0 2c-4.1 0-7.5 2.1-7.5 4.8V21h15v-2.2c0-2.7-3.4-4.8-7.5-4.8z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Academic Overview</div>
+            <div class="group-sub">Position, identity, and interdisciplinary focus</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Role</div>
+          <div class="item-title">Associate Professor of Information Technology</div>
+          <div class="item-meta">
+            An academic profile shaped by research, teaching, and academic leadership across technology-driven higher education environments, with a strong focus on AI-enabled innovation and program development.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Focus</div>
+          <div class="item-title">AI, Intelligent Systems, and Human-Centered Technology</div>
+          <div class="item-meta">
+            Core interests include Artificial Intelligence, Machine Learning, Human–Computer Interaction, data analytics, smart applications, and responsible AI integration in education, media, and organizational settings.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Strength</div>
+          <div class="item-title">Scholar and academic developer</div>
+          <div class="item-meta">
+            Combines scholarly contribution with curriculum modernization, assessment alignment, and structured quality practices to support academic excellence and continuous improvement.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Research & Publications</div>
+            <div class="group-sub">AI-driven intelligent systems, analytics, and impact</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Research</div>
+          <div class="item-title">Core research areas</div>
+          <div class="item-meta">
+            Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, and AI-driven analytics for education, media, and organizational decision-making.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Approach</div>
+          <div class="item-title">From model performance to real adoption</div>
+          <div class="item-meta">
+            Emphasizes not only algorithmic accuracy and robustness, but also usability, interpretability, and alignment with real constraints in academic and institutional environments.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Outputs</div>
+          <div class="item-title">Peer-reviewed scholarship</div>
+          <div class="item-meta">
+            Publications include journal articles, international conference papers, and edited volumes, reflecting methodological rigor, applied relevance, and interdisciplinary integration.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l10 6-10 6L2 9l10-6zm0 13l10-6v8l-10 5-10-5v-8l10 6z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Teaching & Curriculum Development</div>
+            <div class="group-sub">Outcome-driven, tech-enhanced, and industry aware</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Teaching</div>
+          <div class="item-title">Courses and learning experience</div>
+          <div class="item-meta">
+            Designs and delivers courses across AI foundations, HCI, smart applications, multimedia systems, data analytics, and emerging digital technologies, with a focus on clarity, application, and employability skills.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Practice</div>
+          <div class="item-title">Modern pedagogy</div>
+          <div class="item-meta">
+            Uses learner-centered strategies, structured problem-solving, applied projects, and technology-enhanced teaching to ensure conceptual understanding and professional readiness.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Curriculum</div>
+          <div class="item-title">Program and course modernization</div>
+          <div class="item-meta">
+            Contributes to curriculum mapping, learning outcomes formulation, assessment alignment, benchmarking, and the integration of AI competencies across interdisciplinary programs.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6V2zm2 7h8v2H8V9zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Books, Intellectual Property & Innovation</div>
+            <div class="group-sub">Authorship, patents, and applied innovation</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Books</div>
+          <div class="item-title">Academic authorship</div>
+          <div class="item-meta">
+            Author and co-author of academic books that translate complex AI and intelligent systems topics into structured, teachable, and application-oriented knowledge for students and professionals.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">IP</div>
+          <div class="item-title">Patents and registered designs</div>
+          <div class="item-meta">
+            Engaged in intellectual property development including patents, registered designs, and copyrighted works related to intelligent systems, analytics devices, and technology-driven solutions.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.6 9.7-9 10-5.4-.3-9-5-9-10V6l9-4zm-1 6h2v6h-2V8zm0 8h2v2h-2v-2z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Institutional Effectiveness & Accreditation</div>
+            <div class="group-sub">Quality assurance, assessment, KPIs, and improvement systems</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Quality</div>
+          <div class="item-title">Assessment and continuous improvement</div>
+          <div class="item-meta">
+            Contributes to assessment design, evidence-based reporting, KPI interpretation, and improvement planning to support structured academic development.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Accreditation</div>
+          <div class="item-title">Documentation and compliance readiness</div>
+          <div class="item-meta">
+            Supports accreditation-related processes through structured documentation, benchmarking, performance analysis, and alignment with institutional standards and external expectations.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.6-1.5 4.9-3.6 6.1V20l-3.4-2-3.4 2v-4.9C6.5 13.9 5 11.6 5 9a7 7 0 0 1 7-7z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Professional Service & Reviewing</div>
+            <div class="group-sub">Peer review, editorial support, and academic engagement</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Review</div>
+          <div class="item-title">Journal and publisher reviewing</div>
+          <div class="item-meta">
+            Active reviewer for international peer-reviewed venues across AI, data analytics, intelligent systems, and interdisciplinary technology research, supporting scholarly rigor and quality standards.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Community</div>
+          <div class="item-title">Conferences and collaboration</div>
+          <div class="item-meta">
+            Participates in international academic initiatives and cross-institutional collaborations across multiple regions, supporting knowledge exchange and research development.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 12a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm10 0a3 3 0 1 1 3-3 3 3 0 0 1-3 3zM2 21a5 5 0 0 1 10 0H2zm10 0a5 5 0 0 1 10 0H12z"/></svg>
+          </div>
+          <div>
+            <div class="group-title">Academic Collaboration</div>
+            <div class="group-sub">Academic networks, joint research, and scholarly exchange</div>
+          </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Engagement</div>
+          <div class="item-title">International academic collaboration</div>
+          <div class="item-meta">
+            Actively engaged in collaborative research initiatives, academic networks, and joint scholarly activities that advance Artificial Intelligence, intelligent systems, and interdisciplinary innovation.
+          </div>
+        </div>
+        <div class="item">
+          <div class="badge">Contribution</div>
+          <div class="item-title">Scholarly and professional involvement</div>
+          <div class="item-meta">
+            Contributes to the academic community through research collaboration, peer reviewing, editorial engagement, and knowledge exchange aligned with global academic standards.
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+
+  <div class="footer">© 2026 Dr. Nidal Al Said · Ajman University</div>
+
 </div>
-
-<h1>Dr. Nidal Al Said</h1>
-
-<div class="section">
-<p>
-Dr. Nidal Al Said is an Associate Professor of Information Technology at Ajman University in the United Arab Emirates. He has more than twenty years of academic and professional experience across Jordan, Oman, Greece, and the UAE.
-</p>
-
-<p>
-His work focuses on Artificial Intelligence, Machine Learning, Human Computer Interaction, Data Mining, and Smart Systems. His research aims to bridge the gap between advanced computational models and real-world applications in education, media, and digital environments.
-</p>
-
-<p>
-Dr. Al Said has contributed to international journals and conferences, with research covering AI-driven trust, intelligent analytics, and human-centered system design. His work emphasizes both technical performance and practical usability.
-</p>
-</div>
-
-<div class="section">
-<h2>Research Interests</h2>
-
-<p>
-Artificial Intelligence and Machine Learning, Human Computer Interaction, Data Mining and Analytics, Social Computing, Smart Systems, and AI applications in education and digital transformation.
-</p>
-</div>
-
-<div class="section">
-<h2>Academic Contributions</h2>
-
-<p>
-Dr. Al Said is actively involved in curriculum development, accreditation processes, and institutional quality assurance. He contributes to designing modern academic programs that integrate AI technologies and industry-relevant skills.
-</p>
-
-<p>
-His teaching approach focuses on clarity, applied learning, and preparing students for real-world problem solving using modern computational tools.
-</p>
-</div>
-
-<div class="section">
-<h2>Professional Profiles</h2>
-
-<p>
-<a href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ" target="_blank">Google Scholar</a><br>
-<a href="https://orcid.org/0000-0001-9599-2492" target="_blank">ORCID</a><br>
-<a href="https://www.linkedin.com/in/nidal-al-said-74269210/" target="_blank">LinkedIn</a>
-</p>
-</div>
-
-<div class="footer">
-© 2026 Dr. Nidal Al Said
-</div>
-
-</div>
-
 </body>
 </html>
