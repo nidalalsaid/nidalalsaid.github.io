@@ -1,168 +1,521 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Intellectual Property | Dr. Nidal Al Said</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intellectual Property | Dr. Nidal Al Said</title>
 
-<meta name="description" content="Patents, registered designs, copyrights, and intellectual property contributions by Dr. Nidal Al Said in AI systems, intelligent analytics, and digital innovation." />
-<link rel="canonical" href="https://nidalalsaid.github.io/ip.html" />
-<meta name="robots" content="index, follow" />
+  <meta
+    name="description"
+    content="Patents, registered designs, copyrights, and intellectual property contributions by Dr. Nidal Al Said in AI systems, intelligent analytics, and digital innovation."
+  />
+  <link rel="canonical" href="https://nidalalsaid.github.io/ip.html" />
+  <meta name="robots" content="index, follow" />
 
-<meta property="og:title" content="Intellectual Property | Dr. Nidal Al Said" />
-<meta property="og:description" content="Patents, registered designs, and copyright records." />
-<meta property="og:url" content="https://nidalalsaid.github.io/ip.html" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+  <meta property="og:title" content="Intellectual Property | Dr. Nidal Al Said" />
+  <meta property="og:description" content="Patents, registered designs, and copyright records." />
+  <meta property="og:url" content="https://nidalalsaid.github.io/ip.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
 
-<style>
-:root{
-  --bg:#f4f6f8;
-  --panel:#ffffff;
-  --text:#1e2a35;
-  --muted:#6f8093;
-  --teal:#5ca893;
-  --teal-dark:#4a8f7c;
-  --teal-soft:#e7f3ef;
-  --border:#e5eaef;
-  --shadow:0 6px 18px rgba(0,0,0,0.05);
-  --radius:14px;
-}
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --text: #1e2a35;
+      --muted: #6f8093;
 
-body{
-  margin:0;
-  font-family:"Segoe UI", Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
+      --teal: #5ca893;
+      --teal-dark: #4a8f7c;
+      --teal-soft: #e7f3ef;
 
-.container{
-  max-width:1180px;
-  margin:0 auto;
-  padding:40px 24px;
-}
+      --border: #e5eaef;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      --radius: 14px;
+    }
 
-.topbar{
-  display:flex;
-  justify-content:flex-end;
-  gap:14px;
-  margin-bottom:18px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.topnav a{
-  text-decoration:none;
-  color:var(--muted);
-  margin-left:14px;
-  font-weight:600;
-}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-.topnav a.active{
-  color:var(--text);
-}
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
 
-.cvbtn{
-  padding:8px 14px;
-  background:var(--teal);
-  color:#fff;
-  border-radius:20px;
-  text-decoration:none;
-}
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
 
-.hero{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:20px;
-}
+    .topnav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.panel{
-  margin-top:20px;
-  background:#fff;
-  padding:20px;
-  border-radius:var(--radius);
-  border:1px solid var(--border);
-}
+    .topnav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 2px;
+      border-bottom: 2px solid transparent;
+    }
 
-.section-title{
-  font-size:22px;
-  font-weight:700;
-  margin-bottom:10px;
-}
+    .topnav a:hover {
+      color: var(--text);
+      border-bottom-color: rgba(92, 168, 147, 0.35);
+    }
 
-.group{
-  margin-top:20px;
-}
+    .topnav a.active {
+      color: var(--text);
+      border-bottom-color: rgba(92, 168, 147, 0.7);
+    }
 
-.item{
-  margin-top:10px;
-}
+    .cvbtn {
+      display: inline-block;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
 
-.footer{
-  margin-top:30px;
-  text-align:center;
-  font-size:13px;
-  color:var(--muted);
-}
-</style>
+    .cvbtn:hover {
+      background: var(--teal-dark);
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(244, 246, 248, 1) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+    }
+
+    .identity {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 860px;
+    }
+
+    .hero-badges {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--teal-soft);
+      border: 1px solid #cfe7df;
+      color: var(--teal-dark);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .pill svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--teal-dark);
+      opacity: 0.95;
+    }
+
+    .avatar {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .avatar img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--teal);
+      background: #fff;
+    }
+
+    .panel {
+      margin-top: 22px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 14px 0;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      border-radius: 3px;
+      background: var(--teal);
+    }
+
+    .note {
+      margin-top: -6px;
+      color: var(--muted);
+      font-size: 14.5px;
+      max-width: 980px;
+    }
+
+    .group {
+      margin-top: 20px;
+    }
+
+    .group-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid rgba(92, 168, 147, 0.28);
+      background: linear-gradient(180deg, rgba(92, 168, 147, 0.12) 0%, rgba(255, 255, 255, 0.95) 100%);
+      border-radius: 12px;
+    }
+
+    .group-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: rgba(92, 168, 147, 0.16);
+      border: 1px solid rgba(92, 168, 147, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 38px;
+    }
+
+    .group-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--teal-dark);
+    }
+
+    .group-title {
+      font-size: 17px;
+      font-weight: 900;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .group-sub {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .items {
+      margin-top: 10px;
+      border-left: 3px solid rgba(92, 168, 147, 0.18);
+      padding-left: 14px;
+    }
+
+    .item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(92, 168, 147, 0.12);
+      border: 1px solid rgba(92, 168, 147, 0.22);
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+    }
+
+    .item-title {
+      font-size: 16px;
+      font-weight: 900;
+      margin-bottom: 7px;
+      color: var(--text);
+    }
+
+    .item-meta {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .avatar {
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
+  <div class="container">
+    <div class="topbar">
+      <div class="topnav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="ip.html">Intellectual Property</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a class="cvbtn" href="cv.pdf" download>Download CV</a>
+    </div>
 
-<div class="topbar">
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="books.html">Books</a>
-    <a href="research.html">Research</a>
-    <a class="active" href="ip.html">Intellectual Property</a>
-    <a href="contact.html">Contact</a>
+    <div class="hero">
+      <div>
+        <h1>Intellectual Property</h1>
+        <div class="identity">
+          Patents, registered designs, and copyright records related to intelligent systems,
+          analytics devices, and technology-driven innovation.
+        </div>
+
+        <div class="hero-badges" aria-label="Highlights">
+          <span class="pill">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2l4 4v5c0 2.8-1.9 5.3-4.6 6.2L12 22l-2.9-4.8C6.4 16.3 4.5 13.8 4.5 11V6l4-4h3.5z"/>
+            </svg>
+            Patents
+          </span>
+
+          <span class="pill">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 3h16v18H4V3zm3 4h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
+            </svg>
+            Registered Designs
+          </span>
+
+          <span class="pill">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 2h9l3 3v17H6V2z"/>
+            </svg>
+            Copyright
+          </span>
+        </div>
+      </div>
+
+      <div class="avatar">
+        <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="section-title">IP Portfolio</div>
+      <div class="note">
+        Structured records of filed applications, registered designs, and copyright registrations.
+      </div>
+
+      <div class="group">
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l4 4v5c0 2.8-1.9 5.3-4.6 6.2L12 22l-2.9-4.8C6.4 16.3 4.5 13.8 4.5 11V6l4-4h3.5z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="group-title">Patents – Republic of India</div>
+            <div class="group-sub">Filed applications and published patent records</div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="item">
+            <div class="badge">Patent Application</div>
+            <div class="item-title">
+              Intelligent Content Delivery Network for Real-Time Adaptive E-Learning Platforms
+            </div>
+            <div class="item-meta">
+              Application No. 202511076862 | Filed: 12 August 2025 | Published: 21 November 2025
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 3h16v18H4V3zm3 4h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="group-title">Registered Designs – United Kingdom</div>
+            <div class="group-sub">Design registrations and granted records</div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="item">
+            <div class="badge">Registered Design</div>
+            <div class="item-title">AI-Driven Predictive Analytics Electronic Device</div>
+            <div class="item-meta">
+              Reg Design No. 6417621 | Registered: 16 January 2025 | Granted: 21 January 2025
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="badge">Registered Design</div>
+            <div class="item-title">Data Analytics and Visualization Device</div>
+            <div class="item-meta">
+              Reg Design No. 6499329 | Registered: 15 January 2026 | Granted: 28 January 2026
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="badge">Registered Design</div>
+            <div class="item-title">Graphical user interface for an intelligent decision support system</div>
+            <div class="item-meta">
+              Reg Design No. 6516481 | Registered: 30 March 2026 | Granted: 15 April 2026
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 2h10v4H7V2zm-2 6h14a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="group-title">Registered Designs – European Union</div>
+            <div class="group-sub">Registered Community design (EUIPO)</div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="item">
+            <div class="badge">Registered Community Design</div>
+            <div class="item-title">Graphical user interfaces [computer screen layout]</div>
+            <div class="item-meta">
+              Reg Design No. 015137351-0001 | Registered: 29 March 2026 | Published: 23 April 2026
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 2h10v4H7V2zm-2 6h14a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="group-title">Registered Design – Australia</div>
+            <div class="group-sub">Industrial design registration</div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="item">
+            <div class="badge">Registered Design</div>
+            <div class="item-title">
+              Smart Computing Device for Analysis of Employee Engagement and Retention Optimization Strategies
+            </div>
+            <div class="item-meta">
+              Reg Design No. 202515334 | Filed: 12 July 2025 | Registered: 19 August 2025
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-head">
+          <div class="group-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2h9l3 3v17H6V2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="group-title">Copyright – Canada</div>
+            <div class="group-sub">Copyright registrations and records</div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="item">
+            <div class="badge">Copyright Registration</div>
+            <div class="item-title">
+              Data-Driven Insights: The Role of AI in Managing Digital Content
+            </div>
+            <div class="item-meta">
+              Reg No. 1230395 | Registered: 03 February 2025 | Category: Literary
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="badge">Copyright Registration</div>
+            <div class="item-title">
+              Human-Centered Artificial Intelligence System for Intelligent Data Analytics
+            </div>
+            <div class="item-meta">
+              Reg No. 1242009 | Registered: 07 February 2026 | Category: Literary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© 2026 Dr. Nidal Al Said · Ajman University</div>
   </div>
-  <a class="cvbtn" href="cv.pdf">Download CV</a>
-</div>
-
-<div class="hero">
-  <h1>Intellectual Property</h1>
-  <p>Patents, registered designs, and copyright records related to intelligent systems and innovation.</p>
-</div>
-
-<div class="panel">
-  <div class="section-title">IP Portfolio</div>
-
-  <div class="group">
-    <strong>Patents – India</strong>
-    <div class="item">Intelligent Content Delivery Network for Real-Time Adaptive E-Learning Platforms</div>
-  </div>
-
-  <div class="group">
-    <strong>Registered Designs – United Kingdom</strong>
-    <div class="item">AI-Driven Predictive Analytics Electronic Device</div>
-    <div class="item">Data Analytics and Visualization Device</div>
-    <div class="item">Graphical User Interface for an Intelligent Decision Support System</div>
-  </div>
-
-  <div class="group">
-    <strong>Registered Designs – European Union</strong>
-    <div class="item">Graphical User Interface [Computer Screen Layout]</div>
-  </div>
-
-  <div class="group">
-    <strong>Registered Design – Australia</strong>
-    <div class="item">Smart Computing Device for Analysis of Employee Engagement</div>
-  </div>
-
-  <div class="group">
-    <strong>Copyright – Canada</strong>
-    <div class="item">Data-Driven Insights: The Role of AI in Managing Digital Content</div>
-    <div class="item">Human-Centered Artificial Intelligence System</div>
-  </div>
-
-</div>
-
-<div class="footer">
-© 2026 Dr. Nidal Al Said · Ajman University
-</div>
-
-</div>
 </body>
 </html>
