@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -63,6 +63,13 @@ body{
   box-shadow:var(--shadow);
 }
 
+.hero-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
 .hero h1{
   margin:0;
   font-size:34px;
@@ -71,7 +78,34 @@ body{
 .identity{
   margin-top:10px;
   color:var(--muted);
-  max-width:850px;
+  max-width:780px;
+}
+
+.profile-photo{
+  width:135px;
+  height:135px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid var(--teal-soft);
+}
+
+.hero-actions{
+  margin-top:18px;
+}
+
+.button{
+  display:inline-block;
+  padding:9px 18px;
+  border-radius:22px;
+  background:var(--teal);
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+}
+
+.button:hover{
+  background:var(--teal-dark);
 }
 
 .panel{
@@ -144,6 +178,11 @@ body{
 }
 
 @media(max-width:800px){
+  .hero-content{
+    flex-direction:column-reverse;
+    align-items:flex-start;
+  }
+
   .profile-grid,
   .stats{
     grid-template-columns:1fr;
@@ -171,16 +210,26 @@ body{
   </div>
 
   <div class="hero">
-    <h1>Research</h1>
-    <div class="identity">
-      My research is grounded in Information Technology, with a strong focus on Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, Social Computing, and Smart Systems. This work is applied across several domains, including education, digital media, business, smart services, and human-centered technology.
+    <div class="hero-content">
+      <div>
+        <h1>Research</h1>
+        <div class="identity">
+          My research is grounded in Information Technology, with a strong focus on Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, Social Computing, and Smart Systems. This work is applied across several domains, including education, digital media, business, smart services, and human-centered technology.
+        </div>
+
+        <div class="hero-actions">
+          <a class="button" href="cv.pdf" target="_blank">Download CV</a>
+        </div>
+      </div>
+
+      <img src="profile.jpg" alt="Dr. Nidal Al Said" class="profile-photo">
     </div>
   </div>
 
   <div class="panel">
     <div class="section-title">Research Overview</div>
     <p style="color:var(--muted)">
-      My academic work examines how intelligent technologies can support better decision-making, improve user experience, analyze complex data, and strengthen digital systems. The main direction of my research is AI and IT, while domain applications such as media, education, and business provide practical contexts for studying real-world technological impact.
+      My academic work examines how intelligent technologies can support better decision-making, improve user experience, analyze complex data, and strengthen digital systems. The main direction of my research is AI and Information Technology, while domain applications such as media, education, and business provide practical contexts for studying real-world technological impact.
     </p>
   </div>
 
@@ -199,7 +248,7 @@ body{
       <div class="card">
         <b>Data Mining & Intelligent Analytics</b>
         <p>
-          Work focused on discovering patterns, extracting knowledge from data, and supporting evidence-based decision-making across different sectors.
+          Research focused on discovering patterns, extracting knowledge from data, and supporting evidence-based decision-making across different sectors.
         </p>
       </div>
 
@@ -237,7 +286,7 @@ body{
   <div class="panel">
     <div class="section-title">Interdisciplinary Research Direction</div>
     <p style="color:var(--muted)">
-      While my core specialization remains Artificial Intelligence and Information Technology, my research extends into applied domains where intelligent systems create measurable value. This includes the use of AI in digital communication, learning environments, smart services, content analysis, user interaction, and data-driven innovation.
+      While my core specialization remains Artificial Intelligence and Information Technology, my research extends into applied domains where intelligent systems create measurable value. This includes the use of AI in learning environments, smart services, content analysis, user interaction, digital communication, and data-driven innovation.
     </p>
 
     <a class="link" href="ai-media-technologies.html">View AI & Media Applications</a>
