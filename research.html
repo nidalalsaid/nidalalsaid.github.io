@@ -13,7 +13,8 @@
   --panel:#ffffff;
   --text:#1e2a35;
   --muted:#6f8093;
-  --teal:#6f9e8e;
+  --teal:#75aa99;
+  --teal-dark:#5f9585;
   --teal-soft:#e7f3ef;
   --border:#e5eaef;
   --shadow:0 6px 18px rgba(0,0,0,0.05);
@@ -32,7 +33,6 @@ body{
   padding:40px 20px;
 }
 
-/* NAV */
 .topnav{
   display:flex;
   justify-content:flex-end;
@@ -46,21 +46,31 @@ body{
   text-decoration:none;
   color:var(--muted);
   font-weight:600;
+  font-size:15px;
 }
 
 .topnav a.active{
   color:var(--text);
   border-bottom:2px solid var(--teal);
+  padding-bottom:6px;
 }
 
-.cv-btn{
+.topnav .cv-btn{
   background:var(--teal);
   color:white;
-  padding:10px 18px;
-  border-radius:25px;
+  padding:14px 26px;
+  border-radius:999px;
+  font-size:16px;
+  font-weight:700;
+  line-height:1;
+  border-bottom:none;
 }
 
-/* HERO */
+.topnav .cv-btn:hover{
+  background:var(--teal-dark);
+  color:white;
+}
+
 .hero{
   background:white;
   padding:35px;
@@ -76,18 +86,20 @@ body{
 }
 
 .hero-text{
-  max-width:700px;
+  max-width:730px;
 }
 
 .hero h1{
   margin:0;
   font-size:36px;
+  line-height:1.2;
 }
 
 .identity{
-  margin-top:10px;
+  margin-top:14px;
   color:var(--muted);
   line-height:1.7;
+  font-size:16px;
 }
 
 .hero-image img{
@@ -95,10 +107,9 @@ body{
   height:170px;
   border-radius:50%;
   object-fit:cover;
-  border:6px solid var(--teal-soft);
+  border:6px solid var(--teal);
 }
 
-/* TAGS */
 .tags{
   margin-top:20px;
   display:flex;
@@ -109,13 +120,13 @@ body{
 .tags span{
   background:var(--teal-soft);
   padding:8px 14px;
-  border-radius:20px;
+  border-radius:999px;
   font-size:14px;
   color:#4a8f7c;
   font-weight:600;
+  border:1px solid #d4e8e2;
 }
 
-/* PANELS */
 .panel{
   margin-top:25px;
   background:white;
@@ -126,7 +137,7 @@ body{
 
 .section-title{
   font-size:22px;
-  margin-bottom:10px;
+  margin-bottom:15px;
   font-weight:bold;
 }
 
@@ -138,16 +149,23 @@ body{
 
 .card{
   border:1px solid var(--border);
-  padding:15px;
+  padding:16px;
   border-radius:10px;
+  background:white;
 }
 
 .card p{
   color:var(--muted);
-  margin-top:6px;
+  margin:6px 0 0;
+  line-height:1.6;
 }
 
-/* STATS */
+.card a{
+  color:var(--teal-dark);
+  font-weight:600;
+  text-decoration:none;
+}
+
 .stats{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -189,7 +207,6 @@ body{
 
 <div class="container">
 
-  <!-- NAV -->
   <div class="topnav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -201,7 +218,6 @@ body{
     <a class="cv-btn" href="cv.pdf" target="_blank">Download CV</a>
   </div>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
 
@@ -210,7 +226,7 @@ body{
 
         <p class="identity">
           My research is grounded in Artificial Intelligence and Information Technology,
-          with a focus on machine learning, human–computer interaction, data mining,
+          with a focus on machine learning, human-computer interaction, data mining,
           social computing, and smart systems. This work extends across applied domains
           including media, education, and intelligent digital environments.
         </p>
@@ -231,7 +247,6 @@ body{
     </div>
   </div>
 
-  <!-- CORE AREAS -->
   <div class="panel">
     <div class="section-title">Core Research Areas</div>
 
@@ -248,7 +263,7 @@ body{
       </div>
 
       <div class="card">
-        <b>Human–Computer Interaction</b>
+        <b>Human-Computer Interaction</b>
         <p>User experience, usability, and interaction with intelligent systems.</p>
       </div>
 
@@ -270,7 +285,6 @@ body{
     </div>
   </div>
 
-  <!-- PROFILES -->
   <div class="panel">
     <div class="section-title">Research Profiles</div>
 
@@ -299,7 +313,6 @@ body{
     </div>
   </div>
 
-  <!-- STATS -->
   <div class="panel">
     <div class="section-title">Academic Snapshot</div>
 
