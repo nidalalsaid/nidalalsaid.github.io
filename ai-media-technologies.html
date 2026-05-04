@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI & Media Technologies | Dr. Nidal Al Said</title>
+
+<meta name="description" content="AI-driven communication and media technologies, including intelligent media systems, social media analytics, content authenticity, human-AI interaction, and trustworthy digital communication." />
+
+<style>
+:root{
+  --bg:#f4f6f8;
+  --panel:#ffffff;
+  --text:#1e2a35;
+  --muted:#6f8093;
+  --teal:#5ca893;
+  --teal-dark:#4a8f7c;
+  --teal-soft:#e7f3ef;
+  --border:#e5eaef;
+  --shadow:0 6px 18px rgba(0,0,0,0.05);
+  --radius:14px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+.container{
+  max-width:1180px;
+  margin:0 auto;
+  padding:40px 24px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.topnav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.topnav a{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:600;
+  padding:6px 2px;
+  border-bottom:2px solid transparent;
+}
+
+.topnav a:hover{
+  color:var(--text);
+  border-bottom-color:rgba(92,168,147,0.35);
+}
+
+.topnav a.active{
+  color:var(--text);
+  border-bottom-color:rgba(92,168,147,0.7);
+}
+
+.cvbtn{
+  display:inline-block;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:999px;
+  background:var(--teal);
+  color:#fff;
+  text-decoration:none;
+}
+
+.cvbtn:hover{
+  background:var(--teal-dark);
+}
+
+.hero{
+  background:linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(244,246,248,1) 100%);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+  display:grid;
+  grid-template-columns:1fr 240px;
+  gap:26px;
+  align-items:start;
+}
+
+.hero h1{
+  margin:0;
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:-0.4px;
+}
+
+.identity{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:15px;
+  max-width:860px;
+}
+
+.hero-badges{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  border:1px solid #cfe7df;
+  color:var(--teal-dark);
+  font-weight:700;
+  font-size:13px;
+}
+
+.avatar{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.avatar img{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--teal);
+  background:#fff;
+}
+
+.panel{
+  margin-top:22px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:22px;
+  font-weight:700;
+  margin:0 0 14px 0;
+}
+
+.section-title::before{
+  content:"";
+  width:4px;
+  height:24px;
+  border-radius:3px;
+  background:var(--teal);
+}
+
+.note{
+  color:var(--muted);
+  font-size:14.5px;
+  max-width:980px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+  margin-top:14px;
+}
+
+.card,
+.item{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:17px;
+  color:var(--text);
+}
+
+.card p,
+.item p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.item{
+  margin-top:12px;
+}
+
+.item strong{
+  display:block;
+  color:var(--text);
+  margin-bottom:4px;
+}
+
+.meta{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.tag{
+  display:inline-block;
+  margin-top:8px;
+  background:var(--teal-soft);
+  color:var(--teal-dark);
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.keywords span{
+  display:inline-block;
+  margin:5px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  color:var(--teal-dark);
+  border:1px solid #cfe7df;
+  font-size:13px;
+  font-weight:700;
+}
+
+.two-column{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.footer{
+  margin-top:28px;
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+}
+
+@media(max-width:980px){
+  .hero{ grid-template-columns:1fr; }
+  .avatar{ justify-content:flex-start; }
+  .two-column{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="topbar">
+    <div class="topnav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="research.html">Research</a>
+      <a class="active" href="ai-media-technologies.html">AI & Media</a>
+      <a href="ip.html">Intellectual Property</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="cvbtn" href="cv.pdf" download>Download CV</a>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>AI & Media Technologies</h1>
+      <div class="identity">
+        A focused research profile on intelligent media systems, social media analytics, content authenticity, human-AI interaction, and trustworthy digital communication technologies.
+      </div>
+
+      <div class="hero-badges">
+        <span class="pill">AI in Media</span>
+        <span class="pill">Social Media Analytics</span>
+        <span class="pill">Digital Trust</span>
+        <span class="pill">Media Authenticity</span>
+      </div>
+    </div>
+
+    <div class="avatar">
+      <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Profile Overview</div>
+    <p class="note">
+      My research focuses on the integration of artificial intelligence into communication and media technologies, with particular emphasis on how intelligent systems transform digital content, user interaction, and information trust. This work positions media as a data-driven and computational ecosystem where machine learning models, user behavior, and communication processes interact to shape modern digital environments.
+    </p>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Positioning Statement</div>
+    <p class="note"><strong>Main umbrella:</strong> AI-driven communication and media technologies.</p>
+    <p class="note"><strong>Core strengths:</strong> Social media analytics, computational media, human-computer interaction, intelligent content systems, and digital trust.</p>
+    <p class="note"><strong>Research identity:</strong> AI for digital media, journalism, social platforms, and communication systems.</p>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Research Clusters</div>
+    <div class="grid">
+      <div class="card">
+        <h3>AI in News and Digital Content</h3>
+        <p>News classification, text extraction, multimedia content analysis, and computational approaches to media understanding.</p>
+      </div>
+      <div class="card">
+        <h3>Social Computing and Platform Analytics</h3>
+        <p>Social media behavior, online information use, Facebook analytics, platform-mediated communication, and engagement patterns.</p>
+      </div>
+      <div class="card">
+        <h3>HCI for Media Technologies</h3>
+        <p>User experience, interface design, mobile media systems, chatbot interaction, and human-centered communication technologies.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Core Research Areas</div>
+    <div class="grid">
+      <div class="card"><h3>Intelligent Media Content and Analytics</h3><p>Machine learning and deep learning for classifying, extracting, and interpreting large-scale media content.</p></div>
+      <div class="card"><h3>Misinformation, Deepfakes, and Authenticity</h3><p>Detection of manipulated images, fake profiles, deepfakes, and deceptive digital media artifacts.</p></div>
+      <div class="card"><h3>Social Media Systems and Communication Analytics</h3><p>Data mining and analytics for understanding digital communication behavior and platform-based interaction.</p></div>
+      <div class="card"><h3>Digital Media Design and User Experience</h3><p>Interface design, cognitive response, usability, and comprehension in digital news and media environments.</p></div>
+      <div class="card"><h3>AI, Trust, and Digital Communication</h3><p>Privacy, transparency, AI-driven trust, and user perception in intelligent communication systems.</p></div>
+      <div class="card"><h3>Emerging and Immersive Media Technologies</h3><p>Adaptive AR, VR, and intelligent interactive systems for next-generation media experiences.</p></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Selected Publications</div>
+
+    <div class="item"><strong>The Effect of Visual and Informational Complexity of News Website Designs on Comprehension and Memorization</strong><span class="meta">AI & Society, 2022</span><span class="tag">Q1 · Digital media UX</span></div>
+    <div class="item"><strong>Information and Computer Technologies in Media Specialist Preparation</strong><span class="meta">Information Development, 2022</span><span class="tag">Q2 · Media technology education</span></div>
+    <div class="item"><strong>Customized Convolutional Neural Network for Accurate Detection of Deep Fake Images in Video Collections</strong><span class="meta">Computers, Materials & Continua, 2024</span><span class="tag">Q2 · Deepfake detection</span></div>
+    <div class="item"><strong>A Hybrid GAN-CNN Network with Attention Mechanism for Detecting Fake Profile Images in Microblogs</strong><span class="meta">Ingénierie des Systèmes d’Information, 2025</span><span class="tag">Microblogs · Media authenticity</span></div>
+    <div class="item"><strong>Advancing News Text Classification: A Comparative Analysis of Deep Neural Network Models</strong><span class="meta">Journal of Advances in Information Technology, 2025</span><span class="tag">AI journalism · News classification</span></div>
+    <div class="item"><strong>Enhancing Convolutional Recurrent Neural Network Model for Improved Text Extraction from Videos and Images</strong><span class="meta">IT Professional, 2026</span><span class="tag">Multimedia text extraction</span></div>
+    <div class="item"><strong>Data Mining for Managing and Using Online Information on Facebook</strong><span class="meta">Journal of Advances in Information Technology, 2023</span><span class="tag">Social media analytics</span></div>
+    <div class="item"><strong>The Role of Social Networks in the Development of Skills of Professional Communication: An Empirical Study</strong><span class="meta">International Journal of Web-Based Learning and Teaching Technologies, 2022</span><span class="tag">Communication skills · Social networks</span></div>
+    <div class="item"><strong>Impact of Social Networks in Educational Media</strong><span class="meta">Journal of Information and Communication Convergence Engineering, 2020</span><span class="tag">Educational media · Social networks</span></div>
+    <div class="item"><strong>Does Data Privacy Influence Digital Marketing? The Mediating Role of AI-Driven Trust</strong><span class="meta">International Journal of Data and Network Science, 2025</span><span class="tag">Trust · Digital communication</span></div>
+    <div class="item"><strong>Efficiency of Smart AI-Based Voice Apps and Virtual Services Operating with Chatbots</strong><span class="meta">Mendel, 2022</span><span class="tag">Conversational AI</span></div>
+    <div class="item"><strong>Mobile Application Development for Technology Enhanced Learning</strong><span class="meta">International Journal of Emerging Technologies in Learning, 2020</span><span class="tag">Q1 · Interactive media systems</span></div>
+    <div class="item"><strong>Data Mining in Education: Managing Digital Content with Social Media Analytics in Medical Education</strong><span class="meta">Interactive Learning Environments, 2024</span><span class="tag">Q1 · Digital content analytics</span></div>
+    <div class="item"><strong>Immersive AI: Enhancing AR and VR Applications with Adaptive Intelligence</strong><span class="meta">World Skills Conference, 2025</span><span class="tag">Immersive media</span></div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Books and Scholarly Contributions</div>
+
+    <div class="item"><strong>The Digital Nexus: Transforming Mass Communication in the Age of AI</strong><span class="meta">2025 · Mass communication and AI</span></div>
+    <div class="item"><strong>Designing Intelligent Media Systems: Architecture, Governance, and the Public Interest</strong><span class="meta">2023 · Intelligent media systems and governance</span></div>
+    <div class="item"><strong>Social Media Intelligence: AI and ML Applications for Smart Applications</strong><span class="meta">2021 · Social media analytics and intelligent applications</span></div>
+    <div class="item"><strong>Designing Social Media Interfaces: From Websites to Mobile Apps</strong><span class="meta">2018 · Social media interface design</span></div>
+    <div class="item"><strong>Interactive Multimedia Design: Theory and Application</strong><span class="meta">2019 · Multimedia systems and digital design</span></div>
+    <div class="item"><strong>Intelligent Visual Design: An Essential Guide for Non-Designers in the Age of AI</strong><span class="meta">2026 · Visual design and generative AI</span></div>
+    <div class="item"><strong>Intelligent Web Mining: Discovering Patterns in Online Data</strong><span class="meta">2020 · Web mining and online data systems</span></div>
+    <div class="item"><strong>Mining Minds: Smart Data-Driven Solutions in a Connected World</strong><span class="meta">2017 · Data-driven intelligent systems</span></div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Intellectual Property and Innovation</div>
+
+    <div class="two-column">
+      <div>
+        <div class="item"><strong>Intelligent Content Delivery Network for Real-Time Adaptive E-Learning Platforms</strong><span class="meta">Patent Application · Republic of India · Application No. 202511076862</span></div>
+        <div class="item"><strong>System for Predictive Analysis and Detection of Manipulated Digital Media Content</strong><span class="meta">Utility Model · Germany · Reg No. 20 2026 101 004</span></div>
+        <div class="item"><strong>Graphical User Interface for an Intelligent Decision Support System</strong><span class="meta">Registered Design · United Kingdom · Reg No. 6516481</span></div>
+        <div class="item"><strong>Graphical User Interfaces [Computer Screen Layout]</strong><span class="meta">Registered Community Design · EUIPO · Reg No. 015137351-0001</span></div>
+      </div>
+
+      <div>
+        <div class="item"><strong>AI-Driven Predictive Analytics Electronic Device</strong><span class="meta">Registered Design · United Kingdom · Reg No. 6417621</span></div>
+        <div class="item"><strong>Data Analytics and Visualization Device</strong><span class="meta">Registered Design · United Kingdom · Reg No. 6499329</span></div>
+        <div class="item"><strong>Data-Driven Insights: The Role of AI in Managing Digital Content</strong><span class="meta">Copyright Registration · Canada · Reg No. 1230395</span></div>
+        <div class="item"><strong>Intelligent Visual Design: An Essential Guide for Non-Designers in the Age of AI</strong><span class="meta">Copyright Registration · United Arab Emirates · Reg No. 1335-2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Portfolio Keywords</div>
+    <div class="keywords">
+      <span>AI in Media</span>
+      <span>Digital Media and Communication</span>
+      <span>Social Computing</span>
+      <span>Social Media Analytics</span>
+      <span>Human-Computer Interaction</span>
+      <span>Computational Media</span>
+      <span>Media Trust</span>
+      <span>Digital Journalism</span>
+      <span>News Text Classification</span>
+      <span>Deepfake Detection</span>
+      <span>Media Authenticity</span>
+      <span>Intelligent Content Systems</span>
+      <span>Generative AI</span>
+      <span>Explainable AI</span>
+      <span>Epistemic Trust</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Research Contribution</div>
+    <div class="grid">
+      <div class="card"><h3>Content Intelligence</h3><p>AI models for classifying, extracting, and interpreting media content.</p></div>
+      <div class="card"><h3>Media Trust</h3><p>Research on privacy, AI-driven trust, authenticity, and manipulated content.</p></div>
+      <div class="card"><h3>Social Analytics</h3><p>Data mining approaches for social media behavior and digital communication patterns.</p></div>
+      <div class="card"><h3>Human-Centered Systems</h3><p>HCI, usability, and user experience in intelligent media and communication platforms.</p></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Research Vision</div>
+    <p class="note">
+      The future of communication media technologies lies in developing systems that are not only intelligent, but also trustworthy, explainable, and human-centered. Current research focuses on integrating generative AI, explainable AI, and epistemic trust models to design responsible and adaptive communication systems for digital media, education, and intelligent platforms.
+    </p>
+  </div>
+
+  <div class="footer">
+    © 2026 Dr. Nidal Al Said · Ajman University
+  </div>
+
+</div>
+</body>
+</html>
