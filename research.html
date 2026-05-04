@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Research | Dr. Nidal Al Said</title>
 
-<meta name="description" content="Research profiles, publications, and academic presence of Dr. Nidal Al Said, with focus on AI-driven communication and media technologies." />
+<meta name="description" content="Research profile of Dr. Nidal Al Said, focusing on Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, Social Computing, and Smart Systems." />
 <link rel="canonical" href="https://nidalalsaid.github.io/research.html" />
 <meta name="robots" content="index, follow" />
 
@@ -28,6 +28,7 @@ body{
   font-family:"Segoe UI", Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.6;
 }
 
 .container{
@@ -41,6 +42,7 @@ body{
   gap:20px;
   justify-content:flex-end;
   margin-bottom:20px;
+  flex-wrap:wrap;
 }
 
 .topnav a{
@@ -55,24 +57,26 @@ body{
 }
 
 .hero{
-  background:white;
-  padding:25px;
+  background:var(--panel);
+  padding:28px;
   border-radius:var(--radius);
   box-shadow:var(--shadow);
 }
 
 .hero h1{
   margin:0;
+  font-size:34px;
 }
 
 .identity{
   margin-top:10px;
   color:var(--muted);
+  max-width:850px;
 }
 
 .panel{
   margin-top:25px;
-  background:white;
+  background:var(--panel);
   padding:25px;
   border-radius:var(--radius);
   box-shadow:var(--shadow);
@@ -81,7 +85,7 @@ body{
 .section-title{
   font-size:22px;
   margin-bottom:10px;
-  font-weight:bold;
+  font-weight:700;
 }
 
 .profile-grid{
@@ -92,34 +96,43 @@ body{
 }
 
 .card{
-  background:white;
-  padding:15px;
+  background:var(--panel);
+  padding:16px;
   border-radius:10px;
   border:1px solid var(--border);
 }
 
+.card b{
+  color:var(--text);
+}
+
+.card p{
+  margin:8px 0 0;
+  color:var(--muted);
+}
+
 .link{
   display:inline-block;
-  margin-top:10px;
-  padding:6px 12px;
+  margin-top:12px;
+  padding:7px 14px;
   border-radius:20px;
   background:var(--teal-soft);
   color:var(--teal-dark);
   text-decoration:none;
   font-size:13px;
-  font-weight:bold;
+  font-weight:700;
 }
 
 .stats{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr 1fr;
   gap:15px;
   margin-top:20px;
 }
 
 .stat{
   text-align:center;
-  padding:15px;
+  padding:16px;
   background:var(--teal-soft);
   border-radius:10px;
 }
@@ -129,6 +142,17 @@ body{
   margin-top:30px;
   color:var(--muted);
 }
+
+@media(max-width:800px){
+  .profile-grid,
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .topnav{
+    justify-content:flex-start;
+  }
+}
 </style>
 </head>
 
@@ -136,7 +160,6 @@ body{
 
 <div class="container">
 
-  <!-- NAV -->
   <div class="topnav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -147,49 +170,79 @@ body{
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- HERO -->
   <div class="hero">
     <h1>Research</h1>
     <div class="identity">
-      A gateway to my research profiles, publications, and academic presence, with a focused direction in AI-driven communication and media technologies, intelligent content systems, and social media analytics.
+      My research is grounded in Information Technology, with a strong focus on Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, Social Computing, and Smart Systems. This work is applied across several domains, including education, digital media, business, smart services, and human-centered technology.
     </div>
   </div>
 
-  <!-- RESEARCH FOCUS -->
   <div class="panel">
-    <div class="section-title">Research Focus</div>
+    <div class="section-title">Research Overview</div>
     <p style="color:var(--muted)">
-      My research integrates Artificial Intelligence with communication and media systems, focusing on intelligent content, social platforms, user interaction, and trust in digital environments.
+      My academic work examines how intelligent technologies can support better decision-making, improve user experience, analyze complex data, and strengthen digital systems. The main direction of my research is AI and IT, while domain applications such as media, education, and business provide practical contexts for studying real-world technological impact.
     </p>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">Core Research Areas</div>
 
     <div class="profile-grid">
 
       <div class="card">
-        <b>AI-Driven Media Systems</b><br>
-        News classification, deep learning, multimedia content analysis
+        <b>Artificial Intelligence & Machine Learning</b>
+        <p>
+          Research on intelligent models, predictive methods, classification, automation, and applied AI solutions for complex digital environments.
+        </p>
       </div>
 
       <div class="card">
-        <b>Misinformation & Deepfake Detection</b><br>
-        Fake media detection, synthetic content, digital trust
+        <b>Data Mining & Intelligent Analytics</b>
+        <p>
+          Work focused on discovering patterns, extracting knowledge from data, and supporting evidence-based decision-making across different sectors.
+        </p>
       </div>
 
       <div class="card">
-        <b>Social Media Analytics</b><br>
-        User behavior, engagement, communication patterns
+        <b>Human-Computer Interaction</b>
+        <p>
+          Studies related to user experience, usability, interface design, human-AI interaction, and the relationship between people and intelligent systems.
+        </p>
       </div>
 
       <div class="card">
-        <b>Human–AI Interaction</b><br>
-        User experience, intelligent interfaces, communication systems
+        <b>Social Computing & Digital Behavior</b>
+        <p>
+          Research on online behavior, digital communities, social platforms, engagement patterns, and the role of technology in communication environments.
+        </p>
+      </div>
+
+      <div class="card">
+        <b>Smart Systems & Emerging Technologies</b>
+        <p>
+          Applied research on smart applications, adaptive systems, technology-enhanced services, and digital transformation in modern organizations.
+        </p>
+      </div>
+
+      <div class="card">
+        <b>AI Applications in Education, Media, and Business</b>
+        <p>
+          Interdisciplinary applications of AI and IT in teaching, digital media systems, organizational innovation, and technology-supported decision-making.
+        </p>
       </div>
 
     </div>
-
-    <a class="link" href="ai-media-technologies.html">View Full AI & Media Profile</a>
   </div>
 
-  <!-- PROFILES -->
+  <div class="panel">
+    <div class="section-title">Interdisciplinary Research Direction</div>
+    <p style="color:var(--muted)">
+      While my core specialization remains Artificial Intelligence and Information Technology, my research extends into applied domains where intelligent systems create measurable value. This includes the use of AI in digital communication, learning environments, smart services, content analysis, user interaction, and data-driven innovation.
+    </p>
+
+    <a class="link" href="ai-media-technologies.html">View AI & Media Applications</a>
+  </div>
+
   <div class="panel">
     <div class="section-title">Research Profiles</div>
 
@@ -216,10 +269,8 @@ body{
       </div>
 
     </div>
-
   </div>
 
-  <!-- STATS -->
   <div class="panel">
     <div class="section-title">Academic Snapshot</div>
 
@@ -229,7 +280,6 @@ body{
       <div class="stat"><b>6</b><br>Research Areas</div>
       <div class="stat"><b>3</b><br>Languages</div>
     </div>
-
   </div>
 
   <div class="footer">
@@ -239,4 +289,4 @@ body{
 </div>
 
 </body>
-</html> 
+</html>
