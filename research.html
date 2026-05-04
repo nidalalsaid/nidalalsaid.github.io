@@ -1,13 +1,11 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research | Dr. Nidal Al Said</title>
 
-<meta name="description" content="Research profile of Dr. Nidal Al Said, focusing on Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, Social Computing, and Smart Systems." />
-<link rel="canonical" href="https://nidalalsaid.github.io/research.html" />
-<meta name="robots" content="index, follow" />
+<meta name="description" content="Research profile of Dr. Nidal Al Said focusing on Artificial Intelligence, Machine Learning, HCI, Data Mining, Social Computing, and Smart Systems.">
 
 <style>
 :root{
@@ -15,12 +13,10 @@
   --panel:#ffffff;
   --text:#1e2a35;
   --muted:#6f8093;
-  --teal:#5ca893;
-  --teal-dark:#4a8f7c;
+  --teal:#6f9e8e;
   --teal-soft:#e7f3ef;
   --border:#e5eaef;
   --shadow:0 6px 18px rgba(0,0,0,0.05);
-  --radius:14px;
 }
 
 body{
@@ -28,7 +24,6 @@ body{
   font-family:"Segoe UI", Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.6;
 }
 
 .container{
@@ -37,12 +32,14 @@ body{
   padding:40px 20px;
 }
 
+/* NAV */
 .topnav{
   display:flex;
-  gap:20px;
   justify-content:flex-end;
-  margin-bottom:20px;
+  align-items:center;
+  gap:20px;
   flex-wrap:wrap;
+  margin-bottom:20px;
 }
 
 .topnav a{
@@ -56,10 +53,18 @@ body{
   border-bottom:2px solid var(--teal);
 }
 
+.cv-btn{
+  background:var(--teal);
+  color:white;
+  padding:10px 18px;
+  border-radius:25px;
+}
+
+/* HERO */
 .hero{
-  background:var(--panel);
-  padding:28px;
-  border-radius:var(--radius);
+  background:white;
+  padding:35px;
+  border-radius:16px;
   box-shadow:var(--shadow);
 }
 
@@ -67,106 +72,91 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:30px;
+  gap:40px;
+}
+
+.hero-text{
+  max-width:700px;
 }
 
 .hero h1{
   margin:0;
-  font-size:34px;
+  font-size:36px;
 }
 
 .identity{
   margin-top:10px;
   color:var(--muted);
-  max-width:780px;
+  line-height:1.7;
 }
 
-.profile-photo{
-  width:135px;
-  height:135px;
+.hero-image img{
+  width:170px;
+  height:170px;
   border-radius:50%;
   object-fit:cover;
-  border:5px solid var(--teal-soft);
+  border:6px solid var(--teal-soft);
 }
 
-.hero-actions{
-  margin-top:18px;
+/* TAGS */
+.tags{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
-.button{
-  display:inline-block;
-  padding:9px 18px;
-  border-radius:22px;
-  background:var(--teal);
-  color:white;
-  text-decoration:none;
+.tags span{
+  background:var(--teal-soft);
+  padding:8px 14px;
+  border-radius:20px;
   font-size:14px;
-  font-weight:700;
+  color:#4a8f7c;
+  font-weight:600;
 }
 
-.button:hover{
-  background:var(--teal-dark);
-}
-
+/* PANELS */
 .panel{
   margin-top:25px;
-  background:var(--panel);
+  background:white;
   padding:25px;
-  border-radius:var(--radius);
+  border-radius:14px;
   box-shadow:var(--shadow);
 }
 
 .section-title{
   font-size:22px;
   margin-bottom:10px;
-  font-weight:700;
+  font-weight:bold;
 }
 
 .profile-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:15px;
-  margin-top:15px;
 }
 
 .card{
-  background:var(--panel);
-  padding:16px;
-  border-radius:10px;
   border:1px solid var(--border);
-}
-
-.card b{
-  color:var(--text);
+  padding:15px;
+  border-radius:10px;
 }
 
 .card p{
-  margin:8px 0 0;
   color:var(--muted);
+  margin-top:6px;
 }
 
-.link{
-  display:inline-block;
-  margin-top:12px;
-  padding:7px 14px;
-  border-radius:20px;
-  background:var(--teal-soft);
-  color:var(--teal-dark);
-  text-decoration:none;
-  font-size:13px;
-  font-weight:700;
-}
-
+/* STATS */
 .stats{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-columns:repeat(4,1fr);
   gap:15px;
-  margin-top:20px;
 }
 
 .stat{
   text-align:center;
-  padding:16px;
+  padding:15px;
   background:var(--teal-soft);
   border-radius:10px;
 }
@@ -199,6 +189,7 @@ body{
 
 <div class="container">
 
+  <!-- NAV -->
   <div class="topnav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -207,32 +198,40 @@ body{
     <a href="ai-media-technologies.html">AI & Media</a>
     <a href="ip.html">Intellectual Property</a>
     <a href="contact.html">Contact</a>
+    <a class="cv-btn" href="cv.pdf" target="_blank">Download CV</a>
   </div>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
-      <div>
-        <h1>Research</h1>
-        <div class="identity">
-          My research is grounded in Information Technology, with a strong focus on Artificial Intelligence, Machine Learning, Human-Computer Interaction, Data Mining, Social Computing, and Smart Systems. This work is applied across several domains, including education, digital media, business, smart services, and human-centered technology.
-        </div>
 
-        <div class="hero-actions">
-          <a class="button" href="cv.pdf" target="_blank">Download CV</a>
+      <div class="hero-text">
+        <h1>Research</h1>
+
+        <p class="identity">
+          My research is grounded in Artificial Intelligence and Information Technology,
+          with a focus on machine learning, human–computer interaction, data mining,
+          social computing, and smart systems. This work extends across applied domains
+          including media, education, and intelligent digital environments.
+        </p>
+
+        <div class="tags">
+          <span>AI & ML</span>
+          <span>HCI</span>
+          <span>Data Mining & Analytics</span>
+          <span>Social Computing</span>
+          <span>Smart Systems</span>
         </div>
       </div>
 
-      <img src="profile.jpg" alt="Dr. Nidal Al Said" class="profile-photo">
+      <div class="hero-image">
+        <img src="profile.jpg" alt="Dr. Nidal Al Said">
+      </div>
+
     </div>
   </div>
 
-  <div class="panel">
-    <div class="section-title">Research Overview</div>
-    <p style="color:var(--muted)">
-      My academic work examines how intelligent technologies can support better decision-making, improve user experience, analyze complex data, and strengthen digital systems. The main direction of my research is AI and Information Technology, while domain applications such as media, education, and business provide practical contexts for studying real-world technological impact.
-    </p>
-  </div>
-
+  <!-- CORE AREAS -->
   <div class="panel">
     <div class="section-title">Core Research Areas</div>
 
@@ -240,58 +239,38 @@ body{
 
       <div class="card">
         <b>Artificial Intelligence & Machine Learning</b>
-        <p>
-          Research on intelligent models, predictive methods, classification, automation, and applied AI solutions for complex digital environments.
-        </p>
+        <p>Predictive models, classification, deep learning, and intelligent automation.</p>
       </div>
 
       <div class="card">
-        <b>Data Mining & Intelligent Analytics</b>
-        <p>
-          Research focused on discovering patterns, extracting knowledge from data, and supporting evidence-based decision-making across different sectors.
-        </p>
+        <b>Data Mining & Analytics</b>
+        <p>Pattern discovery, knowledge extraction, and data-driven decision support.</p>
       </div>
 
       <div class="card">
-        <b>Human-Computer Interaction</b>
-        <p>
-          Studies related to user experience, usability, interface design, human-AI interaction, and the relationship between people and intelligent systems.
-        </p>
+        <b>Human–Computer Interaction</b>
+        <p>User experience, usability, and interaction with intelligent systems.</p>
       </div>
 
       <div class="card">
-        <b>Social Computing & Digital Behavior</b>
-        <p>
-          Research on online behavior, digital communities, social platforms, engagement patterns, and the role of technology in communication environments.
-        </p>
+        <b>Social Computing</b>
+        <p>Digital behavior, online communities, and communication systems.</p>
       </div>
 
       <div class="card">
-        <b>Smart Systems & Emerging Technologies</b>
-        <p>
-          Applied research on smart applications, adaptive systems, technology-enhanced services, and digital transformation in modern organizations.
-        </p>
+        <b>Smart Systems & IoT</b>
+        <p>Intelligent applications, adaptive systems, and smart environments.</p>
       </div>
 
       <div class="card">
-        <b>AI Applications in Education, Media, and Business</b>
-        <p>
-          Interdisciplinary applications of AI and IT in teaching, digital media systems, organizational innovation, and technology-supported decision-making.
-        </p>
+        <b>Applied AI</b>
+        <p>Applications in media, education, and business environments.</p>
       </div>
 
     </div>
   </div>
 
-  <div class="panel">
-    <div class="section-title">Interdisciplinary Research Direction</div>
-    <p style="color:var(--muted)">
-      While my core specialization remains Artificial Intelligence and Information Technology, my research extends into applied domains where intelligent systems create measurable value. This includes the use of AI in learning environments, smart services, content analysis, user interaction, digital communication, and data-driven innovation.
-    </p>
-
-    <a class="link" href="ai-media-technologies.html">View AI & Media Applications</a>
-  </div>
-
+  <!-- PROFILES -->
   <div class="panel">
     <div class="section-title">Research Profiles</div>
 
@@ -320,6 +299,7 @@ body{
     </div>
   </div>
 
+  <!-- STATS -->
   <div class="panel">
     <div class="section-title">Academic Snapshot</div>
 
