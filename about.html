@@ -1,13 +1,22 @@
- <!DOCTYPE html>
+ 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>About | Dr. Nidal Al Said</title>
 
-<meta name="description" content="Academic profile of Dr. Nidal Al Said, Associate Professor of Information Technology specializing in Artificial Intelligence, Machine Learning, Human–Computer Interaction, AI-driven communication and media technologies, curriculum development, and institutional effectiveness." />
+<meta name="description" content="About Dr. Nidal Al Said, Associate Professor of Information Technology specializing in Artificial Intelligence, academic leadership, accreditation, institutional effectiveness, AI-driven communication and media technologies, teaching, curriculum development, publications, and intellectual property." />
 <link rel="canonical" href="https://nidalalsaid.github.io/about.html" />
 <meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<meta property="og:title" content="About | Dr. Nidal Al Said" />
+<meta property="og:description" content="Academic profile of Dr. Nidal Al Said, covering AI, research, teaching, accreditation, institutional effectiveness, curriculum development, publications, and innovation." />
+<meta property="og:url" content="https://nidalalsaid.github.io/about.html" />
+<meta property="og:type" content="profile" />
+<meta name="twitter:card" content="summary" />
 
 <style>
 :root{
@@ -16,15 +25,20 @@
   --text:#1e2a35;
   --muted:#6f8093;
   --teal:#5ca893;
-  --teal-dark:#4a8f7c;
+  --teal-dark:#2f7f70;
+  --teal-deep:#0d6f63;
   --teal-soft:#e7f3ef;
+  --green-soft:#f2faf7;
   --border:#e5eaef;
+  --border2:#cfe7df;
   --shadow:0 6px 18px rgba(0,0,0,0.05);
   --shadow2:0 6px 16px rgba(0,0,0,0.045);
-  --radius:14px;
+  --radius:16px;
 }
 
-*{ box-sizing:border-box; }
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
@@ -79,7 +93,7 @@ body{
   display:inline-block;
   padding:10px 16px;
   font-size:14px;
-  font-weight:600;
+  font-weight:700;
   border-radius:999px;
   background:var(--teal);
   color:#fff;
@@ -92,33 +106,47 @@ body{
 }
 
 .hero{
-  background:linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(244,246,248,1) 100%);
+  background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(248,251,250,1) 100%);
   border:1px solid var(--border);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-  padding:22px;
+  padding:34px;
   display:grid;
-  grid-template-columns:1fr 240px;
-  gap:26px;
-  align-items:start;
+  grid-template-columns:1fr 360px;
+  gap:30px;
+  align-items:center;
+}
+
+.kicker{
+  color:var(--teal-dark);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:10px;
 }
 
 .hero h1{
   margin:0;
-  font-size:36px;
-  font-weight:800;
-  letter-spacing:-0.4px;
+  font-size:44px;
+  font-weight:850;
+  line-height:1.15;
+  letter-spacing:-0.5px;
+}
+
+.hero h1 span{
+  color:var(--teal-dark);
 }
 
 .identity{
-  margin-top:10px;
+  margin-top:14px;
   color:var(--muted);
-  font-size:15px;
-  max-width:860px;
+  font-size:15.5px;
+  max-width:760px;
 }
 
 .hero-badges{
-  margin-top:12px;
+  margin-top:18px;
   display:flex;
   gap:10px;
   flex-wrap:wrap;
@@ -131,22 +159,27 @@ body{
   padding:8px 12px;
   border-radius:999px;
   background:var(--teal-soft);
-  border:1px solid #cfe7df;
+  border:1px solid var(--border2);
   color:var(--teal-dark);
-  font-weight:700;
-  font-size:13px;
+  font-weight:800;
+  font-size:12.5px;
+  text-decoration:none;
 }
 
-.pill svg{
-  width:16px;
-  height:16px;
-  fill:var(--teal-dark);
-  opacity:.95;
+.pill:hover{
+  background:#dff0ea;
+  color:#0f2f3a;
+}
+
+.hero-side{
+  display:grid;
+  gap:18px;
+  justify-items:center;
 }
 
 .avatar{
   display:flex;
-  justify-content:flex-end;
+  justify-content:center;
 }
 
 .avatar img{
@@ -156,6 +189,73 @@ body{
   object-fit:cover;
   border:4px solid var(--teal);
   background:#fff;
+  box-shadow:var(--shadow2);
+}
+
+.side-stats{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.stat-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  box-shadow:var(--shadow2);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.stat-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:var(--teal-soft);
+  border:1px solid var(--border2);
+  color:var(--teal-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  flex:none;
+}
+
+.stat-number{
+  font-size:24px;
+  font-weight:850;
+  line-height:1;
+  color:var(--teal-deep);
+}
+
+.stat-label{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+  line-height:1.25;
+}
+
+.academic-links{
+  margin-top:20px;
+}
+
+.academic-links-title{
+  color:var(--teal-dark);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.link-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
 .panel{
@@ -167,13 +267,116 @@ body{
   box-shadow:var(--shadow);
 }
 
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.info-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:22px;
+  box-shadow:var(--shadow2);
+}
+
+.info-head{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  margin-bottom:12px;
+}
+
+.info-icon{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:var(--teal-soft);
+  border:1px solid var(--border2);
+  color:var(--teal-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  flex:none;
+}
+
+.info-card h2,
+.info-card h3{
+  margin:0;
+  font-size:18px;
+  line-height:1.3;
+}
+
+.info-card p{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.checklist{
+  list-style:none;
+  padding:0;
+  margin:14px 0 0;
+  display:grid;
+  gap:9px;
+}
+
+.checklist li{
+  display:flex;
+  gap:10px;
+  color:var(--muted);
+  font-size:13.5px;
+}
+
+.check{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--teal-soft);
+  color:var(--teal-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+  font-size:12px;
+  font-weight:900;
+  margin-top:2px;
+}
+
+.timeline{
+  margin:18px 0 0;
+  display:grid;
+  gap:14px;
+}
+
+.timeline-item{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:16px;
+  align-items:start;
+  position:relative;
+}
+
+.year{
+  color:var(--teal-dark);
+  font-size:13px;
+  font-weight:850;
+}
+
+.role{
+  color:var(--muted);
+  font-size:13.5px;
+}
+
 .section-title{
   display:flex;
   align-items:center;
   gap:12px;
   font-size:22px;
-  font-weight:700;
-  margin:0 0 16px 0;
+  font-weight:800;
+  margin:0 0 18px 0;
 }
 
 .section-title::before{
@@ -184,70 +387,8 @@ body{
   background:var(--teal);
 }
 
-.summary{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin:12px 0 10px 0;
-}
-
-.badge{
-  display:inline-block;
-  font-size:12px;
-  font-weight:800;
-  padding:6px 12px;
-  border-radius:999px;
-  background:var(--teal-soft);
-  border:1px solid #cfe7df;
-  color:var(--teal-dark);
-}
-
-.summary-note{
-  font-size:13.5px;
-  color:var(--muted);
-  margin:14px 0 0;
-}
-
-.expand-hint{
-  margin:8px 0 0;
-  color:var(--muted);
-  font-size:13.5px;
-}
-
-.rule{
-  height:1px;
-  background:var(--border);
-  margin:18px 0;
-}
-
-.links{
-  margin-top:12px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.link-pill{
-  display:inline-block;
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid #cfe7df;
-  background:var(--teal-soft);
-  color:var(--teal-dark);
-  font-weight:800;
-  font-size:12.5px;
-  text-decoration:none;
-  transition:0.2s;
-}
-
-.link-pill:hover{
-  background:var(--teal);
-  border-color:var(--teal);
-  color:#fff;
-}
-
 details.group{
-  margin-top:16px;
+  margin-top:14px;
 }
 
 details.group > summary{
@@ -264,7 +405,7 @@ details.group > summary::-webkit-details-marker{
   align-items:center;
   gap:12px;
   padding:14px;
-  border:1px solid #cfe7df;
+  border:1px solid var(--border2);
   background:linear-gradient(180deg, rgba(231,243,239,1) 0%, rgba(255,255,255,0.95) 100%);
   border-radius:12px;
   transition:0.2s;
@@ -282,21 +423,16 @@ details.group[open] .group-head{
 }
 
 .group-icon{
-  width:38px;
-  height:38px;
+  width:40px;
+  height:40px;
   border-radius:12px;
-  background:var(--teal-soft);
-  border:1px solid #cfe7df;
+  background:var(--teal-dark);
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  flex:0 0 38px;
-}
-
-.group-icon svg{
-  width:18px;
-  height:18px;
-  fill:var(--teal-dark);
+  flex:0 0 40px;
+  font-size:18px;
 }
 
 .group-title{
@@ -324,15 +460,17 @@ details.group[open] .group-head{
   white-space:nowrap;
 }
 
-details.group[open] .tapnote{
-  background:rgba(92,168,147,0.10);
-  border-color:rgba(92,168,147,0.18);
-  color:#0f2f3a;
+.tapnote .when-open{
+  display:none;
 }
 
-.tapnote .when-open{ display:none; }
-details.group[open] .tapnote .when-open{ display:inline; }
-details.group[open] .tapnote .when-closed{ display:none; }
+details.group[open] .tapnote .when-open{
+  display:inline;
+}
+
+details.group[open] .tapnote .when-closed{
+  display:none;
+}
 
 .chev{
   width:28px;
@@ -342,16 +480,11 @@ details.group[open] .tapnote .when-closed{ display:none; }
   align-items:center;
   justify-content:center;
   background:rgba(92,168,147,0.14);
+  color:var(--teal-dark);
+  transition:.2s;
 }
 
-.chev svg{
-  width:14px;
-  height:14px;
-  fill:var(--teal-dark);
-  transition:0.2s;
-}
-
-details.group[open] .chev svg{
+details.group[open] .chev{
   transform:rotate(180deg);
 }
 
@@ -372,7 +505,7 @@ details.group[open] .chev svg{
 
 .item-title{
   font-size:16px;
-  font-weight:800;
+  font-weight:850;
   margin:0 0 6px 0;
   color:#0f2f3a;
 }
@@ -382,6 +515,90 @@ details.group[open] .chev svg{
   color:var(--muted);
 }
 
+.badge{
+  display:inline-block;
+  font-size:12px;
+  font-weight:850;
+  padding:6px 12px;
+  border-radius:999px;
+  background:var(--teal-soft);
+  border:1px solid var(--border2);
+  color:var(--teal-dark);
+  margin-bottom:8px;
+}
+
+.contribution-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.contribution-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:18px;
+  box-shadow:var(--shadow2);
+}
+
+.contribution-card h3{
+  margin:0;
+  font-size:28px;
+  line-height:1;
+  color:var(--teal-deep);
+}
+
+.contribution-card p{
+  margin:8px 0 12px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+  font-weight:650;
+}
+
+.small-link{
+  color:var(--teal-dark);
+  text-decoration:none;
+  font-weight:850;
+  font-size:13px;
+}
+
+.small-link:hover{
+  color:var(--text);
+}
+
+.center-action{
+  text-align:center;
+  margin-top:18px;
+}
+
+.main-btn{
+  display:inline-block;
+  background:var(--teal);
+  color:#fff;
+  text-decoration:none;
+  padding:11px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:850;
+}
+
+.main-btn:hover{
+  background:var(--teal-dark);
+}
+
+.quote{
+  margin-top:22px;
+  background:linear-gradient(135deg,var(--teal-deep),var(--teal));
+  color:#fff;
+  border-radius:14px;
+  padding:18px 24px;
+  text-align:center;
+  font-size:16px;
+  line-height:1.7;
+  box-shadow:var(--shadow2);
+}
+
 .footer{
   margin-top:28px;
   text-align:center;
@@ -389,9 +606,25 @@ details.group[open] .chev svg{
   color:var(--muted);
 }
 
-@media (max-width: 980px){
-  .hero{ grid-template-columns:1fr; }
-  .avatar{ justify-content:flex-start; }
+@media (max-width:980px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .side-stats,
+  .two-col,
+  .contribution-grid{
+    grid-template-columns:1fr;
+  }
+
+  .timeline-item{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+
+  .tapnote{
+    display:none;
+  }
 }
 </style>
 </head>
@@ -412,60 +645,108 @@ details.group[open] .chev svg{
     <a class="cvbtn" href="cv.pdf" download>Download CV</a>
   </div>
 
-  <div class="hero">
+  <section class="hero">
     <div>
-      <h1>About</h1>
+      <div class="kicker">About</div>
+      <h1>Academic Leadership.<br>Research. <span>Impact.</span></h1>
+
       <div class="identity">
-        Academic profile highlighting expertise in Artificial Intelligence, with a focused research direction in AI-driven communication and media technologies, alongside teaching, innovation, and institutional contributions.
+        Associate Professor specializing in Artificial Intelligence, academic leadership, accreditation, institutional effectiveness, and AI-driven communication technologies across interdisciplinary educational and media environments.
       </div>
 
-      <div class="hero-badges" aria-label="Highlights">
-        <span class="pill">Ajman University</span>
-        <span class="pill">Academic Profile</span>
-        <span class="pill">Ajman, UAE</span>
+      <div class="hero-badges" aria-label="Academic focus areas">
+        <span class="pill">Artificial Intelligence</span>
+        <span class="pill">Academic Leadership</span>
+        <span class="pill">Institutional Effectiveness</span>
+        <span class="pill">Accreditation & QA</span>
         <span class="pill">AI & Media Technologies</span>
+        <span class="pill">Smart Systems</span>
+        <span class="pill">Research & Innovation</span>
       </div>
 
-      <p class="summary-note">Quick academic snapshot</p>
-      <div class="expand-hint">Tip: click any section header below to expand and view details.</div>
-
-      <div class="summary">
-        <span class="badge">Artificial Intelligence</span>
-        <span class="badge">Machine Learning</span>
-        <span class="badge">Human–Computer Interaction</span>
-        <span class="badge">AI & Media Technologies</span>
-        <span class="badge">Data Analytics</span>
-        <span class="badge">Smart Applications</span>
-        <span class="badge">Curriculum Development</span>
-        <span class="badge">Institutional Effectiveness</span>
-        <span class="badge">Accreditation & QA</span>
-        <span class="badge">Academic Publishing</span>
-        <span class="badge">Patents & IP</span>
-      </div>
-
-      <div class="links">
-        <a class="link-pill" href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="link-pill" href="contact.html">Contact</a>
-        <a class="link-pill" href="research.html">Research Profile</a>
-        <a class="link-pill" href="ai-media-technologies.html">AI & Media Profile</a>
-        <a class="link-pill" href="ip.html">IP Portfolio</a>
+      <div class="academic-links">
+        <div class="academic-links-title">Academic Profiles</div>
+        <div class="link-row">
+          <a class="pill" href="https://scholar.google.ae/citations?user=yqhE_ksAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="pill" href="https://orcid.org/0000-0001-9599-2492" target="_blank" rel="noopener">ORCID</a>
+          <a class="pill" href="https://www.scopus.com/authid/detail.uri?authorId=57910230100" target="_blank" rel="noopener">Scopus</a>
+          <a class="pill" href="https://www.webofscience.com/wos/author/record/AAT-6855-2021" target="_blank" rel="noopener">Web of Science</a>
+          <a class="pill" href="https://www.linkedin.com/in/nidal-al-said-74269210/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </div>
 
-    <div class="avatar">
-      <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+    <div class="hero-side">
+      <div class="avatar">
+        <img src="profile.jpg" alt="Dr. Nidal Al Said" loading="lazy" />
+      </div>
+
+      <div class="side-stats">
+        <div class="stat-card">
+          <div class="stat-icon">◈</div>
+          <div>
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">▤</div>
+          <div>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Publications</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">✦</div>
+          <div>
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Research Initiatives</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">◇</div>
+          <div>
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Patents & IP</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="panel">
-    <div class="rule"></div>
+  <section class="two-col">
+    <div class="info-card">
+      <div class="info-head">
+        <div class="info-icon">●</div>
+        <div>
+          <h2>Quick Academic Snapshot</h2>
+          <p>A dynamic academic and research leader with a strong record of scholarly contribution, institutional transformation, and innovation in AI, education, and media technologies.</p>
+        </div>
+      </div>
 
-    <details class="group">
+      <ul class="checklist">
+        <li><span class="check">✓</span>Associate Professor of Information Technology at Ajman University, UAE</li>
+        <li><span class="check">✓</span>20+ years of academic and leadership experience</li>
+        <li><span class="check">✓</span>Expert in AI, data analytics, and intelligent systems</li>
+        <li><span class="check">✓</span>Leader in accreditation, QA, and institutional effectiveness</li>
+        <li><span class="check">✓</span>Author, inventor, reviewer, and international researcher</li>
+        <li><span class="check">✓</span>Global collaborations and interdisciplinary academic impact</li>
+      </ul>
+    </div>
+
+    
+  </section>
+
+  <section class="panel">
+    <div class="section-title">Detailed Academic Profile</div>
+
+    <details class="group" open>
       <summary>
         <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 12a4.2 4.2 0 1 0-4.2-4.2A4.2 4.2 0 0 0 12 12zm0 2c-4.1 0-7.5 2.1-7.5 4.8V21h15v-2.2c0-2.7-3.4-4.8-7.5-4.8z"/></svg>
-          </div>
+          <div class="group-icon">●</div>
           <div>
             <div class="group-title">Academic Overview</div>
             <div class="group-sub">Position, identity, and interdisciplinary focus</div>
@@ -474,7 +755,7 @@ details.group[open] .chev svg{
             <span class="when-closed">Click to expand</span>
             <span class="when-open">Click to collapse</span>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+          <div class="chev">⌄</div>
         </div>
       </summary>
 
@@ -486,6 +767,7 @@ details.group[open] .chev svg{
             An academic profile shaped by research, teaching, and academic leadership across technology-driven higher education environments, with a strong focus on AI-enabled innovation, program development, and a growing specialization in AI-driven communication and media technologies, particularly intelligent content systems, social media analytics, and digital trust.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Focus</div>
           <div class="item-title">AI, Intelligent Systems, and Human-Centered Technology</div>
@@ -493,6 +775,7 @@ details.group[open] .chev svg{
             Core interests include Artificial Intelligence, Machine Learning, Human–Computer Interaction, data analytics, smart applications, responsible AI integration, and AI-driven media systems in education, media, and organizational settings.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Strength</div>
           <div class="item-title">Scholar and academic developer</div>
@@ -506,9 +789,7 @@ details.group[open] .chev svg{
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
-          </div>
+          <div class="group-icon">▤</div>
           <div>
             <div class="group-title">Research & Publications</div>
             <div class="group-sub">AI-driven intelligent systems, analytics, media technologies, and impact</div>
@@ -517,7 +798,7 @@ details.group[open] .chev svg{
             <span class="when-closed">Click to expand</span>
             <span class="when-open">Click to collapse</span>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+          <div class="chev">⌄</div>
         </div>
       </summary>
 
@@ -529,6 +810,7 @@ details.group[open] .chev svg{
             Artificial Intelligence, Machine Learning, Human–AI Interaction, Intelligent Information Systems, Data Mining, social media analytics, AI-driven media technologies, and AI-driven analytics for education, media, and organizational decision-making.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Direction</div>
           <div class="item-title">AI-driven communication and media technologies</div>
@@ -536,6 +818,7 @@ details.group[open] .chev svg{
             A focused research direction connecting intelligent content systems, media authenticity, social platform analytics, news classification, human–computer interaction, and trustworthy digital communication.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Approach</div>
           <div class="item-title">From model performance to real adoption</div>
@@ -543,6 +826,7 @@ details.group[open] .chev svg{
             Emphasizes not only algorithmic accuracy and robustness, but also usability, interpretability, trust, and alignment with real constraints in academic, institutional, and media environments.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Outputs</div>
           <div class="item-title">Peer-reviewed scholarship</div>
@@ -556,9 +840,7 @@ details.group[open] .chev svg{
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3l10 6-10 6L2 9l10-6zm0 13l10-6v8l-10 5-10-5v-8l10 6z"/></svg>
-          </div>
+          <div class="group-icon">▣</div>
           <div>
             <div class="group-title">Teaching & Curriculum Development</div>
             <div class="group-sub">Outcome-driven, tech-enhanced, and industry aware</div>
@@ -567,7 +849,7 @@ details.group[open] .chev svg{
             <span class="when-closed">Click to expand</span>
             <span class="when-open">Click to collapse</span>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+          <div class="chev">⌄</div>
         </div>
       </summary>
 
@@ -579,6 +861,7 @@ details.group[open] .chev svg{
             Designs and delivers courses across AI foundations, HCI, smart applications, multimedia systems, data analytics, and emerging digital technologies, with a focus on clarity, application, and employability skills.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Practice</div>
           <div class="item-title">Modern pedagogy</div>
@@ -586,6 +869,7 @@ details.group[open] .chev svg{
             Uses learner-centered strategies, structured problem-solving, applied projects, and technology-enhanced teaching to ensure conceptual understanding and professional readiness.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Curriculum</div>
           <div class="item-title">Program and course modernization</div>
@@ -599,9 +883,50 @@ details.group[open] .chev svg{
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6V2zm2 7h8v2H8V9zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg>
+          <div class="group-icon">◆</div>
+          <div>
+            <div class="group-title">Institutional Effectiveness & Accreditation</div>
+            <div class="group-sub">Quality assurance, assessment, KPIs, and improvement systems</div>
           </div>
+          <div class="tapnote" aria-hidden="true">
+            <span class="when-closed">Click to expand</span>
+            <span class="when-open">Click to collapse</span>
+          </div>
+          <div class="chev">⌄</div>
+        </div>
+      </summary>
+
+      <div class="items">
+        <div class="item">
+          <div class="badge">Quality</div>
+          <div class="item-title">Assessment and continuous improvement</div>
+          <div class="item-meta">
+            Contributes to assessment design, evidence-based reporting, KPI interpretation, and improvement planning to support structured academic development and institutional decision-making.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Accreditation</div>
+          <div class="item-title">Documentation and compliance readiness</div>
+          <div class="item-meta">
+            Supports accreditation-related processes through structured documentation, benchmarking, performance analysis, curriculum mapping, and alignment with institutional standards and external expectations.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="badge">Institutional Impact</div>
+          <div class="item-title">Evidence-based academic enhancement</div>
+          <div class="item-meta">
+            Works across assessment, CLO/PLO alignment, reporting, moderation, program improvement, and quality assurance practices that strengthen institutional effectiveness.
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>
+        <div class="group-head">
+          <div class="group-icon">▰</div>
           <div>
             <div class="group-title">Books, Intellectual Property & Innovation</div>
             <div class="group-sub">Authorship, patents, applied media systems, and innovation</div>
@@ -610,7 +935,7 @@ details.group[open] .chev svg{
             <span class="when-closed">Click to expand</span>
             <span class="when-open">Click to collapse</span>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+          <div class="chev">⌄</div>
         </div>
       </summary>
 
@@ -619,9 +944,10 @@ details.group[open] .chev svg{
           <div class="badge">Books</div>
           <div class="item-title">Academic authorship</div>
           <div class="item-meta">
-            Author and co-author of academic books that translate complex AI, intelligent systems, digital media, and visual design topics into structured, teachable, and application-oriented knowledge for students and professionals.
+            Author and co-author of academic books that translate complex AI, intelligent systems, digital media, web mining, and visual design topics into structured, teachable, and application-oriented knowledge for students and professionals.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">IP</div>
           <div class="item-title">Patents and registered designs</div>
@@ -635,45 +961,7 @@ details.group[open] .chev svg{
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.6 9.7-9 10-5.4-.3-9-5-9-10V6l9-4zm-1 6h2v6h-2V8zm0 8h2v2h-2v-2z"/></svg>
-          </div>
-          <div>
-            <div class="group-title">Institutional Effectiveness & Accreditation</div>
-            <div class="group-sub">Quality assurance, assessment, KPIs, and improvement systems</div>
-          </div>
-          <div class="tapnote" aria-hidden="true">
-            <span class="when-closed">Click to expand</span>
-            <span class="when-open">Click to collapse</span>
-          </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
-        </div>
-      </summary>
-
-      <div class="items">
-        <div class="item">
-          <div class="badge">Quality</div>
-          <div class="item-title">Assessment and continuous improvement</div>
-          <div class="item-meta">
-            Contributes to assessment design, evidence-based reporting, KPI interpretation, and improvement planning to support structured academic development.
-          </div>
-        </div>
-        <div class="item">
-          <div class="badge">Accreditation</div>
-          <div class="item-title">Documentation and compliance readiness</div>
-          <div class="item-meta">
-            Supports accreditation-related processes through structured documentation, benchmarking, performance analysis, and alignment with institutional standards and external expectations.
-          </div>
-        </div>
-      </div>
-    </details>
-
-    <details class="group">
-      <summary>
-        <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.6-1.5 4.9-3.6 6.1V20l-3.4-2-3.4 2v-4.9C6.5 13.9 5 11.6 5 9a7 7 0 0 1 7-7z"/></svg>
-          </div>
+          <div class="group-icon">✦</div>
           <div>
             <div class="group-title">Professional Service & Reviewing</div>
             <div class="group-sub">Peer review, editorial support, and academic engagement</div>
@@ -682,7 +970,7 @@ details.group[open] .chev svg{
             <span class="when-closed">Click to expand</span>
             <span class="when-open">Click to collapse</span>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+          <div class="chev">⌄</div>
         </div>
       </summary>
 
@@ -694,6 +982,7 @@ details.group[open] .chev svg{
             Active reviewer for international peer-reviewed venues across AI, data analytics, intelligent systems, communication technologies, and interdisciplinary technology research, supporting scholarly rigor and quality standards.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Community</div>
           <div class="item-title">Conferences and collaboration</div>
@@ -707,9 +996,7 @@ details.group[open] .chev svg{
     <details class="group">
       <summary>
         <div class="group-head">
-          <div class="group-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M7 12a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm10 0a3 3 0 1 1 3-3 3 3 0 0 1-3 3zM2 21a5 5 0 0 1 10 0H2zm10 0a5 5 0 0 1 10 0H12z"/></svg>
-          </div>
+          <div class="group-icon">◉</div>
           <div>
             <div class="group-title">Academic Collaboration</div>
             <div class="group-sub">Academic networks, joint research, and scholarly exchange</div>
@@ -718,7 +1005,7 @@ details.group[open] .chev svg{
             <span class="when-closed">Click to expand</span>
             <span class="when-open">Click to collapse</span>
           </div>
-          <div class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg></div>
+          <div class="chev">⌄</div>
         </div>
       </summary>
 
@@ -730,6 +1017,7 @@ details.group[open] .chev svg{
             Actively engaged in collaborative research initiatives, academic networks, and joint scholarly activities that advance Artificial Intelligence, intelligent systems, media technologies, and interdisciplinary innovation.
           </div>
         </div>
+
         <div class="item">
           <div class="badge">Contribution</div>
           <div class="item-title">Scholarly and professional involvement</div>
@@ -739,7 +1027,44 @@ details.group[open] .chev svg{
         </div>
       </div>
     </details>
+  </section>
 
+  <section class="panel">
+    <div class="section-title">Selected Academic Contributions</div>
+
+    <div class="contribution-grid">
+      <div class="contribution-card">
+        <h3>50+</h3>
+        <p>Scopus-indexed publications and scholarly outputs</p>
+        <a class="small-link" href="research.html">View Research →</a>
+      </div>
+
+      <div class="contribution-card">
+        <h3>10+</h3>
+        <p>Patents, registered designs, and IP registrations</p>
+        <a class="small-link" href="ip.html">View IP Portfolio →</a>
+      </div>
+
+      <div class="contribution-card">
+        <h3>2</h3>
+        <p>Authored books in AI, design, and web mining</p>
+        <a class="small-link" href="books.html">View Books →</a>
+      </div>
+
+      <div class="contribution-card">
+        <h3>60+</h3>
+        <p>Academic, research, quality, and institutional initiatives</p>
+        <a class="small-link" href="contact.html">Connect →</a>
+      </div>
+    </div>
+
+    <div class="center-action">
+      <a class="main-btn" href="research.html">View Full Research Profile</a>
+    </div>
+  </section>
+
+  <div class="quote">
+    Committed to advancing knowledge, empowering learners, and transforming institutions through AI, innovation, and excellence in education and research.
   </div>
 
   <div class="footer">© 2026 Dr. Nidal Al Said ·</div>
