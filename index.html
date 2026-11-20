@@ -301,106 +301,6 @@ body{
   gap:14px;
 }
 
-.media-feature{
-  margin-top:22px;
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(135deg,var(--blue),var(--blue2));
-  color:white;
-  border-radius:20px;
-  padding:34px 40px;
-  box-shadow:var(--shadow);
-}
-
-.media-feature::after{
-  content:"";
-  position:absolute;
-  right:-42px;
-  top:-76px;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.12);
-}
-
-.media-feature-inner{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:1fr 330px;
-  gap:28px;
-  align-items:center;
-}
-
-.media-feature h2{
-  margin:0;
-  font-size:34px;
-  line-height:1.25;
-  letter-spacing:-0.4px;
-}
-
-.media-feature p{
-  margin:14px 0 0;
-  color:rgba(255,255,255,0.92);
-  font-size:17px;
-  line-height:1.7;
-  max-width:820px;
-}
-
-.media-badge{
-  display:inline-block;
-  margin-bottom:20px;
-  padding:10px 18px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.22);
-  color:#fff;
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.media-oval{
-  justify-self:end;
-  width:300px;
-  min-height:78px;
-  border-radius:999px;
-  background:#ffffff;
-  color:#000000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:14px 22px;
-  font-weight:900;
-  font-size:16px;
-  line-height:1.35;
-  box-shadow:0 10px 24px rgba(0,0,0,0.12);
-}
-
-.media-actions{
-  margin-top:20px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.media-btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:999px;
-  background:#fff;
-  color:var(--blue);
-  text-decoration:none;
-  font-weight:800;
-  font-size:13px;
-}
-
-.media-btn:hover{
-  background:#f3f6f8;
-}
-
 .items-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -598,15 +498,6 @@ body{
     height:220px;
     object-fit:contain;
   }
-
-  .media-feature-inner{
-    grid-template-columns:1fr;
-  }
-
-  .media-oval{
-    justify-self:start;
-    width:100%;
-  }
 }
 </style>
 </head>
@@ -745,25 +636,6 @@ body{
       <a class="pill" href="https://www.linkedin.com/in/nidal-al-said-74269210/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
-
-  <section class="media-feature" aria-label="AI and Media Technologies">
-    <div class="media-feature-inner">
-      <div>
-        <div class="media-badge">AI and Media Technologies</div>
-        <h2>AI-Driven Communication and Media Technologies</h2>
-        <p>
-          Publications, books, and protected innovations focused on intelligent media systems, social media analytics,
-          content authenticity, human-AI interaction, and trustworthy digital communication technologies.
-        </p>
-        <div class="media-actions">
-          <a class="media-btn" href="ai-media-technologies.html">View AI & Media Profile</a>
-        </div>
-      </div>
-      <div class="media-oval">
-        IT expertise applied to communication and media contexts
-      </div>
-    </div>
-  </section>
 
   <div class="panel">
     <div class="section-title">Selected Books</div>
